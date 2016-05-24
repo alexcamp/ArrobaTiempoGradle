@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TIPO_PETICION_ST" name="TIPO_PETICION_ST" comments="" primaryKey="PK_TIPO_PETICION">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID" name="ID">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176389202765" characterSet="800" length="32">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TIPO_AVERIA" name="TIPO_AVERIA">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176389202766" length="50">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_PS_AVERIA" name="COD_PS_AVERIA" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176389202765">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_TIPO_PETICION" name="PK_TIPO_PETICION" members="ID" constraint="SQLConstraint_1176389202765"/>
+  <constraints xmi:id="SQLConstraint_1176389202765" name="PK_TIPO_PETICION" type="PRIMARYKEY" primaryKey="PK_TIPO_PETICION"/>
+</RDBSchema:RDBTable>

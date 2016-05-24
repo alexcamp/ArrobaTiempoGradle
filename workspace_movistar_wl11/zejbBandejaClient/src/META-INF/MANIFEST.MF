@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: zejbComunClient.jar 
+ zjarutiles.jar 
+ zjarATiempoInterface.jar
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_006_E.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-006-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-006-E">
+		<sequence>
+			<element name="head" type="tr-006-e:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="cod-ave-cd" type="tr-006-e:string9" />
+						<element name="cod-cie-ave-cd" type="tr-006-e:string6" />
+						<element name="cod-are-ges-cd" type="tr-006-e:long9" />
+						<element name="cod-est-ave-cd" type="tr-006-e:char" />
+						<element name="ind-cob-vst-in" type="tr-006-e:char" />
+						<element name="ind-dft-emo-in" type="tr-006-e:char" />
+						<element name="aju-flt-ser-in" type="tr-006-e:char" />
+						<element name="ind-imp-mlt-in" type="tr-006-e:char" />
+						<element name="ind-ser-efe-in" type="tr-006-e:char" />
+						<element name="ind-equ-atc-in" type="tr-006-e:char" />
+						<element name="fec-cie-ave-ts" type="tr-006-e:string26" />
+						<element name="id-request-atis" type="tr-006-e:string24" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-006-e" type="tr-006-e:TR-006-E" />
+</schema>

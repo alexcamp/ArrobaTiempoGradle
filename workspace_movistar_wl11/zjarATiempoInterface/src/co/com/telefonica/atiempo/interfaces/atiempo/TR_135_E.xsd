@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-135-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-135-E">
+		<sequence>
+			<element name="head" type="tr-135-e:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="brand-modem" type="tr-135-e:string30" />
+						<element name="model-modem" type="tr-135-e:string30" />
+						<element name="serial-number" type="tr-135-e:string30" />
+						<element name="father-email" type="tr-135-e:string100" />
+						<element name="product-service-code" type="tr-135-e:long9" />
+						<element name="commercial-operation-type" type="tr-135-e:long9" />
+						<element name="operation-acs" type="tr-135-e:string30" />
+						<element name="atiempo-request-number" type="tr-135-e:string30" />
+						<element name="phone-number" type="tr-135-e:int8" />
+						<element name="new-phone-number" type="tr-135-e:int8" />
+						<element name="password-IMS" type="tr-135-e:string250" />
+						<element name="OUI" type="tr-135-e:string250" />
+						<element name="service-type" type="tr-135-e:string250" />
+						<element name="service-value" type="tr-135-e:string250" />
+						<element name="ip-service" type="tr-135-e:string250" />
+						<element name="mask-service" type="tr-135-e:string250" />
+						<element name="speed" type="tr-135-e:int8" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-135-e" type="tr-135-e:TR-135-E" />
+</schema>

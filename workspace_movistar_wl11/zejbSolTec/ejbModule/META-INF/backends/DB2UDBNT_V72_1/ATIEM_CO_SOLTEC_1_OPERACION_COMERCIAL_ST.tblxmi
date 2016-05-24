@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="OPERACION_COMERCIAL_ST" name="OPERACION_COMERCIAL_ST" comments="" primaryKey="OPCO_PK">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="OPCO_ID" name="OPCO_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176337965750">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="OPCO_NOMBRE" name="OPCO_NOMBRE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176337965750" length="200">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="OPCO_PK" name="OPCO_PK" members="OPCO_ID" constraint="SQLConstraint_1176337965750">
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_FLUJO.tblxmi#FK_OPCO_2_PEFL"/>
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRODUCTO_SERVICIO_PETICION.tblxmi#FK_OC"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1176337965750" name="OPCO_PK" type="PRIMARYKEY" primaryKey="OPCO_PK"/>
+</RDBSchema:RDBTable>

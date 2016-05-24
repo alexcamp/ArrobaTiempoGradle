@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://atiempo.telefonica.com.co" 
+		xmlns:tr-301-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	
+	
+	<complexType name="Perfil_Type">
+		<sequence>
+			<element name="usua_id" type="tr-301-s:long16" />
+			<element name="perfil_id" type="tr-301-s:long16" />
+		</sequence>
+	</complexType>
+	<complexType name="Rol_Type">
+		<sequence>
+			<element name="usua_id" type="tr-301-s:long16" />
+			<element name="rol_id" type="tr-301-s:long16" />
+			<element name="habilitado" type="tr-301-s:int8" />
+		</sequence>
+	</complexType>
+	<complexType name="Habilidad_Type">
+		<sequence>
+			<element name="usua_id" type="tr-301-s:long16" />
+			<element name="husu_id" type="tr-301-s:long16" />
+			<element name="habi_id" type="tr-301-s:long16" />
+			<element name="husu_valor" type="tr-301-s:string50" />
+		</sequence>
+	</complexType>
+	<complexType name="Supervision_Type">
+	    <sequence>
+	      <element name="supervisor_id" type="tr-301-s:long16"/>
+	      <element name="supervisado_id" type="tr-301-s:long16"/>
+	      <element name="rol_id" type="tr-301-s:long16"/>
+	    </sequence>
+  	</complexType>
+	
+	<complexType name="TR_301_S">
+		<sequence>	
+
+			<element name="head" type="tr-301-s:RequestHeaderAgendaSC" />
+			<element name="body">		
+				<complexType>
+					<sequence>
+						<element name="operacion" type="tr-301-s:string255" />
+						<element name="Supervision" type="tr-301-s:Supervision_Type"/>
+						<element name="usuario">
+							<complexType>
+								<sequence>
+									<element name="usua_id" type="tr-301-s:long16" />
+									<element name="usua_login" type="tr-301-s:string30" />
+									<element name="usua_nombre" type="tr-301-s:string80" />
+									<element name="usua_direccion" type="tr-301-s:string300" />
+									<element name="usua_email" type="tr-301-s:string64" />
+									<element name="usua_telefono" type="tr-301-s:string12"/>
+									<element name="usua_cargo" type="tr-301-s:string50" />
+									<element name="usua_habilitado" type="tr-301-s:char" />
+									<element name="empr_id" type="tr-301-s:long16" />
+									<element name="usua_password" type="tr-301-s:string30" />
+									<element name="usua_idca" type="tr-301-s:string20" />
+									<element name="usua_fecha_alta" type="tr-301-s:string20" />
+								</sequence>
+							</complexType>
+						</element>
+					
+					
+						<element name="Perfiles">
+							<complexType>
+								<sequence>
+									<element name="perfil" type="tr-301-s:Perfil_Type" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						
+						<element name="Roles">
+							<complexType>
+								<sequence>
+									<element name="rol" type="tr-301-s:Rol_Type" maxOccurs="unbounded"  />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="Habilidades">
+							<complexType>
+								<sequence>
+									<element name="habilidad" type="tr-301-s:Habilidad_Type"  maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>		
+		</sequence>
+	</complexType>
+	<element name="tr-301-s" type="tr-301-s:TR_301_S" />
+</schema>

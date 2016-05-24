@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TMP_MODEM" name="TMP_MODEM" comments="" primaryKey="PFS_TMP_MODEM">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID" name="ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1196284510796">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_AVE_CD" name="COD_AVE_CD">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1196284510797">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="XML" name="XML">
+    <type xmi:type="RDBSchema:SQLCharacterLargeObject" xmi:id="SQLCharacterLargeObject_1196284510796" characterSet="800" length="8" multiplier="K">
+      <originatingType xmi:type="RDBSchema:SQLCharacterLargeObject" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterLargeObject_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_STMP_MODEM_P" name="FK_STMP_MODEM_P" members="COD_AVE_CD" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1196284510796">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_ST.tblxmi#P_KEY_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PFS_TMP_MODEM" name="PFS_TMP_MODEM" members="ID" constraint="SQLConstraint_1196284510797"/>
+  <constraints xmi:id="SQLConstraint_1196284510796" name="FK_STMP_MODEM_P" type="FOREIGNKEY" referenceByKey="FK_STMP_MODEM_P"/>
+  <constraints xmi:id="SQLConstraint_1196284510797" name="PFS_TMP_MODEM" type="PRIMARYKEY" primaryKey="PFS_TMP_MODEM"/>
+</RDBSchema:RDBTable>

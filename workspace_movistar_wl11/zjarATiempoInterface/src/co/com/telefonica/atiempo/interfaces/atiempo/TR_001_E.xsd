@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_001_E.xsd,v 1.1 2011/03/30 18:21:05 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-001-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="group1">
+		<sequence>
+			<element name="atis-group-number" type="tr-001-e:int4" />
+			<element name="comercial-product-identification-number" type="tr-001-e:string40" />
+			<element name="pulse-quantity-from" type="tr-001-e:long9" />
+			<element name="pulse-quantity-to" type="tr-001-e:long9" />
+			<element name="subRequests">
+				<complexType>
+					<sequence>
+						<element name="subRequest" type="tr-001-e:subRequest1" maxOccurs="unbounded" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="subRequest1">
+		<sequence>
+			<element name="atis-subrequest-number" type="tr-001-e:int4" />
+			<element name="subrequest-type-error" type="tr-001-e:string2" />
+			<element name="subrequest-code-error" type="tr-001-e:string10" />
+			<element name="subrequest-description-error" type="tr-001-e:string100" />
+			<element name="subrequest-end-time">
+				<simpleType>
+					<restriction base="dateTime" />
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR-001-E">
+		<sequence>
+			<element name="head" type="tr-001-e:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-001-e:long9" />
+						<element name="groupings">
+							<complexType>
+								<sequence>
+									<element name="group" type="tr-001-e:group1" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-001-e" type="tr-001-e:TR-001-E" />
+</schema>

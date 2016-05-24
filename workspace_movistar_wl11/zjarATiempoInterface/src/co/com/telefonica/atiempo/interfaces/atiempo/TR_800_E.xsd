@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <xsd:schema targetNamespace="http://www.telefonica.com/ManageWorkOrderLifecydeScheduler_PS/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.telefonica.com/ManageWorkOrderLifecydeScheduler_PS/">
+    
+      <xsd:element name="CreacionServicio">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="XA_FAMILIA" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_SOURCE_SYSTEM" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="cname" type="xsd:string" maxOccurs="1"
+          		minOccurs="1" />
+          	<xsd:element name="XA_CUSTOMER_ID_TYPE" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="customer_number" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_CUSTOMER_SEGMENT" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_CUSTOMER_SUBSEGMENT"
+          		type="xsd:string" maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_DAT_AGDMTO_1" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_DAT_AGDMTO_2" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_CUSTOMER_VIP" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_DAT_OP_CLIENT" type="tns:OTHERTYPE"
+          		maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_CONTACT_NAME" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="cell" type="xsd:string" maxOccurs="1"
+          		minOccurs="0" />
+          	<xsd:element name="XA_CONTACT_PHONE_NUMBER_2"
+          		type="xsd:string" maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_CONTACT_PHONE_NUMBER_3"
+          		type="xsd:string" maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_CONTACT_PHONE_NUMBER_4"
+          		type="xsd:string" maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_CONTACT_PHONE_NUMBER_5"
+          		type="xsd:string" maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_CONTACT_PHONE_NUMBER_6"
+          		type="xsd:string" maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="email" type="xsd:string" maxOccurs="1"
+          		minOccurs="0" />
+          	<xsd:element name="phone" type="xsd:string" maxOccurs="1"
+          		minOccurs="0" />
+          	<xsd:element name="XA_DAT_OP_CONTACT" type="tns:OTHERTYPE"
+          		maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="address" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_CITY_CODE" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="city" type="xsd:string" maxOccurs="1"
+          		minOccurs="1" />
+          	<xsd:element name="XA_STATE_CODE" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="state" type="xsd:string" maxOccurs="1"
+          		minOccurs="1" />
+          	<xsd:element name="XA_NEIGHBORHOOD" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="acoord_x" type="xsd:decimal"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="acoord_y" type="xsd:decimal"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_QUADRANT" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_WORK_ZONE_KEY" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="aworktype_label" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_WORK_TYPE" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_DESCRIPTION" type="xsd:string"
+          		maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_DAT_OP_TPACTIVIDAD"
+          		type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="id_actuacion" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_ORDER_ATIS" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_ORDER_NUMBER" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="XA_CREATION_DATE" type="xsd:string"
+          		maxOccurs="1" minOccurs="1" />
+          	<xsd:element name="date" type="xsd:string" maxOccurs="1"
+          		minOccurs="1" />
+          	<xsd:element name="XA_DAT_OP_DATO_CITA"
+          		type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_PROJECT_CODE" type="xsd:string"
+          		maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_REINJECTED" type="xsd:string"
+          		maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_DAT_OP_DATO_INST"
+          		type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_MASSIVE_TYPE" type="xsd:string"
+          		maxOccurs="1" minOccurs="0" />
+
+          	<xsd:element name="XA_REITERATION" type="xsd:string"
+          		maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_YOUNG_REPAIR" type="xsd:string"
+          		maxOccurs="1" minOccurs="0" />
+          	<xsd:element name="XA_DAT_OP_DATO_AVER"
+          		type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_POST_SALES_CODE" type="xsd:string"
+          		maxOccurs="1" minOccurs="0" />
+
+          	<xsd:element name="XA_REPAIR_INFO"
+          		type="tns:XA_REPAIR_INFO" maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_CENTRAL" type="xsd:string"
+          		maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_BOX_TYPE" type="xsd:string"
+          		maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_TELEPHONE_DATA"
+          		type="tns:XA_TELEPHONE_DATA" maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_BROADBAND_DATA"
+          		type="tns:XA_BROADBAND_DATA" maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_NUMBER_DECODERS" type="xsd:string"
+          		maxOccurs="unbounded" minOccurs="1">
+          	</xsd:element>
+          	<xsd:element name="XA_ID_PCTV" type="xsd:string"
+          		maxOccurs="unbounded" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_TV_DATA" type="tns:XA_TV_DATA"
+          		maxOccurs="unbounded" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_NOTES" type="xsd:string"
+          		maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="XA_EQUIPMENT" type="tns:XA_EQUIPMENT"
+          		maxOccurs="unbounded" minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="EQUIPOS_CLIENTE"
+          		type="tns:EQUIPOS_CLIENTE" maxOccurs="unbounded"
+          		minOccurs="0">
+          	</xsd:element>
+          	<xsd:element name="OTHER" type="tns:OTHERTYPE"
+          		maxOccurs="1" minOccurs="0">
+          	</xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+
+
+
+      
+      <xsd:element name="CreacionServicioResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="XA_SOURCE_SYSTEMR" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="id_actuacion" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="XA_ORDER_ATIEMPO" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="XA_ORDER_ATIS" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="XA_ORDER_COD_ERR" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="XA_ORDER_DESC_ERR" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    
+      <xsd:complexType name="XA_TELEPHONE_DATA">
+      	<xsd:sequence>
+      		<xsd:element name="Central" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Telefono" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Len" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Posicion_Horizontal" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Distribuidor" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Descripcion_Distribuidor"
+      			type="xsd:string" maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Direccion_Distribuidor"
+      			type="xsd:string" maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Liston" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Par_liston" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Cable" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Par_Cable" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Armario" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Direccion_Armario" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Caja" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Par_caja" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Direccion_caja" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Tipo_caja" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Distancia_caja" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Latitud" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Longitud" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Zona_cobertura" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Otros_Telephon_Data"
+      			type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="XA_REPAIR_INFO">
+      	<xsd:sequence>
+      		<xsd:element name="Codigo_Apertura" type="xsd:string"
+      			maxOccurs="1" minOccurs="1">
+      		</xsd:element>
+      		<xsd:element name="Observaciones_Apertura"
+      			type="xsd:string" maxOccurs="1" minOccurs="1">
+      		</xsd:element>
+      		<xsd:element name="Diagnostico_Primer_Nivel"
+      			type="xsd:string" maxOccurs="1" minOccurs="1">
+      		</xsd:element>
+      		<xsd:element name="Diagnostico_Segundo_Nivel"
+      			type="xsd:string" maxOccurs="1" minOccurs="1">
+      		</xsd:element>
+      		<xsd:element
+      			name="Observaciones_Diagnostico_Segundo_Nivel"
+      			type="xsd:string" maxOccurs="1" minOccurs="1">
+      		</xsd:element>
+      		<xsd:element name="Categoría_Avería" type="xsd:string"
+      			maxOccurs="1" minOccurs="1">
+      		</xsd:element>
+      		<xsd:element name="Codigo_Prioridad" type="xsd:string"
+      			maxOccurs="1" minOccurs="1">
+      		</xsd:element>
+      		<xsd:element name="Otros_Repair" type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="XA_BROADBAND_DATA">
+      	<xsd:sequence>
+      		<xsd:element name="Velocidad" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Tipo_IP" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Puerto" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="POTs" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="ADSL" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Direccion_IP_DISLAM" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Direccion_IP_WAN" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Direccion_IP_LAN" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Mascara_LAN" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Frame" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Tarjeta_Slot" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="RACK" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="SUBRACK" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="VPI_VCI_Cliente" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="VPI_VCI_Red" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Usuario_Acceso" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Otros_Datos_BA" type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="XA_TV_DATA">
+      	<xsd:sequence>
+      		<xsd:element name="Tematicos" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Tipo_Decos" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Cantidad_Decos" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Otros_Datos_TV" type="tns:OTHERTYPE"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="XA_EQUIPMENT">
+      	<xsd:sequence>
+      		<xsd:element name="Tipo_Equipo" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Numero" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Accion" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+
+      		<xsd:element name="Familia" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Otros_Equipos" type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="OTHERTYPE">
+      	<xsd:sequence>
+
+
+      		<xsd:element name="Propiedad" type="tns:OTHERELEMENT"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="OTHERELEMENT">
+      	<xsd:sequence>
+      		<xsd:element name="Key" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="Value" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>      
+      <xsd:complexType name="EQUIPOS_CLIENTE">
+      	<xsd:sequence>
+      		<xsd:element name="inv_type" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="invsn" type="xsd:string" maxOccurs="1"
+      			minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_BRAND" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_MODEL" type="xsd:string"
+      			maxOccurs="1" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_DOCUMENT_NUMBER"
+      			type="xsd:string" maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_DOCUMENT_YEAR" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_CODE" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_CODE_DESCRIPTION"
+      			type="xsd:string" maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_CODE_TJ" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_CARD_SERIAL_NUMBER"
+      			type="xsd:string" maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_CAS_ID" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_BULK_SAP" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_DISTRIBUTION_CENTER"
+      			type="xsd:string" maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_MOVIMIENTO" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_BOD_CTISTA" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_PEP" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_SAP_OTROS" type="tns:OTHERTYPE" maxOccurs="1" minOccurs="0"></xsd:element>
+      		<xsd:element name="I_ACTIVATION_NUMBER" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      		<xsd:element name="XI_MATERIAL_CODE" type="xsd:string"
+      			maxOccurs="unbounded" minOccurs="0">
+      		</xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>

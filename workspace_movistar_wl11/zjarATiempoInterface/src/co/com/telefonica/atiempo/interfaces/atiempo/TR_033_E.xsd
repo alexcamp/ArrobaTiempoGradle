@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-033-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-033-E">
+		<sequence>
+			<element name="head" type="tr-033-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-033-e:long16" />
+						<element name="ticket-number" type="tr-033-e:string255" />
+						<element name="installation-end-date" type="tr-033-e:string255" />
+						<element name="code" type="tr-033-e:string5" />
+						<element name="description" type="tr-033-e:string255" />
+						<element name="other">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-033-e:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="reverse" type="boolean" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-033-e" type="tr-033-e:TR-033-E" />
+</schema>

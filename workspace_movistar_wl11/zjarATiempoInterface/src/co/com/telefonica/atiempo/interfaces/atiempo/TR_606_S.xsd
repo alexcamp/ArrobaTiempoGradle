@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-606-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-606-S">
+		<sequence>
+			<element name="head" type="tr-606-s:ResponseHeader2" />
+			<element name="body">
+			<complexType>
+					<sequence>
+
+	                 </sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-606-s" type="tr-606-s:TR-606-S" />
+</schema>

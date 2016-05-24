@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_038_E.xsd,v 1.1 2011/03/30 18:22:10 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-038-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR_038_E">
+		<sequence>
+			<element name="head" type="tr-038-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-038-e:long16" />
+						<element name="customer-segment" type="tr-038-e:string9" />
+						<element name="service-type" type="tr-038-e:long9" />
+						<element name="ip-service-type" type="tr-038-e:string9"/>
+						<element name="previous-service-type" type="tr-038-e:long9" />
+						<element name="service-number" type="tr-038-e:string40" />
+						<element name="terminal-number" type="tr-038-e:string40" />
+						<element name="ip-amount" type="tr-038-e:string40" />
+						<element name="comercial-operation" type="tr-038-e:string40" />
+						<element name="range-zone-list">
+							<complexType>
+								<sequence>
+									<element name="range-zone-id" maxOccurs="unbounded" minOccurs="0" type="tr-038-e:string30" />
+								</sequence>
+							</complexType>
+						</element>
+
+						<element name="pssba-data-list">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-038-e:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="pssba-rollback-data-list">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-038-e:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="other">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-038-e:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-038-e" type="tr-038-e:TR_038_E" />
+</schema>

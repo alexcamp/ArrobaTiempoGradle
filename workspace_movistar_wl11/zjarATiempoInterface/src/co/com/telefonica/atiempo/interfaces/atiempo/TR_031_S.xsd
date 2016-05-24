@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_031_S.xsd,v 1.1 2011/03/30 18:21:42 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-031-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR_031_S">
+		<sequence>
+			<element name="head" type="tr-031-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-031-s:long16">
+							
+						</element>
+						<element name="code" type="tr-031-s:string5" />
+						<element name="description" type="tr-031-s:string255" />
+						<element name="action" type="tr-031-s:string255" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-031-s" type="tr-031-s:TR_031_S" />
+</schema>

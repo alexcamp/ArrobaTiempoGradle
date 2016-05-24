@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-805-e="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/>
+   <complexType name="TR_805_E">
+   <sequence>
+      <element name="head" type="tr-805-e:RequestHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+           <sequence maxOccurs="1" minOccurs="1">
+             <element name="id_sistema_origen" type="string"/>
+             <element name="id-schedule" type="string"/>
+             <element name="appt_number" type="string"/>
+             <element name="idpc_tv" type="string"/>
+             <element name="numero_cliente" type="string"/>
+             <element name="tipo_docum_cliente" type="string"/>             
+             <element name="nombre_cliente" type="string"/>             
+             <element name="ciudad" type="string"/>                          
+             <element name="accion" type="string"/>                          
+             <element name="id_pedido_atis" type="string"/>
+			</sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-805-e" type="tr-805-e:TR_805_E"/>
+</schema>

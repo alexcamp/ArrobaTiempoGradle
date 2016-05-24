@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_004_S.xsd,v 1.1 2011/03/30 18:21:05 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-004-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-004-S">
+		<sequence>
+			<element name="head" type="tr-004-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="type-error" type="tr-004-s:long5">
+						</element>
+						<element name="response" type="boolean" />
+						<element name="phone-number" type="tr-004-s:int8" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-004-s" type="tr-004-s:TR-004-S" />
+</schema>

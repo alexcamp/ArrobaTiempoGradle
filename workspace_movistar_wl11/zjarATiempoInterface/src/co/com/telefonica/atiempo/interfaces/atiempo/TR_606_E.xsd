@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-606-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-606-E">
+		<sequence>
+			<element name="head" type="tr-606-e:RequestHeader" />
+			<element name="body">
+			<complexType>
+					<sequence>
+	                    <element name="phone-number" type="tr-606-e:string250" />
+	                    <element name="action" type="tr-606-e:string250" />
+	                 </sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-606-e" type="tr-606-e:TR-606-E" />
+</schema>

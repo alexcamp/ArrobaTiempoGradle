@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-614-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-614-S">
+		<sequence>
+			<element name="head" type="tr-614-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-614-s:long9" />
+						<element name="estado" type="string" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-614-s" type="tr-614-s:TR-614-S" />
+</schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-020-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-020-S">
+		<sequence>
+			<element name="head" type="tr-020-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-020-s:string13" />
+						<element name="documento-material" type="tr-020-s:string13" />
+						<element name="fecha-documento" type="tr-020-s:string13" />
+						<element name="fecha-ejecucion-sap" type="tr-020-s:string13" />
+						<element name="hora-ejecucion-interfaz" type="tr-020-s:string13" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-020-s" type="tr-020-s:TR-020-S" />
+</schema>

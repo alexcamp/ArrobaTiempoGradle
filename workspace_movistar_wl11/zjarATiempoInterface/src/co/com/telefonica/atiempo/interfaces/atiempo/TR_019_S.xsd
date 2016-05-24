@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-019-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="equipment2">
+		<sequence>
+			<element name="deco" type="tr-019-s:string30" />
+			<element name="deco-reference" type="tr-019-s:string3" />
+			<element name="deco-marca" type="tr-019-s:string80" />
+			<element name="deco-serial" type="tr-019-s:string30" />
+			<element name="deco-posting-date" type="tr-019-s:string8"/>
+			<element name="deco-move-type" type="tr-019-s:string30" />
+			<element name="deco-sap-material-code" type="tr-019-s:string4"/>
+			<element name="deco-material" type="tr-019-s:string18"/>
+			<element name="deco-plant" type="tr-019-s:string4"/>
+			<element name="deco-storage" type="tr-019-s:string4"/>
+			<element name="deco-batch-code" type="tr-019-s:string10"/>			
+			<element name="deco-measurement-unit" type="tr-019-s:string3"/>
+			<element name="deco-cost-center" type="tr-019-s:string10"/>
+			<element name="deco-func-area-long" type="tr-019-s:string4"/>						
+			<element name="deco-pep-element" type="tr-019-s:string10"/>
+			<element name="deco-flag-mat-sap" type="tr-019-s:string2"/>
+			<element name="card" type="tr-019-s:string30" />
+			<element name="card-posting-date" type="tr-019-s:string8"/>
+			<element name="card-move-type" type="tr-019-s:string30" />
+			<element name="card-sap-material-code" type="tr-019-s:string4"/>
+			<element name="card-material" type="tr-019-s:string18"/>
+			<element name="card-plant" type="tr-019-s:string4"/>
+			<element name="card-storage" type="tr-019-s:string4"/>
+			<element name="card-batch-code" type="tr-019-s:string10"/>			
+			<element name="card-measurement-unit" type="tr-019-s:string3"/>
+			<element name="card-cost-center" type="tr-019-s:string10"/>
+			<element name="card-func-area-long" type="tr-019-s:string4"/>						
+			<element name="card-pep-element" type="tr-019-s:string10"/>
+			<element name="card-flag-mat-sap" type="tr-019-s:string2"/>
+			<element name="ddtv-serial" type="tr-019-s:string30"/>
+			<element name="ddtv-marca" type="tr-019-s:string30"/>
+			<element name="ddtv-modelo" type="tr-019-s:string30"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR_019_S">
+		<sequence>
+			<element name="head" type="tr-019-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-019-s:long9">
+							
+						</element>
+						<element name="equipments">
+							
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-019-s:equipment2" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="packages">
+							
+							<complexType>
+								<sequence>
+									<element name="package" maxOccurs="unbounded" minOccurs="0" type="tr-019-s:string20" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="error-code" type="tr-019-s:long9">
+							
+						</element>
+						<element name="error-code-message" type="tr-019-s:string250">
+							
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-019-s" type="tr-019-s:TR_019_S" />
+</schema>

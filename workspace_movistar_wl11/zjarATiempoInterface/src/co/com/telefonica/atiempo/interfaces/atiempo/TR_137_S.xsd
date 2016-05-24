@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-137-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-137-S">
+		<sequence>
+			<element name="head" type="tr-137-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-137-s:string15" />
+						<element name="error-code" type="tr-137-s:string10" />
+						<element name="error-description" type="tr-137-s:string60" />												
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-137-s" type="tr-137-s:TR-137-S" />
+</schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-516-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-516-S">
+		<sequence>
+			<element name="head" type="tr-516-s:ResponseHeader2" />
+			<!--element name="body">
+				<complexType>
+                    <all maxOccurs="1" minOccurs="1">
+					</all>
+				</complexType>
+			</element-->
+		</sequence>
+	</complexType>
+	<element name="tr-516-s" type="tr-516-s:TR-516-S" />
+</schema>

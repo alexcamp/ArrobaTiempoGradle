@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://atiempo.telefonica.com.co"
+	xmlns:tr-709-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+
+	<complexType name="TR-709-S">
+		<sequence>
+			<element name="head" type="tr-709-s:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence maxOccurs="1" minOccurs="1">
+						<element name="id-source-system"
+							type="tr-709-s:string16" />
+						<element name="id-schedule" type="tr-709-s:string24" />
+						<element name="client-code" type="long" />
+						<element name="client-number"
+							type="tr-709-s:string30" />
+						<element minOccurs="0" name="cameras">
+							<complexType>
+								<sequence maxOccurs="1"
+									minOccurs="1">
+									<element maxOccurs="unbounded"
+										minOccurs="0" name="camera" type="tr-709-s:CameraRequest" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<element name="tr-709-s" type="tr-709-s:TR-709-S" />
+</schema>

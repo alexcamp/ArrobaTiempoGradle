@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_027_S.xsd,v 1.1 2011/03/30 18:21:42 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-027-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="equipment">
+		<sequence>
+			<element name="element-serial" type="tr-027-s:string250" />
+			<element name="element-type" type="tr-027-s:string250" />
+			<element name="equipment-type" type="tr-027-s:string2" />
+			<element name="inventory-type" type="tr-027-s:string250" />
+			<element name="product-service-code" type="tr-027-s:long9" />
+			<element name="inv-posting-date" type="tr-027-s:string8"/>
+			<element name="inv-move-type" type="tr-027-s:string30" />
+			<element name="inv-sap-material-code" type="tr-027-s:string4"/>
+			<element name="inv-material" type="tr-027-s:string18"/>
+			<element name="inv-plant" type="tr-027-s:string4"/>
+			<element name="inv-storage" type="tr-027-s:string4"/>
+			<element name="inv-batch-code" type="tr-027-s:string10"/>			
+			<element name="inv-measurement-unit" type="tr-027-s:string3"/>
+			<element name="inv-cost-center" type="tr-027-s:string10"/>
+			<element name="inv-func-area-long" type="tr-027-s:string4"/>						
+			<element name="inv-pep-element" type="tr-027-s:string10"/>
+			<element name="inv-flag-mat-sap" type="tr-027-s:string2"/>
+			<element name="caracteristica" type="tr-027-s:string250"/>						
+		</sequence>
+	</complexType>
+	<complexType name="TR-027-S">
+		<sequence>
+			<element name="head" type="tr-027-s:ResponseHeader2" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-027-s:long9" />
+						<element name="atis-request-number" type="tr-027-s:long9" />
+
+						<element name="equipments">							
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-027-s:equipment" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-027-s" type="tr-027-s:TR-027-S" />
+</schema>

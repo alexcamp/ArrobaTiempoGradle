@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_007_E.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-007-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-007-E">
+		<sequence>
+			<element name="head" type="tr-007-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-007-e:long9" />
+						<element name="phone-number" type="tr-007-e:int8" />
+						<element name="serial-number" type="tr-007-e:string30">
+						</element>
+						<element name="brand-modem" type="tr-007-e:string30" />
+						<element name="model-number" type="tr-007-e:string30" />
+						<element name="type-modem" type="tr-007-e:string30" />
+						<element name="modem-action" type="tr-007-e:int2">
+						</element>
+						<element name="contractor-id" type="tr-007-e:long10">
+						</element>
+						<element name="modem-posting-date" type="tr-007-e:string8"/>
+						<element name="modem-move-type" type="tr-007-e:string30" />
+						<element name="modem-sap-material-code" type="tr-007-e:string4"/>
+						<element name="modem-material" type="tr-007-e:string18"/>
+						<element name="modem-plant" type="tr-007-e:string4"/>
+						<element name="modem-storage" type="tr-007-e:string4"/>
+						<element name="modem-batch-code" type="tr-007-e:string10"/>			
+						<element name="modem-measurement-unit" type="tr-007-e:string3"/>
+						<element name="modem-cost-center" type="tr-007-e:string10"/>
+						<element name="modem-func-area-long" type="tr-007-e:string4"/>						
+						<element name="modem-pep-element" type="tr-007-e:string10"/>
+						<element name="modem-flag-mat-sap" type="tr-007-e:string2"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-007-e" type="tr-007-e:TR-007-E" />
+</schema>

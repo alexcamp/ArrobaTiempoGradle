@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Class-Path: zjarUtiliesATiempo.jar 
+ zjarutiles.jar 
+ lib/xercesImpl.jar 
+ lib/xmlParserAPIs.jar 
+ lib/xsdbeans.jar 
+ lib/castor-1.0.5.jar 
+ lib/commons-logging.jar
+

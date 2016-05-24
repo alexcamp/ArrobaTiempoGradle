@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_044_E.xsd,v 1.1 2011/03/30 18:22:10 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-044-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR044EEquipment">
+		<sequence>
+			<element name="codigoPS" type="tr-044-e:string15"/>
+			<element name="serial" type="tr-044-e:string50"/>
+			<element name="codigoCaracteristica" type="long"/>
+			<element name="codigoPaquete" type="long"/>			
+		</sequence>
+	</complexType>
+	<complexType name="TR044EClient">
+		<sequence>
+			<element name="apellido" type="tr-044-e:string50"/>
+			<element name="ciudad" type="tr-044-e:string50"/>
+			<element name="codClienteAtis" type="tr-044-e:string50"/>
+			<element name="codCuentaAtis" type="tr-044-e:string50"/>
+			<element name="departamento" type="tr-044-e:string50"/>
+			<element name="direccion" type="tr-044-e:string50"/>
+			<element name="documento" type="tr-044-e:string50"/>
+			<element name="nombre" type="tr-044-e:string50"/>
+			<element name="telefono" type="tr-044-e:string50"/>
+			<element name="tipoDocumento" type="tr-044-e:string50"/>
+			<element name="email" type="tr-044-e:string50"/>			
+		</sequence>
+	</complexType>
+	<complexType name="TR_044_E">
+		<sequence>
+			<element name="head" type="tr-044-e:RequestHeader"/>
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="cliente"  type="tr-044-e:TR044EClient" maxOccurs="unbounded"/>
+						<element name="usuario" type="tr-044-e:string16"/>
+						<element name="numeroPedido" type="tr-044-e:string16"/>
+						<element name="productos">
+							<complexType>
+								<sequence>
+									<element name="producto" type="tr-044-e:TR044EEquipment" maxOccurs="unbounded"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="segmento" type="tr-044-e:string16"/>
+						<element name="numeroAtis" type="tr-044-e:string16"/>
+						<element name="tipoOperacion" type="tr-044-e:string10"/>
+						<element name="operacionComercial" type="long"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-044-e" type="tr-044-e:TR_044_E"/>
+</schema>

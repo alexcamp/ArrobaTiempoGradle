@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_011_E.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-011-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-011-E">
+		<sequence>
+			<element name="head" type="tr-011-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="phone-number" type="tr-011-e:int8" />
+						<element name="services">
+							<complexType>
+								<sequence>
+									<element name="service-type" type="tr-011-e:int6" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="action" type="tr-011-e:int2" />
+						<element name="atis-request-number" type="tr-011-e:long9" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-011-e" type="tr-011-e:TR-011-E" />
+</schema>

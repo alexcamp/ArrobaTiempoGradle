@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_026_S.xsd,v 1.2 2011/05/23 13:42:00 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-026-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="equipment">
+		<sequence>
+			<element name="element-serial" type="tr-026-s:string250" />
+			<element name="brand" type="tr-026-s:string250" />
+			<element name="model" type="tr-026-s:string250" />
+			<element name="equipment-type" type="tr-026-s:string2" />
+			<element name="element-type" type="tr-026-s:string30" />
+			<element name="cellphone" type="tr-026-s:string11" />
+			<element name="material-sap" type="tr-026-s:string18" />
+			<element name="plant-sap" type="tr-026-s:string4" />
+			<element name="storage-sap" type="tr-026-s:string4" />
+			<element name="num-purch-doc-sap" type="tr-026-s:string10" />
+			<element name="num-pos-purch-doc-sap" type="tr-026-s:int5" />
+		</sequence>
+	</complexType>
+	<complexType name="TR-026-S">
+		<sequence>
+			<element name="head" type="tr-026-s:ResponseHeader2" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-026-s:long9" />
+						<element name="atis-request-number" type="tr-026-s:long9" />
+
+						<element name="equipments">							
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-026-s:equipment" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-026-s" type="tr-026-s:TR-026-S" />
+</schema>

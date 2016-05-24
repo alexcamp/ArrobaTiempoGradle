@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="CODIGO_ST" name="CODIGO_ST" comments="" primaryKey="PK_CODIGO_ST">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="CODIGO" name="CODIGO">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176753535843" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TIPO" name="TIPO">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176753535843">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="DESCRIPCION" name="DESCRIPCION" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176753535844" characterSet="800" length="32">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="CORRELATIVO" name="CORRELATIVO">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176753535844">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_CODIGO_ST" name="PK_CODIGO_ST" members="CORRELATIVO" constraint="SQLConstraint_1176753535843">
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_REGLA_AREA_GES_COD_ESTADO.tblxmi#FK_COD_ST"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1176753535843" name="PK_CODIGO_ST" type="PRIMARYKEY" primaryKey="PK_CODIGO_ST"/>
+</RDBSchema:RDBTable>

@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd" version="5" xmlns="http://java.sun.com/xml/ns/javaee">
+    <display-name>zearAll</display-name>
+    <module>
+    	<ejb>zejbBandeja.jar</ejb>
+    </module>
+    <module>
+        <ejb>zejbComun.jar</ejb>
+	</module>
+	<module>
+        <ejb>zejbClienteEmuladorSigres.jar</ejb>
+	</module>
+	<module>
+        <ejb>zejbCommunucatorWS.jar</ejb>
+	</module>
+	<module>
+        <ejb>zejbComunWF.jar</ejb>
+	</module>
+	<module>
+        <ejb>zejbEmuladorSigres.jar</ejb>
+	</module>
+	<module>
+        <ejb>zejbSoltec.jar</ejb>
+	</module>
+	<module>
+        <ejb>zejbVpiStbBa.jar</ejb>
+    </module>
+    <module>
+        <web>
+            <web-uri>zwebBandejaWL.war</web-uri>
+            <context-root>bandejaweb</context-root>
+        </web>
+    </module>
+</application>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="DSLAM_CONEC6_APSC_LINEA" name="DSLAM_APSC_LINEA" comments="" primaryKey="P_PK_DSLAM_CONEC6_">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_DSLAM" name="ID_DSLAM">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176386089984">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_CONECTOR" name="ID_CONECTOR" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176386089985">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="IP" name="IP" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176386089984" length="15">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TIPO_DSLAM" name="TIPO_DSLAM" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176386089985" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_02_RESPUESTA" name="FK_02_RESPUESTA" members="ID_CONECTOR" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176386089984">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_RESPUESTA_CONEC6_APSC_LINEA.tblxmi#P_PKRESPUESTA_CONE"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="P_PK_DSLAM_CONEC6_" name="P_PK_DSLAM_CONEC6_" members="ID_DSLAM" constraint="SQLConstraint_1176386089985"/>
+  <constraints xmi:id="SQLConstraint_1176386089984" name="FK_02_RESPUESTA" type="FOREIGNKEY" referenceByKey="FK_02_RESPUESTA"/>
+  <constraints xmi:id="SQLConstraint_1176386089985" name="P_PK_DSLAM_CONEC6_" type="PRIMARYKEY" primaryKey="P_PK_DSLAM_CONEC6_"/>
+</RDBSchema:RDBTable>

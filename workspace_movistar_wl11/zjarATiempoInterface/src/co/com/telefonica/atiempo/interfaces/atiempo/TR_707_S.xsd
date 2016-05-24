@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-707-s="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/> 
+   <complexType name="TR_707_S">
+   <sequence>
+      <element name="head" type="tr-707-s:RequestHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+          <sequence>
+            <element name="comercial-product-identification-number" type="tr-707-s:string40" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+    </complexType>
+    <element name="tr-707-s" type="tr-707-s:TR_707_S" />
+</schema>

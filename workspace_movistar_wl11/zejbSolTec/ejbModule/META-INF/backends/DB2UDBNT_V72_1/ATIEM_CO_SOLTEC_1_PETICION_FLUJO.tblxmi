@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="PETICION_FLUJO" name="PETICION_FLUJO" comments="" primaryKey="P_PEFL_PRIMARY">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PEFL_ID" name="PEFL_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176337914546">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PETI_NUMERO" name="PETI_NUMERO">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176337914547">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="OPCO_ID" name="OPCO_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176337914548">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ACTI_ID" name="ACTI_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176337914549">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PRSE_ID" name="PRSE_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176337914550">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PEFL_ORDEN" name="PEFL_ORDEN">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176337914551">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PEFL_ESTADO" name="PEFL_ESTADO" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176337914546" length="6">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_04_PS_ST" name="FK_04_PS_ST" members="PRSE_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176337914546">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRODUCTO_SERVICIO_ST.tblxmi#PRSE_PK"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_ACTI_2_PEFL" name="FK_ACTI_2_PEFL" members="ACTI_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176337914547">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_ACTIVIDAD_FLUJO.tblxmi#ACTI_PK"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_PETI_2_PEFL" name="FK_PETI_2_PEFL" members="PETI_NUMERO" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176337914548">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_ST.tblxmi#P_KEY_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="P_PEFL_PRIMARY" name="P_PEFL_PRIMARY" members="PEFL_ID" constraint="SQLConstraint_1176337914549"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_OPCO_2_PEFL" name="FK_OPCO_2_PEFL" members="OPCO_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176337996421">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_OPERACION_COMERCIAL_ST.tblxmi#OPCO_PK"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1176337914546" name="FK_04_PS_ST" type="FOREIGNKEY" referenceByKey="FK_04_PS_ST"/>
+  <constraints xmi:id="SQLConstraint_1176337914547" name="FK_ACTI_2_PEFL" type="FOREIGNKEY" referenceByKey="FK_ACTI_2_PEFL"/>
+  <constraints xmi:id="SQLConstraint_1176337914548" name="FK_PETI_2_PEFL" type="FOREIGNKEY" referenceByKey="FK_PETI_2_PEFL"/>
+  <constraints xmi:id="SQLConstraint_1176337914549" name="P_PEFL_PRIMARY" type="PRIMARYKEY" primaryKey="P_PEFL_PRIMARY"/>
+  <constraints xmi:id="SQLConstraint_1176337996421" name="FK_OPCO_2_PEFL" type="FOREIGNKEY" referenceByKey="FK_OPCO_2_PEFL"/>
+</RDBSchema:RDBTable>

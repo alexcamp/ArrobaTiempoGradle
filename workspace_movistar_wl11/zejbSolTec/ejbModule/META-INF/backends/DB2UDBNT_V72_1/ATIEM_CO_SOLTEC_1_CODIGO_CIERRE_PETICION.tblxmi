@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="CODIGO_CIERRE_PETICION" name="CODIGO_CIERRE_PETICION" comments="" primaryKey="PK_CIERRE">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_CIERRE" name="ID_CIERRE">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1184357729109">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_CIERRE" name="COD_CIERRE">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1184357729109" length="6">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_AVE_CD" name="COD_AVE_CD">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1184357729110">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ACT_ID" name="ACT_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1184357729111">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="USUA_ID" name="USUA_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1184357729112">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FECHA" name="FECHA">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1184357729109" precision="2">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_CIERRE_PET" name="FK_CIERRE_PET" members="COD_AVE_CD" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1184357729109">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_ST.tblxmi#P_KEY_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_CIERRE" name="FK_CIERRE" members="COD_CIERRE" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1184357729110">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CODIGO_CIERRE.tblxmi#PK_COD_CIERRE"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_CIERRE" name="PK_CIERRE" members="ID_CIERRE" constraint="SQLConstraint_1184357729111"/>
+  <constraints xmi:id="SQLConstraint_1184357729109" name="FK_CIERRE_PET" type="FOREIGNKEY" referenceByKey="FK_CIERRE_PET"/>
+  <constraints xmi:id="SQLConstraint_1184357729110" name="FK_CIERRE" type="FOREIGNKEY" referenceByKey="FK_CIERRE"/>
+  <constraints xmi:id="SQLConstraint_1184357729111" name="PK_CIERRE" type="PRIMARYKEY" primaryKey="PK_CIERRE"/>
+</RDBSchema:RDBTable>

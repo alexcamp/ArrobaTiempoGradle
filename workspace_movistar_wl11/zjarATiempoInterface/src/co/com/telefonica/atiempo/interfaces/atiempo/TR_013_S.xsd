@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_013_S.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-013-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR001SError">
+		<sequence>
+			<element name="code" type="tr-013-s:long9" />
+			<element name="description" type="tr-013-s:string250" />
+		</sequence>
+	</complexType>
+	<complexType name="TR-013-S">
+		<sequence>
+			<element name="head" type="tr-013-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-013-s:long9" />
+						<element name="status" type="tr-013-s:int2" />
+						<element name="errors">
+							<complexType>
+								<sequence>
+									<element name="error" type="tr-013-s:TR001SError" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="actual-port" type="tr-013-s:string20" />
+						<element name="actual-pots" type="tr-013-s:string20" />
+						<element name="actual-adsl" type="tr-013-s:string20" />
+						<element name="actual-lan-mask" type="tr-013-s:string100" />
+						<element name="actual-dslam-ip" type="tr-013-s:string15" />
+						<element name="actual-lan-ip" type="tr-013-s:string100" />
+						<element name="actual-wan-ip" type="tr-013-s:string100" />
+						<element name="actual-frame" type="tr-013-s:string20" />
+						<element name="actual-vpivci" type="tr-013-s:string20" />
+						<element name="actual-vpivci-network" type="tr-013-s:string20" />
+						<element name="actual-slot" type="tr-013-s:string20" />
+						<element name="new-port" type="tr-013-s:string20" />
+						<element name="new-pots" type="tr-013-s:string20" />
+						<element name="new-adsl" type="tr-013-s:string20" />
+						<element name="new-lan-mask" type="tr-013-s:string100" />
+						<element name="new-dslam-ip" type="tr-013-s:string15" />
+						<element name="new-lan-ip" type="tr-013-s:string100" />
+						<element name="new-wan-ip" type="tr-013-s:string100" />
+						<element name="new-frame" type="tr-013-s:string20" />
+						<element name="new-vpivci" type="tr-013-s:string20" />
+						<element name="new-vpivci-network" type="tr-013-s:string20" />
+						<element name="new-slot" type="tr-013-s:string20" />
+						<element name="father-email" type="tr-013-s:string50" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-013-s" type="tr-013-s:TR-013-S" />
+</schema>

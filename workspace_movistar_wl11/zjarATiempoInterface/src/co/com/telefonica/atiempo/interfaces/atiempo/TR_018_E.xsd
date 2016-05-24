@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_018_E.xsd,v 1.1 2011/03/30 18:21:42 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-018-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="cards">
+		<sequence>
+			<element name="card" type="tr-018-e:string30" />
+			<element name="action" type="tr-018-e:int1" />
+			<element name="posting-date" type="tr-018-e:string8"/>
+			<element name="move-type" type="tr-018-e:string30"/>
+			<element name="material-code" type="tr-018-e:string4"/>
+			<element name="material" type="tr-018-e:string18"/>
+			<element name="plant" type="tr-018-e:string4"/>
+			<element name="storage" type="tr-018-e:string4"/>
+			<element name="batch-code" type="tr-018-e:string10"/>
+			<element name="measurement-unit" type="tr-018-e:string3"/>
+			<element name="cost-center" type="tr-018-e:string10"/>
+			<element name="func-area-long" type="tr-018-e:string4"/>
+			<element name="pep-element" type="tr-018-e:string10"/>
+			<element name="flag-mat-sap" type="tr-018-e:string2"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR018EEquipment">
+		<sequence>
+			<element name="cas-id" type="tr-018-e:string30" />
+			<element name="action" type="tr-018-e:int1" />
+			<element name="posting-date" type="tr-018-e:string8"/>
+			<element name="move-type" type="tr-018-e:string30"/>
+			<element name="material-code" type="tr-018-e:string4"/>
+			<element name="material" type="tr-018-e:string18"/>
+			<element name="plant" type="tr-018-e:string4"/>
+			<element name="storage" type="tr-018-e:string4"/>
+			<element name="batch-code" type="tr-018-e:string10"/>
+			<element name="measurement-unit" type="tr-018-e:string3"/>
+			<element name="cost-center" type="tr-018-e:string10"/>
+			<element name="func-area-long" type="tr-018-e:string4"/>
+			<element name="pep-element" type="tr-018-e:string10"/>
+			<element name="flag-mat-sap" type="tr-018-e:string2"/>
+			<element name="ddtv-serial" type="tr-018-e:string30"/>
+			<element name="ddtv-marca" type="tr-018-e:string30"/>
+			<element name="ddtv-modelo" type="tr-018-e:string30"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR_018_E">
+		<sequence>
+			<element name="head" type="tr-018-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-018-e:long9">
+							
+						</element>
+						<element name="pc-id" type="tr-018-e:string30">
+							
+						</element>
+						<element name="equipments">
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-018-e:TR018EEquipment" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="cards">
+						
+							<complexType>
+								<sequence>
+									<element name="card" type="tr-018-e:cards" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-018-e" type="tr-018-e:TR_018_E" />
+</schema>

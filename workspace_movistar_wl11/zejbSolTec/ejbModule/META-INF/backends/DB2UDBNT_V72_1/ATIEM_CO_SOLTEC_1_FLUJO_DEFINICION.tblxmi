@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="FLUJO_DEFINICION" name="FLUJO_DEFINICION" comments="" primaryKey="P_FLAC_PRIMARY">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FLDE_ID" name="FLDE_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176334820718">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FLUJ_ID" name="FLUJ_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176334820719">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ACTI_ID" name="ACTI_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176334820720">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ACT_ACTI_ID" name="ACT_ACTI_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176334820721">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_01_FLUJO" name="FK_01_FLUJO" members="FLUJ_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176334820718">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FLUJO.tblxmi#P_FLUJ_PRIMARY"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_02_FLUJ_ACTIV" name="FK_02_FLUJ_ACTIV" members="ACTI_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176334820719">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_ACTIVIDAD_FLUJO.tblxmi#ACTI_PK"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="P_FLAC_PRIMARY" name="P_FLAC_PRIMARY" members="FLDE_ID" constraint="SQLConstraint_1176334820720"/>
+  <constraints xmi:id="SQLConstraint_1176334820718" name="FK_01_FLUJO" type="FOREIGNKEY" referenceByKey="FK_01_FLUJO"/>
+  <constraints xmi:id="SQLConstraint_1176334820719" name="FK_02_FLUJ_ACTIV" type="FOREIGNKEY" referenceByKey="FK_02_FLUJ_ACTIV"/>
+  <constraints xmi:id="SQLConstraint_1176334820720" name="P_FLAC_PRIMARY" type="PRIMARYKEY" primaryKey="P_FLAC_PRIMARY"/>
+</RDBSchema:RDBTable>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: IT_010_S.xsd,v 1.1 2011/03/30 18:20:03 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:it-010-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="IT-010-S">
+		<sequence>
+			<element name="head" type="it-010-s:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="breakdown-number" type="it-010-s:long9" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="it-010-s" type="it-010-s:IT-010-S" />
+</schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TTR_800_S_ 20/05/2015 INSTALAR TOA @DCARNDENA $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-800-s="http://atiempo.telefonica.com.co">
+    <include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR_800_S">
+		<sequence>
+			<element name="head"/>
+			<element name="body">
+						<complexType>
+							<sequence>
+								<element name="XA_SOURCE_SYSTEMR" type="tr-800-s:string250" maxOccurs="1" minOccurs="1"/>
+								<element name="id_actuacion" type="tr-800-s:string250" maxOccurs="1" minOccurs="1"/>
+								<element name="XA_ORDER_ATIEMPO" type="tr-800-s:string250" maxOccurs="1" minOccurs="1"/>
+								<element name="XA_ORDER_ATIS" type="tr-800-s:string250" maxOccurs="1" minOccurs="1"/>
+								<element name="XA_ORDER_COD_ERR" type="tr-800-s:string250" maxOccurs="1" minOccurs="1"/>
+								<element name="XA_ORDER_DESC_ERR" type="tr-800-s:string250" maxOccurs="1" minOccurs="0"/>
+							</sequence>
+						</complexType>
+			</element>
+		</sequence>
+    </complexType>
+  <element name="tr-800-s" type="tr-800-s:TR_800_S"/>
+</schema>

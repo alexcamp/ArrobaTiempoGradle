@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<acciones>
+	<accion nombre="accionNoAutorizada" vista="mensajeErrorAutorizacion" />
+	<accion nombre="verResultadoGrabacion" vista="verResultadoGrabacion" />
+	
+	<accion nombre="verControlTecnico" clase="com.telefonica_chile.bandeja.web.acciones.VerControlTecnicoAcc" vista="verBandejaControlTecnico" />
+	<accion nombre="verReporteTerreno" clase="com.telefonica_chile.bandeja.web.acciones.VerReporteTerrenoAcc" vista="verBandejaReporteTerreno" />
+	
+	<accion nombre="iframeReporteTerreno" clase="com.telefonica_chile.bandeja.web.acciones.GeneraReporteTerrenoAcc" vista="vistaReporteTerreno" />
+	
+	<accion nombre="verBandejaBackOC" clase="com.telefonica_chile.bandeja.web.acciones.VerBandejaBackOCAcc" vista="verBackOffice" />
+	<accion nombre="verBandejaEsperaBA" clase="com.telefonica_chile.bandeja.web.acciones.VerBandejaEsperaBAAcc" vista="verBandejaEsperaBA" />
+	<accion nombre="verBandejaSupCo" clase="com.telefonica_chile.bandeja.web.acciones.VerBandejaSupCoAcc" vista="verBandejaSupCo" />
+	<accion nombre="peticionesSupervisado" clase="com.telefonica_chile.bandeja.web.acciones.PeticionesSupervisadoAcc" vista="verBandejaSupervisadoCo" />
+	
+	<accion nombre="verBandejaEsperaTerra" clase="com.telefonica_chile.bandeja.web.acciones.VerBandejaEsperaTerraAcc" vista="verBandejaEsperaTerra" />
+	
+    <!-- adocarmo - CR9664 - inicio -->
+	<accion nombre="verBandejaEsperaAula365" clase="com.telefonica_chile.bandeja.web.acciones.VerBandejaEsperaAula365Acc" vista="verBandejaEsperaAula365" />
+    <!-- adocarmo - CR9664 - fin -->	
+    	
+	<accion nombre="verNuevaBandejaTorreControl" clase="com.telefonica_chile.bandeja.web.acciones.VerNuevaBandejaTorreControlAcc" vista="verNuevaBandejaTorreControl" />
+	
+	<accion nombre="verNuevaTorreControl" clase="com.telefonica_chile.bandeja.web.acciones.VerNuevaTorreControlAcc" vista="verNuevaTorreControl" />	
+
+	<accion nombre="verMarcoTorreControl" clase="com.telefonica_chile.bandeja.web.acciones.VerMarcoTorreControlAcc" vista="verMarcoTorreControl">
+		<mapa resultado="nuevoMarco" vista="nuevoMarco"/>
+	</accion>
+	
+	
+	<accion nombre="verGestionInbound" clase="com.telefonica_chile.bandeja.web.acciones.VerBuscadorInboundAcc" vista="verBuscadorInbound" />
+	<accion nombre="verGestionOutbound" clase="com.telefonica_chile.bandeja.web.acciones.VerBuscadorOutboundAcc" vista="verBuscadorOutbound" />
+	<accion nombre="verBuscadorGesOS" clase="com.telefonica_chile.bandeja.web.acciones.VerBuscadorGesOSAcc" vista="verBuscadorGesOS" />
+	<accion nombre="verPTVPI" clase="com.telefonica_chile.bandeja.web.acciones.VerPTVPIAcc" vista="verPTVPI" />
+
+	<accion nombre="verInstalarEquipos" clase="com.telefonica_chile.bandeja.web.acciones.VerInstalarEquiposAcc" vista="verBuscadorInstalarEquipos" />
+
+	<accion nombre="logoff" clase="com.telefonica_chile.bandeja.web.acciones.LogoffAcc" vista="formLogout" />
+	
+	<accion nombre="verGestionRecogidaEquipos" clase="com.telefonica_chile.bandeja.web.acciones.VerBuscadorRecogidaEquiposAcc" vista="verGestionRecogidaEquipos" />
+	<accion nombre="verBuscadorRecogidaEquipos" clase="com.telefonica_chile.bandeja.web.acciones.VerBuscadorRecogidaEquiposAcc" vista="verBuscadorRecogidaEquipos" />
+
+	
+	<accion nombre="errorGenerico" vista="errorGenerico" />
+	
+	
+	<!-- Password's Related -->
+	<accion
+		nombre="recuperarClave"
+		clase="com.telefonica_chile.bandeja.web.acciones.claves.RecuperarClaveAcc"
+		vista="">
+		
+		<mapa resultado="formNuevaClave" vista="formNuevaClave" />
+	</accion>
+	
+	<accion
+		nombre="cambiarClave"
+		clase="com.telefonica_chile.bandeja.web.acciones.claves.CambiarClaveAcc"
+		vista="">
+		
+		<mapa resultado="formCambiarClave" vista="formCambiarClave" />
+		<mapa resultado="informeCambioClave" vista="informeCambioClave" />
+	</accion>
+	
+	<accion nombre="ListadoMasivo" clase="com.telefonica_chile.bandeja.web.acciones.ListadoMasivoAcc" vista="listadoMasivo" />
+	<accion nombre="VerUploadFile" clase="com.telefonica_chile.bandeja.web.acciones.VerUploadFileAcc"	vista="uploadFileAM" />
+	<accion nombre="UploadFile" clase="com.telefonica_chile.bandeja.web.acciones.UploadFileAcc"	vista="uploadFileAM" />
+	<accion nombre="VerUploadFileST" clase="com.telefonica_chile.bandeja.web.acciones.VerUploadFileAcc"	vista="uploadFileAMST" />
+	
+	<accion nombre="verBandejaEsperaSigres" clase="com.telefonica_chile.bandeja.web.acciones.VerBandejaEsperaSigresAcc" vista="verBandejaEsperaSigres" />
+
+	<accion nombre="operacionMasivaModem" clase="com.telefonica_chile.bandeja.web.acciones.OperacionMasivaModemAcc" >
+		<mapa resultado="operacionMasivaModem" vista="operacionMasivaModem"></mapa>		
+		<mapa resultado="respuestaMasivaModem" vista="respuestaMasivaModem"></mapa>		
+	</accion>
+	
+	<accion nombre="CierreMasivoVAB" clase="com.telefonica_chile.bandeja.web.acciones.RealizarCierresAcc" vista="volverBandeja" />
+
+</acciones>
+
+

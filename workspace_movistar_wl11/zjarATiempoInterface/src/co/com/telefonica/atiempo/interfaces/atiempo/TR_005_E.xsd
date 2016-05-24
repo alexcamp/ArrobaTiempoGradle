@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_005_E.xsd,v 1.1 2011/03/30 18:21:05 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-005-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-005-E">
+		<sequence>
+			<element name="head" type="tr-005-e:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="breakdown-number" type="tr-005-e:long9" />
+						<element name="client-code" type="tr-005-e:long9" />
+						<element name="contracted-product-service-code" type="tr-005-e:long12" />
+						<element name="comercial-product-identification" type="tr-005-e:string2" />
+						<element name="comercial-product-identification-number" type="tr-005-e:string40" />
+						<element name="comercial-product-identification-number-TV" type="tr-005-e:string40" />
+						<element name="breakdown-open-code" type="tr-005-e:string5" />
+						<element name="breakdown-close-code" type="tr-005-e:string6" />
+						<element name="breakdown-symptom-code" type="tr-005-e:string2" />
+						<element name="breakdown-test-response-code" type="tr-005-e:string2" />
+						<element name="management-area-code" type="tr-005-e:long9" />
+						<element name="breakdown-status-code" type="tr-005-e:char" />
+						<element name="request-number" type="tr-005-e:long9" />
+						<element name="massive-breakdown-code" type="tr-005-e:long9" />
+						<element name="breakdown-original-code" type="tr-005-e:long9" />
+						<element name="climant-document-type" type="tr-005-e:string3" />
+						<element name="climant-document-number" type="tr-005-e:string20" />
+						<element name="climant-document-verification" type="tr-005-e:string2" />
+						<element name="climant-name" type="tr-005-e:string64" />
+						<element name="climant-first-lastname" type="tr-005-e:string40" />
+						<element name="climant-second-lastname" type="tr-005-e:string40" />
+						<element name="client-relationship-code" type="tr-005-e:string2" />
+						<element name="climant-relationship-other-description" type="tr-005-e:string40" />
+						<element name="notification-way-code" type="tr-005-e:char" />
+						<element name="contact-name" type="tr-005-e:string20" />
+						<element name="contact-phone" type="tr-005-e:string20" />
+						<element name="contact-name-2" type="tr-005-e:string20" />
+						<element name="contact-phone-2" type="tr-005-e:string20" />
+						<element name="communication-media-code" type="tr-005-e:char" />
+						<element name="category-code" type="tr-005-e:string2" />
+						<element name="breakdown-priority-code" type="tr-005-e:char" />
+						<element name="max-resolution-term" type="tr-005-e:long9" />
+						<element name="days-to-alarm" type="tr-005-e:long9" />
+						<element name="answer-indicator" type="tr-005-e:char" />
+						<element name="collect-indicator" type="tr-005-e:char" />
+						<element name="delay-indicator" type="tr-005-e:char" />
+						<element name="breakdown-reiterate-indicator" type="tr-005-e:char" />
+						<element name="extreme-defect-indicator" type="tr-005-e:char" />
+						<element name="lack-of-service-indicator" type="tr-005-e:char" />
+						<element name="material-amount-indicator" type="tr-005-e:char" />
+						<element name="completed-service-indicator" type="tr-005-e:char" />
+						<element name="updated-equipment-indicator" type="tr-005-e:char" />
+						<element name="make-appoitment-indicator" type="tr-005-e:char" />
+						<element name="appoitment-date" type="date" />
+						<element name="breakdown-commitment-date" type="dateTime" />
+						<element name="breakdown-open-date" type="dateTime" />
+						<element name="breakdown-close-date" type="dateTime" />
+						<element name="second-line-number" type="tr-005-e:string20" />
+						<element name="breakdown-source" type="tr-005-e:char" />
+						<element name="breakdown-cancelation-code" type="tr-005-e:string2" />
+						<element name="breakdown-test-description" type="tr-005-e:string20" />
+						<element name="emitting-user" type="tr-005-e:string16" />
+						<element name="last-modification-user" type="tr-005-e:string16" />
+						<element name="emmiting-time" type="dateTime" />
+						<element name="last-modification-time" type="dateTime" />
+						<element name="information-element-length" type="tr-005-e:int4" />
+						<element name="appoitment-observation" type="tr-005-e:string100" />
+						<element name="information-element-length-synonym" type="tr-005-e:int4" />
+						<element name="breakdown-observation" type="tr-005-e:string100" />
+						<element name="breakdown-type-code" type="tr-005-e:string2" />
+						<element name="massive-breakdown-syntom-code" type="tr-005-e:string2" />
+						<element name="product-service-code" type="tr-005-e:long9" />
+						<element name="massive-breakdown-status-code" type="tr-005-e:string2" />
+						<element name="massive-breakdown-commitment-date" type="tr-005-e:string10" />
+						<element name="massive-breakdown-open-date" type="tr-005-e:string10" />
+						<element name="massive-breakdown-close-date" type="tr-005-e:string10" />
+						<element name="massive-breakdown-external-code" type="tr-005-e:string20" />
+						<element name="information-component-length-synonym" type="tr-005-e:int4" />
+						<element name="massive-breakdown-observation" type="tr-005-e:string100" />
+						<element name="massive-breakdown-motive" type="tr-005-e:string2" />
+						<element name="street-type" type="tr-005-e:string3" />
+						<element name="street-name" type="tr-005-e:string40" />
+						<element name="street-number" type="tr-005-e:string6" />
+						<element name="complements-description-1" type="tr-005-e:string40" />
+						<element name="complements-description-2" type="tr-005-e:string40" />
+						<element name="department-code" type="tr-005-e:string2" />
+						<element name="city-code" type="tr-005-e:string8" />
+						<element name="account-segment-code" type="tr-005-e:long9" />
+						<element name="account-subsegment-code" type="tr-005-e:long9" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-005-e" type="tr-005-e:TR-005-E" />
+</schema>

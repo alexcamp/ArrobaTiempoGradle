@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_048_E.xsd,v 1.1 2011/03/30 18:22:55 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-048-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-048-E">
+		<sequence>
+			<element name="head" type="tr-048-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-048-e:string16" />
+						<element name="username" type="tr-048-e:string16"/>
+						<element name="password" type="tr-048-e:string16"/>
+						<element name="email" type="tr-048-e:string40"/>
+						<element name="comercial-operation" type="tr-048-e:string64"/>
+                        <element name="product-service" type="tr-048-e:string64"/>
+                        <element name="phone-number" type="tr-048-e:int8"/>
+                        <element name="segment" type="tr-048-e:string30"/>
+                        <element name="sub-segment" type="tr-048-e:string30"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-048-e" type="tr-048-e:TR-048-E" />
+</schema>

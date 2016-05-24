@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_702_E.xsd,v 1.1 2011/03/30 18:23:12 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-702-e="http://atiempo.telefonica.com.co">
+    <include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR_702_E">
+    <sequence>
+      <element name="head" type="tr-702-e:RequestHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+          <sequence maxOccurs="1" minOccurs="1">
+            <element name="id-system-origin" type="tr-702-e:string50"/>
+            <element name="id-schedule" type="tr-702-e:string64"/>            
+            <element name="id-type" type="tr-702-e:string3"/>            
+            <element name="customer-id" type="tr-702-e:string30"/>
+            <element name="atis-request-number" type="tr-702-e:string30"/>
+            <element name="telephone-number" type="tr-702-e:string30"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-702-e" type="tr-702-e:TR_702_E"/>
+</schema>

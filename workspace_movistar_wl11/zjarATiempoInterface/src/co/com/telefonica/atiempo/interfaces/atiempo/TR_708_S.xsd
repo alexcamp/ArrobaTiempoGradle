@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-708-s="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/>
+   <complexType name="TR708SEquipment">
+	 	<sequence>
+			<element name="deco-code" type="tr-708-s:string64"/>
+		    <element name="deco-brand" type="string"/>
+		    <element name="deco-type" type="string"/>
+			<element name="deco-serial-number" type="tr-708-s:string30"/>
+		    <element name="deco-cass-id" type="tr-708-s:string150"/>
+		    <element name="card-code" type="tr-708-s:string64"/>
+		    <element name="card-serial-number" type="tr-708-s:string30"/>
+		</sequence>
+   </complexType>
+
+   <complexType name="TR_708_S">
+   <sequence>
+      <element name="head" type="tr-708-s:RequestHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+			<sequence>
+            <element name="id-source-system" type="tr-708-s:string16"/>
+            <element name="id-schedule" type="tr-708-s:string24"/>
+            <element name="task-type-code" type="long"/>
+            <element name="client-code" type="long"/>
+            <element name="client-number" type="tr-708-s:string30"/>
+            <element name="city" type="string"/>
+            <element name="location-county" type="tr-708-s:string30"/>
+            <element name="action" type="tr-708-s:string10"/>
+			<element name="atis-request-number" type="tr-708-s:string150"/>
+            <element name="equipments">
+              <complexType>
+  				 <sequence>
+                    <element maxOccurs="unbounded" name="equipment" type="tr-708-s:TR708SEquipment"/>
+				 </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-708-s" type="tr-708-s:TR_708_S"/>
+</schema>

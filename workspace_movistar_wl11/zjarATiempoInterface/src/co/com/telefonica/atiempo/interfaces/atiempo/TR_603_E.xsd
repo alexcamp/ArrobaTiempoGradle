@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-603-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<element name="equipmentFTTC">
+							<complexType>
+								<sequence>
+									<element name="vendor" type="tr-603-e:string150"/>
+								    <element name="model" type="tr-603-e:string150"/>
+								    <element name="network" type="tr-603-e:string150"/>
+								    <element name="name" type="tr-603-e:string150"/>
+								    <element name="ip" type="tr-603-e:string150"/>
+								    <element name="password" type="tr-603-e:string150"/>
+								    <element name="telnetuser" type="tr-603-e:string150  "/>
+								    <element name="telnetpassword" type="tr-603-e:string150  "/>
+								</sequence>
+							</complexType>
+						</element>	
+						<element name="endPointType">
+							<complexType>
+								<sequence>
+									<element name="rack" type="long"/>
+								    <element name="subrack" type="tr-603-e:string250"/>
+								    <element name="slot" type="tr-603-e:long16"/>
+								    <element name="port" type="tr-603-e:string150  "/>
+								    <element name="desc" type="tr-603-e:string150  "/>
+								    <element name="vpi" type="tr-603-e:string150  "/>
+								    <element name="vci" type="tr-603-e:string150  "/>
+								</sequence>
+							</complexType>
+						</element>	
+						
+						<element name="sippstData">
+							<complexType>
+								<sequence>
+									<element name="phonenumber" type="tr-603-e:string150  "/>
+								    <element name="authuser" type="tr-603-e:string150  "/>
+								    <element name="authpass" type="tr-603-e:string150  "/>
+								    <element name="callhold" type="tr-603-e:string150  "/>
+								    <element name="threeparty" type="tr-603-e:string150  "/>
+								    <element name="cw" type="tr-603-e:string150  "/>
+								    <element name="hottime" type="tr-603-e:string150 " minOccurs="0" />
+								    <element name="hotlinenum" type="tr-603-e:string150" minOccurs="0" />
+								    <element name="ct" type="tr-603-e:string150  "/>
+								    <element name="dc" type="tr-603-e:string150  "/>
+								    <element name="conf" type="tr-603-e:string150  "/>
+								    <element name="hotline" type="tr-603-e:string150" minOccurs="0" />			       
+								</sequence>
+							</complexType>
+						</element>	
+	<complexType name="TR-603-E">
+		<sequence>
+			<element name="head" type="tr-603-e:RequestHeader" />
+			<element name="body">
+			<complexType>
+					<sequence>	
+	                   <element name="atiempo-request-number" type="tr-603-e:string50" />
+	                   <element name="operation" type="tr-603-e:string50" />
+	                   <element name="equipment" type="tr-603-e:string250"/>
+				       <element name="endPointType" type="tr-603-e:string250"/>
+					   <element name="sippstData" type="tr-603-e:string250"/>	
+	                 </sequence>
+			</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-603-e" type="tr-603-e:TR-603-E" />
+</schema>
+

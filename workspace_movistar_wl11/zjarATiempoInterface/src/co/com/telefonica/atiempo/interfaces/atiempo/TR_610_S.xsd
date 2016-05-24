@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-610-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR-610-S">
+	  <sequence>
+        <element name="head" type="tr-610-s:ResponseHeaderAgendaSC"/>
+        <element name="body">
+          <complexType>
+            <sequence maxOccurs="1" minOccurs="1">
+              <element name="atiempo-request-number" type="tr-610-s:long9"/>
+              <element name="client-id-type" type="string"/>
+			  <element name="client-id-number" type="string"/>
+			  <element name="sales-value" type="decimal"/>
+			  <element name="sales-number" type="int"/>
+			  <element name="rate-plan" type="int"/>
+			  <element name="modem-serial-number" type="tr-610-s:string30"/>
+			  <element name="icc" type="string"/>
+			  <element name="observation" type="tr-610-s:string200"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+  </complexType>
+  <element name="tr-610-s" type="tr-610-s:TR-610-S"/>
+</schema>

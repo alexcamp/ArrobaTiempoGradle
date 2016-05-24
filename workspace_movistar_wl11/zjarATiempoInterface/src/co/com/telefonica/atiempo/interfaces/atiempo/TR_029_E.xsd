@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-029-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	
+	<complexType name="TR029EPosition">
+		<sequence>
+			<element name="pos-doc-mat" type="tr-029-e:string4"/>
+			<element name="material" type="tr-029-e:string18"/>
+			<element name="plant" type="tr-029-e:string4"/>
+			<element name="storage" type="tr-029-e:string4"/>
+			<element name="mat-quantity" type="tr-029-e:string16"/>
+			<element name="num-purchasing-doc" type="tr-029-e:string10"/>
+			<element name="num-pos-purch-doc" type="tr-029-e:int5"/>
+			<element name="segment" type="tr-029-e:string10"/>
+			<element name="serials">
+				<complexType>
+					<sequence>
+						<element name="serial" type="tr-029-e:string18" minOccurs="0" maxOccurs="unbounded"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="TR-029-E">
+		<sequence>
+			<element name="head" type="tr-029-e:RequestHeaderAgendaSC"/>
+				<element name="body">
+					<complexType>
+						<sequence>
+							<element name="execution-date" type="tr-029-e:string8"/>
+							<element name="execution-time" type="tr-029-e:string6"/>
+							<element name="atiempo-request-number" type="tr-029-e:long9"/>
+							<element name="posting-date" type="tr-029-e:string8"/>
+							<element name="atis-request-number" type="tr-029-e:string16"/>					
+							<element name="positions">
+								<complexType>
+									<sequence>
+										<element maxOccurs="unbounded" name="position" type="tr-029-e:TR029EPosition"/>
+									</sequence>
+								</complexType>
+							</element>							
+						</sequence>
+					</complexType>
+				</element>
+		</sequence>
+	</complexType>
+	<element name="tr-029-e" type="tr-029-e:TR-029-E" />
+</schema>

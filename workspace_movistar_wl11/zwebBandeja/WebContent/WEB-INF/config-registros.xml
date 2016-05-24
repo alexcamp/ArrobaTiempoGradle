@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config-registros>
+	<!-- hora de inicio del thread para GMT 0 (Chile = GMT -4), en formato HH:mm:ss -->
+	<hora_inicio>04:00:00</hora_inicio>
+	<!-- periodicidad entre llamadas al thread, en milisegundos (86400000 ms = 24 hrs) -->
+	<periodicidad>86400000</periodicidad>
+	<!-- nombre del DataSource para obtener la conexión -->
+	<datasource>jdbc/bandeja</datasource>
+	<!--	Tablas sobre las cuales se realizan eliminaciones automáticas.
+			Se debe dar:
+				- el nombre completo de la tabla (ALIAS.TABLA)
+				- el nombre del campo para el análisis
+				- el tipo del campo (DATE, TIMESTAMP)
+				- la duración de un registro (en milisegundos, 2592000000 ms = 30 días)
+				- de forma opcional, un campo de estado para registros sin uso:
+					- el nombre del campo de estado (nombre_estado)
+					- el tipo del campo de estado (INTEGER, BIGINT, SMALLINT)
+					- el valor del campo de estado
+	-->
+	<tablas>
+		<tabla nombre_tabla="WF.WF_INSTANCIA_ACTIVIDAD" nombre_campo="FECHA_ACTIVACION" tipo_campo="TIMESTAMP" duracion="2592000000" nombre_estado="ESTADO" tipo_estado="INTEGER" valor_estado="1" />
+	</tablas>
+</config-registros>

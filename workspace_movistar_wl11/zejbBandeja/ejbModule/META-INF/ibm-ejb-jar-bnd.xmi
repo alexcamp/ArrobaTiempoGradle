@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbbnd:EJBJarBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbbnd="ejbbnd.xmi" xmlns:ejb="ejb.xmi" xmi:id="EJBJarBinding_1115398965375" currentBackendId="DB2UDBNT_V72_1">
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115399418375" jndiName="ejb/com/telefonica_chile/bandeja/mantenedores/session/MantenedoresSessionLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115399418375"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508550" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508550"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508551" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508551"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668500" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668500"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115399418546" jndiName="ejb/com/telefonica_chile/bandeja/bintegrada/session/BIntegradaSessionHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115399418546"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508566" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508566"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508567" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508567"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668501" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668501"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115399418828" jndiName="ejb/com/telefonica_chile/bandeja/torreControl/ParametrosTCSessionLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115399418828"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508568" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508568"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508581" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508581"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668516" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668516"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115399418968" jndiName="ejb/com/telefonica_chile/bandeja/torreControl/TorreControlSessionLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115399418968"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508582" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508582"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508583" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508583"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668517" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668517"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115399419031" jndiName="ejb/com/telefonica_chile/bandeja/accionesMasivas/AccionesMasivasSessionHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115399419031"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508584" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508584"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508597" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508597"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668518" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668518"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115415773062" jndiName="ejb/com/telefonica_chile/bandeja/datos/usuarios/UsuariosSessionHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115415773062"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508598" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508598"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508599" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508599"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668531" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668531"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115415773140" jndiName="ejb/com/telefonica_chile/bandeja/datos/bandeja/BandejaSessionHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115415773140"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508600" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508600"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508613" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508613"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668532" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668532"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1115415995828" jndiName="ejb/com/telefonica_chile/bandeja/servicios/publicador/PublicadorBandejaLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115415995828"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508614" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508614"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508615" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508615"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668533" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668533"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1122386695163" jndiName="ejb/com/telefonica_chile/bandeja/usuariossupervisadossession/UsuariosSupervisadosSessionHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#UsuariosSupervisadosSession"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210683508616" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210683508616"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210692668534" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210692668534"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210693761658" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210693761658"/>
+    </resRefBindings>
+  </ejbBindings>
+  <defaultCMPConnectionFactory xmi:id="CMPConnectionFactoryBinding_1115715960218" jndiName="jdbc/bandeja" resAuth="Per_Connection_Factory"/>
+</ejbbnd:EJBJarBinding>

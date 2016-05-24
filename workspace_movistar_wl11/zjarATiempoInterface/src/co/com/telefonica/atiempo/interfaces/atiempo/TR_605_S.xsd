@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-605-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-605-S">
+		<sequence>
+			<element name="head" type="tr-605-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+	                    <element name="code-error" type="tr-605-s:int5" />
+	                    <element name="message" type="tr-605-s:string250" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-605-s" type="tr-605-s:TR-605-S" />
+</schema>

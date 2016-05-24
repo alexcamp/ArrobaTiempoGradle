@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-032-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-032-S">
+		<sequence>
+			<element name="head" type="tr-032-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="status-code" type="tr-032-s:string5" />
+						<element name="atiempo-request-number" type="tr-032-s:long16" />
+						<element name="ticket-number" type="tr-032-s:string255" />
+
+						<element name="range-zone-id" type="tr-032-s:string30" />
+
+						<element name="equipment">
+							<complexType>
+								<sequence>
+									<element name="ip" type="tr-032-s:string30" />
+									<element name="subrack" type="tr-032-s:string20" />
+									<element name="slot" type="tr-032-s:string20" />
+									<element name="port-id" type="tr-032-s:string50" />
+								</sequence>
+							</complexType>
+						</element>
+
+						<element name="vpi-vci" type="tr-032-s:string24" />
+						<element name="vpi-vci-network" type="tr-032-s:string24" />
+						<element name="pots" type="tr-032-s:string24" />
+						<element name="adsl" type="tr-032-s:string24" />
+
+						<element name="ip-lan-mask" type="tr-032-s:string255" />
+						<element name="ip-lan" type="tr-032-s:string255" />
+						<element name="ip-wan" type="tr-032-s:string255" />
+						<element name="other">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-032-s:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="action" type="tr-032-s:string255" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-032-s" type="tr-032-s:TR-032-S" />
+</schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_004_E.xsd,v 1.1 2011/03/30 18:21:06 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-004-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-004-E">
+		<sequence>
+			<element name="head" type="tr-004-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="ods-number" type="tr-004-e:int8" />
+						<element name="atis-request-number " type="tr-004-e:long9" />
+						<element name="department" type="tr-004-e:int2" />
+						<element name="city" type="tr-004-e:int8" />
+						<element name="password-FTTC" type="tr-004-e:string150" />
+						</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-004-e" type="tr-004-e:TR-004-E" />
+</schema>

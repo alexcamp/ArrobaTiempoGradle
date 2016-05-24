@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_018_S.xsd,v 1.1 2011/03/30 18:21:43 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-018-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR_018_S">
+		<sequence>
+			<element name="head" type="tr-018-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-018-s:long9">
+							
+						</element>
+						<element name="error-code" type="tr-018-s:long9" />
+						<element name="error-code-message" type="tr-018-s:string250" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-018-s" type="tr-018-s:TR_018_S" />
+
+</schema>

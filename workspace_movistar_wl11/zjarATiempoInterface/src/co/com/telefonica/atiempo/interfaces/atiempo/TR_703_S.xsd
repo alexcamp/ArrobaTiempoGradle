@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-703-s="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/>
+   <complexType name="TR703SOption">
+		<sequence>
+            <element name="id-option" type="string"/>
+            <element name="initial-date" type="string"/>
+            <element name="final-date" type="string"/>
+            <element name="tecnichalname" type="string"/>
+            <element name="cost" type="string"/>
+		</sequence>
+	</complexType>
+
+   <complexType name="TR_703_S">
+   <sequence>
+      <element name="head" type="tr-703-s:ResponseHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+           <sequence maxOccurs="1" minOccurs="1">
+              <element name="id-system-origin" type="string"/>
+              <element name="id-schedule" type="string"/>
+              <element name="options">
+                   <complexType>
+  	    			 <sequence>
+                        <element maxOccurs="unbounded" name="option" type="tr-703-s:TR703SOption"/>
+			    	 </sequence>
+                   </complexType>
+                </element>
+			</sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-703-s" type="tr-703-s:TR_703_S"/>
+</schema>

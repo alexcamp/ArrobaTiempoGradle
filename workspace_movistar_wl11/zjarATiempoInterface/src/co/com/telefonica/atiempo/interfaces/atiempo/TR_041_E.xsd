@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-041-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-041-E">
+		<sequence>
+			<element name="head" type="tr-041-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-041-e:long9" />
+						<element name="actual-operator-id" type="tr-041-e:string40" />
+						<element name="new-operator-id" type="tr-041-e:string40" />
+						<element name="actual-terminal-number" type="tr-041-e:string40" />
+						<element name="new-terminal-number" type="tr-041-e:string40" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-041-e" type="tr-041-e:TR-041-E" />
+</schema>

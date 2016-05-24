@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-052-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-052-E">
+		<sequence>
+			<element name="head" type="tr-052-e:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="long"/>
+						<element name="cp-source" type="string"/>
+						<element name="entry-date" type="string"/>
+						<element name="cause-id" type="int"/>
+						<element name="cause-description" type="string"/>
+						<element name="central" type="string"/>
+						<element name="district" type="string"/>
+						<element name="closet" type="string"/>
+						<element name="box" type="string"/>
+						<element name="distributor-code" type="string"/>
+						<element name="primary-cable" type="string"/>
+						<element name="secondary-cable" type="string"/>						
+						<element name="segment" type="string"/>						
+						<element name="error" type="string"/>	
+						<element name="attendance-areas">
+							<complexType>
+								<sequence>
+									<element name="area" type="tr-052-e:string15" minOccurs="0" maxOccurs="unbounded"/>
+								</sequence>
+							</complexType>
+						</element>					
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-052-e" type="tr-052-e:TR-052-E" />
+</schema>

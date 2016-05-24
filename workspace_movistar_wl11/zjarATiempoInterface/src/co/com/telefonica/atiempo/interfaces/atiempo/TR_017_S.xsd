@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_017_S.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-017-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="error">
+		<sequence>
+			<element name="code" type="tr-017-s:long9" />
+			<element name="cas-id" type="tr-017-s:string30" />
+			<element name="card" type="tr-017-s:string30" />
+			<element name="error-code-message" type="tr-017-s:string250" />
+		</sequence>
+	</complexType>
+	<complexType name="TR-017-S">
+		<sequence>
+			<element name="head" type="tr-017-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-017-s:long9" />
+						<element name="errors">
+							
+							<complexType>
+								<sequence>
+									<element name="error" type="tr-017-s:error" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-017-s" type="tr-017-s:TR-017-S" />
+</schema>

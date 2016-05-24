@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_045_E.xsd,v 1.1 2011/03/30 18:22:10 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-045-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="RequestCanalOnline">
+		<sequence>
+			<element name="atiempo-request-number" type="tr-045-e:long9"/>
+			<element name="state-request" type="tr-045-e:string30"/>
+			<element name="request-initial-date" type="tr-045-e:string30"/>
+			<element name="request-change-state-date" type="tr-045-e:string30"/>
+			<element name="request-final-date" type="tr-045-e:string30"/>
+			<element name="request-description" type="tr-045-e:string255"/>
+			<element name="request-observations" type="tr-045-e:string255"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR_045_E">
+		<sequence>
+			<element name="head" type="tr-045-e:ResponseHeader"/>
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="requests">
+							<complexType>
+								<sequence>
+									<element name="request" type="tr-045-e:RequestCanalOnline" maxOccurs="unbounded"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-045-e" type="tr-045-e:TR_045_E"/>
+</schema>

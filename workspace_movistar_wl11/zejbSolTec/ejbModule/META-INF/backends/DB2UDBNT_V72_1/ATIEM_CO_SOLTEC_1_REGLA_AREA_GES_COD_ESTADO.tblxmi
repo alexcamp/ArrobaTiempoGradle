@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="REGLA_AREA_GES_COD_ESTADO" name="REGLA_AREA_GES_COD_ESTADO" comments="" primaryKey="PK_ID_REGLA_AREA">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_REGLA_AREA_ESTADO" name="ID_REGLA_AREA_ESTADO">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1187298718500">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_AREA_GES" name="ID_AREA_GES">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1187298718501">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="CORRELATIVO" name="CORRELATIVO">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1187298718502">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_REGLA" name="ID_REGLA">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1187298718503">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_ID_AREA_GES" name="FK_ID_AREA_GES" members="ID_AREA_GES" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1187298718500">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_AREA_GESTION.tblxmi#PK_ID_AREA_GES"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_COD_ST" name="FK_COD_ST" members="CORRELATIVO" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1187298718501">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CODIGO_ST.tblxmi#PK_CODIGO_ST"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="C1126093FK_ID_REGLA" name="FK_ID_REGLA" members="ID_REGLA" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1187298718502">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_REGLA.tblxmi#PK_ID_REGLA"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_ID_REGLA_AREA" name="PK_ID_REGLA_AREA" members="ID_REGLA_AREA_ESTADO" constraint="SQLConstraint_1187298718503"/>
+  <constraints xmi:id="SQLConstraint_1187298718500" name="FK_ID_AREA_GES" type="FOREIGNKEY" referenceByKey="FK_ID_AREA_GES"/>
+  <constraints xmi:id="SQLConstraint_1187298718501" name="FK_COD_ST" type="FOREIGNKEY" referenceByKey="FK_COD_ST"/>
+  <constraints xmi:id="SQLConstraint_1187298718502" name="FK_ID_REGLA" type="FOREIGNKEY" referenceByKey="C1126093FK_ID_REGLA"/>
+  <constraints xmi:id="SQLConstraint_1187298718503" name="PK_ID_REGLA_AREA" type="PRIMARYKEY" primaryKey="PK_ID_REGLA_AREA"/>
+</RDBSchema:RDBTable>

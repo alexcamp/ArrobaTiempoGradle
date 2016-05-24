@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tr-010-s="http://atiempo.telefonica.com.co" targetNamespace="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR-010-S">
+		<sequence>
+			<element name="head" type="tr-010-s:ResponseHeader"/>
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="type-error" type="tr-010-s:long5"/>
+						<element name="response" type="boolean"/>
+						<element name="ods-number" type="tr-010-s:int8"/>
+						<element name="atis-request-number" type="tr-010-s:long9"/>
+						<element name="reserve-result" type="boolean"/>
+						<element name="secondary-distributor" type="tr-010-s:long14"/>
+						<element name="distributor-description" type="tr-010-s:string30"/>
+						<element name="closet" type="tr-010-s:string6"/>
+						<element name="box" type="tr-010-s:string6"/>
+						<element name="box-pair" type="tr-010-s:int6"/>
+						<element name="primary-distributor" type="tr-010-s:int6"/>
+						<element name="strip" type="tr-010-s:string6"/>
+						<element name="strip-pair" type="tr-010-s:int6"/>
+						<element name="central-code" type="tr-010-s:long14"/>
+						<element name="central-description" type="tr-010-s:string30"/>
+						<element name="cable" type="tr-010-s:string6"/>
+						<element name="cable-pair" type="tr-010-s:int6"/>
+						<element name="phone-number" type="tr-010-s:int8"/>
+						<element name="len" type="tr-010-s:string20"/>
+						<element name="distributor-address" type="tr-010-s:string40"/>
+						<element name="closet-address" type="tr-010-s:string40"/>
+						<element name="box-address" type="tr-010-s:string40"/>
+						<element name="dslams">
+							<complexType>
+								<sequence>
+									<element name="dslam" type="tr-010-s:Dslam1" minOccurs="0" maxOccurs="unbounded"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="rack" type="tr-010-s:string250"/>
+						<element name="sub-rack" type="tr-010-s:string250"/>
+						<element name="horizontal-position" type="tr-010-s:string30"/>
+						<element name="state-line" type="tr-010-s:string40"/>
+						<element name="box-type" type="tr-010-s:string15" />
+						<element name="fttciplb" type="tr-010-s:string150" />
+						<element name="fttcusu" type="tr-010-s:string150" />
+						<element name="fttcpwd" type="tr-010-s:string150" />
+						<element name="fttcslot" type="tr-010-s:string150" />
+						<element name="fttcfab" type="tr-010-s:string150" />
+						<element name="fttcmode" type="tr-010-s:string150" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-010-s" type="tr-010-s:TR-010-S"/>
+</schema>

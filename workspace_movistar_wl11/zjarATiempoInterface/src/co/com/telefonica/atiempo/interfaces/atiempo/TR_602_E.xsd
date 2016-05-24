@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-602-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-602-E">
+		<sequence>
+			<element name="head" type="tr-602-e:RequestHeader" />
+			<element name="body">
+			<complexType>
+					<sequence>
+	                   <element name="process-type" type="boolean" />
+						<element name="father-account" type="tr-602-e:string250" />
+						<element name="password" type="tr-602-e:string250" />
+						<element name="atiempo-request-number" type="tr-602-e:long16" />
+						<element name="phone-number" type="tr-602-e:string250" />
+						<element name="locality" type="tr-602-e:string250" />
+						<element name="area-code" type="tr-602-e:long9" />
+						<element name="control-account" type="boolean" />
+						<element name="precableada" type="boolean" />
+						<element name="special-service-types">
+							<complexType>
+								<sequence minOccurs="0" maxOccurs="unbounded">
+										<element name="special-service" type="tr-602-e:long9"/>			
+								</sequence>
+							</complexType>
+						</element>	
+	                 </sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-602-e" type="tr-602-e:TR-602-E" />
+</schema>

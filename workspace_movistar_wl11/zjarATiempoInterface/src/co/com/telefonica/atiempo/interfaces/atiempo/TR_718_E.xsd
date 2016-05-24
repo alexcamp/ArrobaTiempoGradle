@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-718-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-718-E">
+		<sequence>
+			<element name="head" type="tr-718-e:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="account-expiration" type="tr-718-e:string50" />
+						<element name="username" type="tr-718-e:string50" />
+						<element name="password" type="tr-718-e:string50" />
+						<element name="email" type="tr-718-e:string50" />
+						<element name="firstname" type="tr-718-e:string50" />
+						<element name="lastname" type="tr-718-e:string50" />
+						<element name="comercial-operation" type="tr-718-e:string60" />
+						<element name="product-service" type="tr-718-e:string60" />																								
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-718-e" type="tr-718-e:TR-718-E" />
+</schema>

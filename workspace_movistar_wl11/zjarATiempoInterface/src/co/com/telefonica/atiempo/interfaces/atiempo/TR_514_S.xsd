@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-514-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-514-S">
+		<sequence>
+			<element name="head" type="tr-514-s:ResponseHeader2" />
+			<element name="body">
+				<complexType>
+                    <all maxOccurs="1" minOccurs="1">
+						<element name="distributor" type="tr-514-s:long16" />
+						<element name="distributor-description" type="tr-514-s:string30" />
+						<element name="closet" type="tr-514-s:string6" />
+						<element name="box" type="tr-514-s:string30" />
+						<element name="box-pair" type="tr-514-s:int6" />
+						<element name="primary-distributor" type="tr-514-s:long16" />
+						<element name="primary-distributor-description" type="tr-514-s:string30" />
+						<element name="strip" type="tr-514-s:string6" />
+						<element name="strip-pair" type="tr-514-s:int6" />
+						<element name="central" type="tr-514-s:int6" />
+						<element name="central-description" type="tr-514-s:string30" />
+						<element name="cable" type="tr-514-s:string6" />
+						<element name="cable-pair" type="tr-514-s:int6" />
+						<element name="phone-number" type="tr-514-s:int8" />
+						<element name="distributor-address" type="tr-514-s:string80" />
+						<element name="closet-address" type="tr-514-s:string80" />
+						<element name="box-address" type="tr-514-s:string80" />
+						<element name="len" type="tr-514-s:string20" />
+       					<element name="horizontal-position" type="tr-514-s:string30" />
+       						
+						<element name="special-service-types">
+							<complexType>
+								<sequence>
+									<element name="special-service-type" minOccurs="0" maxOccurs="unbounded">
+										<complexType>
+											<sequence>
+												<element name="special-service" type="tr-514-s:string15" minOccurs="0"/>
+											</sequence>
+										</complexType>		
+									</element>							
+								</sequence>
+							</complexType>
+						</element>	
+									
+						<element name="dslams">
+							<complexType>
+								<sequence>
+									<element name="dslam" type="tr-514-s:Dslam1" minOccurs="0" maxOccurs="unbounded"/>
+								</sequence>
+							</complexType>
+						</element>
+
+						<element name="box-type" type="tr-514-s:string15" />
+						<element name="box-distance" type="tr-514-s:int6" />
+						<element name="latitude" type="float" />
+						<element name="longitude" type="float" />
+						<element name="eoc" type="boolean" />	
+              			<element name="fttciplb" type="tr-514-s:string150" />
+  						<element name="fttcusu" type="tr-514-s:string150" />
+						<element name="fttcpwd" type="tr-514-s:string150" />
+                        <element name="fttcslot" type="tr-514-s:string150" />
+                        <element name="fttcfabr" type="tr-514-s:string150" />
+                        <element name="fttcmode" type="tr-514-s:string150" />  
+                        <element name="rack" type="tr-514-s:string250" />
+						<element name="sub-rack" type="tr-514-s:string250" />
+                                                                              		
+					</all>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-514-s" type="tr-514-s:TR-514-S" />
+</schema>

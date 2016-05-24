@@ -1,0 +1,20 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-053-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+		<complexType name="TR-053-S">
+			<sequence>
+				<element name="head" type="tr-053-s:ResponseHeader2" />
+				<element name="body">
+					<complexType>
+						<sequence>
+							<element name="atiempo-request-number" type="tr-053-s:long16" />
+							<element name="state-code" type="tr-053-s:long16" />
+							<element name="descripcion-state" type="tr-053-s:string250" /> 
+							<element name="error-code" type="tr-053-s:long16" />  
+							<element name="error-code-message" type="tr-053-s:string250" />                                        
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	<element name="tr-053-s" type="tr-053-s:TR-053-S" />
+</schema>

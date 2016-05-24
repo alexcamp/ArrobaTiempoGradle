@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definicion-vistas>
+
+	<vista nombre="despliegaDisponibilidad" plantilla="/jsp/agenda/despliegaDisponibilidad.jsp" />
+	<vista nombre="resultadoAgenda" plantilla="/jsp/agenda/resultadoAgenda.jsp" />		
+	<vista nombre="resultadoAgendaSupervisor" plantilla="/jsp/agenda/resultadoAgendaSupervisor.jsp" />		
+		
+	<vista nombre="verResultadoGrabacion" plantilla="/verResultadoGrabacion.jsp"/>
+	<vista nombre="mensajeErrorAutorizacion" plantilla="/mensajeErrorAutorizacion.jsp"/>
+
+	<vista nombre="mensajesUsuario" plantilla="/jsp/template/templateBandeja.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/mensajesUsuario.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	<vista nombre="formLogin" plantilla="/login.html" />
+	<vista nombre="formLogout" plantilla="/logoff.html" />
+	
+	
+	<vista nombre="verBandejaSupCo" plantilla="/jsp/template/templateBandejaSuCo.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/supervisorco/listadoUsuariosSup.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	<vista nombre="verBandejaControlTecnico" plantilla="/jsp/template/templateBandejaCT.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verControlTecnico.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	<vista nombre="verBackOffice" plantilla="/jsp/template/templateBackOffice.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBackOffice.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	<vista nombre="verBandejaReporteTerreno" plantilla="/jsp/template/templateRepTerreno.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verRepTerreno.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	
+	<vista nombre="verBandejaEsperaBA" plantilla="/jsp/template/templateEsperaBA.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBandejaEsperaBA.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	<vista nombre="verBandejaEsperaTerra" plantilla="/jsp/template/templateEsperaTerra.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBandejaEsperaTerra.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+
+    <!-- adocarmo - CR9664 - inicio -->
+    <!-- notar que estoy reutilizando la plantilla de terra (templateEsperaTerra.jsp) y la jsp ppal agregandole un parametro (verBandejaEsperaTerra.jsp?aula=S) -->
+	<vista nombre="verBandejaEsperaAula365" plantilla="/jsp/template/templateEsperaTerra.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBandejaEsperaTerra.jsp?aula=S"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>	
+    <!-- adocarmo - CR9664 - inicio -->	
+
+	<vista nombre="verBandeja" plantilla="/jsp/template/templateBandeja.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBandeja.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	<vista nombre="verNuevaBandejaTorreControl" plantilla="/jsp/template/templateBandejaTorre.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBandejaTorre.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	<vista nombre="verBandejaSupervisadoCo" plantilla="/jsp/template/templatePetSupervisado.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBandejaSupervisado.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+
+	<!-- Password's Related -->
+	<vista nombre="formNuevaClave" plantilla="/jsp/template/templateBandeja.jsp">
+		<area nombre="head" url="/jsp/template/headRecuperaClave.jsp"/>
+		<area nombre="main" url="/jspNoRestringidos/recuperarClave.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	<vista nombre="formCambiarClave" plantilla="/jsp/template/templateBandeja.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/formCambiarClave.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+
+	<vista nombre="informeCambioClave" plantilla="/jsp/informeCambioClave.jsp" />	
+	<!-- Fin Password's Related -->
+
+	<vista nombre="cambiarUsuarioPlataforma" plantilla="/jsp/template/templateBandeja.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/supervisor/cambiarUsuarioPlataforma.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+	
+	<vista nombre="verNuevaTorreControl" plantilla="/jsp/bandeja/verNuevaTorreControl.jsp" />
+	<vista nombre="verMarcoTorreControl" plantilla="/jsp/bandeja/verMarcoTorreControl.jsp" />
+	<vista nombre="nuevoMarco" plantilla="/jsp/bandeja/verMarcoOculto.jsp" />
+	
+	<vista nombre="errorGenerico" plantilla="/jsp/asigna/errorGenerico.jsp" />
+	<vista nombre="resultadoAsignacion" plantilla="/jsp/asigna/resultadoAsignacion.jsp" />	
+	<vista nombre="mensaje" plantilla="/jsp/asigna/mensaje.jsp" />	
+	
+	<vista nombre="verBuscadorInbound" plantilla="/jsp/bandeja/verBuscadorInbound.jsp" />
+	<vista nombre="verBuscadorOutbound" plantilla="/jsp/bandeja/verBuscadorOutbound.jsp" />
+	<vista nombre="verBuscadorGesOS" plantilla="/jsp/bandeja/verBuscadorGesOS.jsp" />
+	<vista nombre="verPTVPI" plantilla="/jsp/bandeja/verPTVPI.jsp" />
+
+	<vista nombre="verBuscadorRecogidaEquipos" plantilla="/jsp/bandeja/verBuscadorRecogidaEquipos.jsp" />
+	<vista nombre="verGestionRecogidaEquipos" plantilla="/jsp/bandeja/verGestionRecogidaEquipos.jsp" />
+
+
+	<vista nombre="verBuscadorInstalarEquipos" plantilla="/jsp/bandeja/verBuscadorInstalarEquipos.jsp" />
+
+	<vista nombre="listadoMasivo" plantilla="/jsp/accionesMasivas/listadoMasivo.jsp"/>
+	<vista nombre="vistaReporteTerreno" plantilla="/jsp/accionesMasivas/vistaReporteTerreno.jsp"/>
+	<vista nombre="uploadFileAM" plantilla="/jsp/bandeja/uploadFileAccionesMasivas.jsp"/>
+	<vista nombre="uploadFileAMST" plantilla="/jsp/bandeja/uploadFileAccionesMasivasST.jsp"/>
+	
+	<vista nombre="verBandejaEsperaSigres" plantilla="/jsp/template/templateEsperaSigres.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/bandeja/verBandejaEsperaSigres.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>
+
+	<vista nombre="operacionMasivaModem" plantilla="/jsp/template/templateBandeja.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/accionesMasivas/altaBajaModem.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>	
+
+	<vista nombre="respuestaMasivaModem" plantilla="/jsp/template/templateBandeja.jsp">
+		<area nombre="head" url="/jsp/template/head.jsp"/>
+		<area nombre="main" url="/jsp/accionesMasivas/respuestaAltaBajaModem.jsp"/>
+		<area nombre="pie" url="/jsp/template/pie.jsp"/>
+	</vista>	
+	
+	<vista nombre="volverBandeja" plantilla="/jsp/bandeja/volverBandeja.jsp"/>
+ 	
+</definicion-vistas>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_022_S.xsd,v 1.1 2011/03/30 18:21:42 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-022-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	
+	<complexType name="TR022SModem">
+		<sequence>
+			<element name="serial" type="tr-022-s:string40" />
+			<element name="brand" type="tr-022-s:string40" />
+			<element name="model" type="tr-022-s:string40" />
+		</sequence>
+	</complexType>
+	<complexType name="TR-022-S">
+		<sequence>
+			<element name="head" type="tr-022-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-022-s:long9" />
+						<element name="modems">
+							<complexType>
+								<sequence>
+									<element name="modem" type="tr-022-s:TR022SModem" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="error-code" type="tr-022-s:long10" />
+						<element name="error-code-message" type="tr-022-s:string250" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-022-s" type="tr-022-s:TR-022-S" />
+</schema>

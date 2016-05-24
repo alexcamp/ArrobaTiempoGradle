@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<SCRIPT language="JavaScript">
+<!--
+function avisoAgendamiento(idTipo) {
+	//alert("RECIBIDA '" + idTipo + "'");
+}
+
+function EnviarGaudi(forma) {
+	var newWin = window.open("about:blank", "newAgenda");
+
+	forma.target = "newAgenda";
+	forma.action = "verCita.free";
+	forma.submit();
+}
+
+function Enviar(forma, tipo) {
+	forma.action = "/bandejaweb/DisponibilidadAgenda.free";
+
+	if ( tipo != "SP" ) {
+		var newWin = window.open("about:blank", "newAgenda");
+		forma.target = "newAgenda";
+		if ( tipo == "SC" )
+			forma.action = "verCita.free";
+	}
+	forma.submit();
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<form name=forma method="get" action="/bandejaweb/DisponibilidadAgenda.free">
+Numero Peticion: <input type="text" name="NP" value="800000000085"><br>
+Segmento: <input type="text" name="SG" value="143"><br>
+TICA: <input type="text" name="TC" value="AE"><br>
+Agencia: <input type="text" name="AG" value="K100"><br>
+Planta Comercial: <input type="text" name="PC" value="0952"><br>
+Punto Venta: <input type="text" name="PV" value="ATE"><br>
+Fecha Creación: <input type="text" name="FC" value="26092005"><br>
+Cantidad PS: <input type="text" name="CP" value="2"><br>
+PS 1: <input type="text" name="P_1" value="2"> - 
+OC 1: <input type="text" name="O_1" value="A"><br>
+PS 2: <input type="text" name="P_2" value="7"> - 
+OC 2: <input type="text" name="O_2" value="A"><br>
+PS 3: <input type="text" name="P_3" value=""> -
+OC 3: <input type="text" name="O_3" value=""><br>
+PS 4: <input type="text" name="P_4" value=""> -
+OC 4: <input type="text" name="O_4" value=""><br>
+PS 5: <input type="text" name="P_5" value=""> -
+OC 5: <input type="text" name="O_5" value=""><br>
+PS 6: <input type="text" name="P_6" value=""> - 
+OC 6: <input type="text" name="O_6" value=""><br>
+Fecha Compromiso (GAUDI) <input type=text name="agenda_cita_fecha" value="04/08/2006"> <br>
+
+<input type="button" onclick="Enviar(this.form, 'CP');" value="Enviarcon PopUp">
+&nbsp;&nbsp;&nbsp;
+<input type="button" onclick="Enviar(this.form, 'SP');" value="Enviar Sin PopUp">
+&nbsp;&nbsp;&nbsp;
+<input type="button" onClick="Enviar(this.form, 'SC');" value="Agendar Cita">
+</form>
+</BODY>
+</HTML>

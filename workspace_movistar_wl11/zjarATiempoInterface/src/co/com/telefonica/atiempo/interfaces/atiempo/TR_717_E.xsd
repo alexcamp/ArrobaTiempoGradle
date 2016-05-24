@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-717-e="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/>
+   <complexType name="TR_717_E">
+   <sequence>
+      <element name="head" type="tr-717-e:ResponseHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+			<sequence>
+            	<element name="id-system-source" type="tr-717-e:string16"/>
+            	<element name="id-schedule" type="tr-717-e:string64"/>
+		        <element name="response" type="tr-717-e:string10"/>
+		        <element name="response-description" type="tr-717-e:string100"/>
+		        <element name="material-code" type="tr-717-e:string10"/>
+		        <element name="modem-serial" type="tr-717-e:string100"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-717-e" type="tr-717-e:TR_717_E"/>
+</schema>

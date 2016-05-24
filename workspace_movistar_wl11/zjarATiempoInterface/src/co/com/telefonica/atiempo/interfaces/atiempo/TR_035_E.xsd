@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_035_E.xsd,v 1.1 2011/03/30 18:22:10 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-035-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR_035_E">
+		<sequence>
+			<element name="head" type="tr-035-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="service-number" type="tr-035-e:string40">
+							
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-035-e" type="tr-035-e:TR_035_E" />
+</schema>

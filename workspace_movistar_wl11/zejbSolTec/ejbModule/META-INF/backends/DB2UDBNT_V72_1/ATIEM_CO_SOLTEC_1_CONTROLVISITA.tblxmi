@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="CONTROLVISITA" name="CONTROLVISITA" comments="" primaryKey="PK_ACONTROVI">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_AVE_CD" name="COD_AVE_CD">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1196779438171">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FECHAHORA_LLEGADA" name="FECHAHORA_LLEGADA" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1196779438171" precision="2">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FECHA_HORASALIDA" name="FECHAHORA_SALIDA" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1196779438172" precision="2">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FECHAHORA_REGISTRO" name="FECHAHORA_REGISTRO">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1196779438173" precision="2">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_TECNICO" name="ID_TECNICO" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1213137413640" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_ACONTROVI_P" name="FK_ACONTROVI_P" members="COD_AVE_CD" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1196779438171">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_ST.tblxmi#P_KEY_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_ACONTROVI" name="PK_ACONTROVI" members="COD_AVE_CD FECHAHORA_REGISTRO" constraint="SQLConstraint_1196779438172"/>
+  <constraints xmi:id="SQLConstraint_1196779438171" name="FK_ACONTROVI_P" type="FOREIGNKEY" referenceByKey="FK_ACONTROVI_P"/>
+  <constraints xmi:id="SQLConstraint_1196779438172" name="PK_ACONTROVI" type="PRIMARYKEY" primaryKey="PK_ACONTROVI"/>
+</RDBSchema:RDBTable>

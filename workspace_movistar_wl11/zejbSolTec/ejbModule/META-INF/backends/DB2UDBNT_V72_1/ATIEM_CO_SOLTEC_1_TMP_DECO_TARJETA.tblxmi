@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TMP_DECO_TARJETA" name="TMP_DECO_TARJETA" comments="" primaryKey="PF_DECO_TARJETA">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID" name="ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1178635613812">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_AVE_CD" name="COD_AVE_CD">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1178635613813">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="XML" name="XML">
+    <type xmi:type="RDBSchema:SQLCharacterLargeObject" xmi:id="SQLCharacterLargeObject_1178635613812" characterSet="800" length="4" multiplier="K">
+      <originatingType xmi:type="RDBSchema:SQLCharacterLargeObject" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterLargeObject_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_01_PETION_ST" name="FK_01_PETION_ST" members="COD_AVE_CD" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1178635613812">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_ST.tblxmi#P_KEY_1"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PF_DECO_TARJETA" name="PF_DECO_TARJETA" members="ID" constraint="SQLConstraint_1178635613813"/>
+  <constraints xmi:id="SQLConstraint_1178635613812" name="FK_01_PETION_ST" type="FOREIGNKEY" referenceByKey="FK_01_PETION_ST"/>
+  <constraints xmi:id="SQLConstraint_1178635613813" name="PF_DECO_TARJETA" type="PRIMARYKEY" primaryKey="PF_DECO_TARJETA"/>
+</RDBSchema:RDBTable>

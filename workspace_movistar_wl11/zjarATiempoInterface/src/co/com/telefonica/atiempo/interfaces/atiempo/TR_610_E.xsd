@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: IT_010_E.xsd,v 1.1 2011/03/30 18:20:03 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-610-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+    <complexType name="TR-610-E">
+		<sequence>
+			<element name="head" type="tr-610-e:RequestHeaderAgendaSC" />
+
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-610-e:long9" />
+						<element name="source-phone-number" type="string" />
+						<element name="destination-phone-number" type="tr-610-e:string19" />
+						<element name="product-service" type="tr-610-e:int3" />
+						<element name="modem-serial-number" type="tr-610-e:string30" />
+						<element name="modem-brand" type="tr-610-e:string30" />
+						<element name="modem-model" type="tr-610-e:string30" />												
+						<element name="sim-serial-number" type="tr-610-e:string30" />
+						<element name="client-id-type" type="string" />
+						<element name="client-id-number" type="string" />
+						<element name="client-last-name" type="tr-610-e:string20" />
+						<element name="sales-number" type="int" />
+						<element name="city-code" type="string" />
+						<element name="client-address" type="tr-610-e:string50" />
+						<element name="client-address-com" type="tr-610-e:string200" />
+						<element name="phone-number" type="string" />
+						<element name="cell-phone" type="tr-610-e:string14"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+    </complexType>
+	<element name="tr-610-e" type="tr-610-e:TR-610-E">
+    </element>
+</schema>

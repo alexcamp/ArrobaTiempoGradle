@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-718-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-718-S">
+		<sequence>
+			<element name="head" type="tr-718-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="response" type="tr-718-s:string10" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-718-s" type="tr-718-s:TR-718-S" />
+</schema>

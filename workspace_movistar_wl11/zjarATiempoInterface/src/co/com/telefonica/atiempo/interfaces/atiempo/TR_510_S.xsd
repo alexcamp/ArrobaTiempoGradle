@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-510-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-510-S">
+		<sequence>
+			<element name="head" type="tr-510-s:ResponseHeader2" />
+			<element name="body">
+				<complexType>
+                    <all maxOccurs="1" minOccurs="1">
+                    					
+						<element name="availability-flag" type="boolean" />
+						<element name="ods-number" type="tr-510-s:int8" />
+						<element name="atiempo-request-number" type="tr-510-s:long9" />
+						<element name="reserve-result" type="boolean" />
+						<element name="secundary-distributor" type="tr-510-s:long16" />
+						<element name="distributor-description" type="tr-510-s:string30" />
+						<element name="closet" type="tr-510-s:string6" />
+						<element name="box" type="tr-510-s:string30" />
+						<element name="box-pair" type="tr-510-s:int6" />
+						<element name="primary-distributor" type="tr-510-s:long16" />
+						<element name="strip" type="tr-510-s:string6" />
+						<element name="strip-pair" type="tr-510-s:int6" />
+						<element name="central-code" type="tr-510-s:int6" />
+						<element name="central-description" type="tr-510-s:string30" />
+						<element name="cable" type="tr-510-s:string6" />
+						<element name="cable-pair" type="tr-510-s:int6" />
+						<element name="phone-number" type="tr-510-s:int8" />
+						<element name="len" type="tr-510-s:string20" />
+       					<element name="horizontal-position" type="tr-510-s:string30" />
+						<element name="distributor-address" type="tr-510-s:string80" />
+						<element name="closet-address" type="tr-510-s:string80" />
+						<element name="box-address" type="tr-510-s:string80" />
+				
+						<element name="dslams">
+							<complexType>
+								<sequence>
+									<element name="dslam" type="tr-510-s:Dslam1" minOccurs="0" maxOccurs="unbounded"/>
+								</sequence>
+							</complexType>
+						</element>
+					
+						<element name="central-connection" type="boolean" />
+						<element name="eoc-enable" type="boolean" />
+						<element name="box-type" type="tr-510-s:string15" />
+						<element name="box-distance" type="tr-510-s:int6" />
+						<element name="latitude" type="float" />
+						<element name="longitude" type="float" />
+						<element name="dedication-presence" type="boolean" />
+						<element name="closet-dedicated" type="tr-510-s:string6" />
+						<element name="box-type-dedicated" type="tr-510-s:string15" />
+						<element name="box-dedicated" type="tr-510-s:int2" />
+						<element name="box-pair-dedicated" type="tr-510-s:int6" />
+						<element name="central-code-dedicated" type="tr-510-s:long9" />
+						<element name="cable-dedicated" type="tr-510-s:string6" />
+						<element name="cable-pair-dedicated" type="tr-510-s:int6" />
+						<element name="closet-address-dedicated" type="tr-510-s:string40" />
+						<element name="box-address-dedicated" type="tr-510-s:string40" />
+						<element name="previous-secondary-distributor" type="tr-510-s:long16" />
+						<element name="previous-secondary-distributor-description" type="tr-510-s:string30" />
+						<element name="previous-closet" type="tr-510-s:string6" />
+						<element name="previous-box" type="tr-510-s:string30" />
+						<element name="previous-box-pair" type="tr-510-s:int6" />
+						<element name="previous-primary-distributor" type="tr-510-s:long16" />
+						<element name="previous-primary-distributor-description" type="tr-510-s:string30" />
+						<element name="previous-strip" type="tr-510-s:string6" />
+						<element name="previous-strip-pair" type="tr-510-s:int6" />
+						<element name="previous-cable" type="tr-510-s:string6" />
+						<element name="previous-cable-pair" type="tr-510-s:int6" />
+						<element name="previous-central-code" type="tr-510-s:int4" />
+						<element name="previous-central-description" type="tr-510-s:string30" />
+						<element name="previous-phone-number" type="tr-510-s:int8" />
+						<element name="previous-len" type="tr-510-s:string20" />
+       					<element name="previous-horizontal-position" type="tr-510-s:string30" />
+						<element name="central-connection-previous-number" type="boolean" />
+						<element name="cna" type="tr-510-s:int3" />
+						<element name="result" type="tr-510-s:int1" />
+						<element name="fttciplb" type="tr-510-s:string150" />
+						<element name="fttcusu" type="tr-510-s:string150" />
+						<element name="fttcpwd" type="tr-510-s:string150" />
+						<element name="fttcslot" type="tr-510-s:string150" />
+						<element name="fttcfabr" type="tr-510-s:string150" />
+						<element name="fttcmode" type="tr-510-s:string150" />
+						<element name="rack" type="tr-510-s:string250" />
+						<element name="sub-rack" type="tr-510-s:string250" />
+					</all>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-510-s" type="tr-510-s:TR-510-S" />
+</schema>

@@ -1,0 +1,11 @@
+Version 0.5
+
+Se agrego en la el metodo doProcess que si la accion no esta autorizada
+se reenvie e la accion "accionNoAutorizada"
+
+
+Version 0.6 
+
+usa tn-seguridad 0.3 que acepta patrones en el archivo de configuracion de recursos
+para no tener que mapearlos uno por uno
+<patron idRecurso="nombreRecurso" controlador="nombreClaseControlador" />

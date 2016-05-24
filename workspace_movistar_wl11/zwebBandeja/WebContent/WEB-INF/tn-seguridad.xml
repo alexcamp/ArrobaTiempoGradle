@@ -1,0 +1,11 @@
+<recursos>
+	<recurso id="logon.acc" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadTrue" />
+	<recurso id="logoff.free" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadTrue" />
+	<recurso id="porDefecto" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadPorDefecto" />
+	<recurso id="accionNoAutorizada.acc" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadTrue" />
+
+	<recurso id="recuperarClave.free" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadPorDefecto" />
+	<recurso id="DisponibilidadAgenda.free" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadTrue" />
+	<recurso id="AsignaTecnicoAcc.free" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadTrue" />
+	<recurso id="verCita.free" estatico="falso" controlador="com.telefonica_chile.bandeja.web.seguridad.ControladorDeSeguridadTrue" />
+</recursos>

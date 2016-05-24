@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-055-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-055-E">
+		<sequence>
+			<element name="head" type="tr-055-e:RequestHeaderAgendaSC"/>
+				<element name="body">
+					<complexType>
+						<sequence>
+							<element name="nit" type="tr-055-e:string14"/>
+							<element name="telefonoPadre" type="tr-055-e:string8"/>
+							<element name="telefonoAdicional" type="tr-055-e:string8"/>
+							<element name="extension" type="tr-055-e:string5"/>
+							<element name="limiteUsuarios" type="tr-055-e:int4"/>
+							<element name="nombreCliente" type="tr-055-e:string40"/>
+							<element name="apellidoCliente" type="tr-055-e:string80"/>
+							<element name="productosServicio">
+								<complexType>
+						            <sequence>
+						              <element name="productoServicio">
+						                <complexType>
+						                  <sequence>
+						                    <element name="ps" type="tr-055-e:long9"/>
+						                    <element name="operacionComercial" type="tr-055-e:long9"/>
+						                  </sequence>
+						                </complexType>
+						              </element>
+						            </sequence>
+						    	</complexType>
+							</element>							
+							<element name="localidades">
+				              <complexType>
+				                <sequence>
+				                  <element name="localidad" type="tr-055-e:string8"/>
+				                </sequence>
+				              </complexType>
+				            </element>
+							<element name="atis-request-number" type="tr-055-e:long9"/>
+							<element name="atiempo-request-number" type="tr-055-e:long9"/>
+						</sequence>
+					</complexType>
+				</element>
+		</sequence>
+	</complexType>
+	<element name="tr-055-e" type="tr-055-e:TR-055-E" />
+</schema>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_003_S.xsd,v 1.1 2011/03/30 18:21:06 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-003-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="Dslam">
+		<sequence>
+			<element name="ip" type="tr-003-s:string15" />
+			<element name="dslam-type" type="tr-003-s:char" />
+			<element name="port" type="tr-003-s:string20" />
+			<element name="pots" type="tr-003-s:string20" />
+			<element name="adsl" type="tr-003-s:string20" />
+			<element name="frame" type="tr-003-s:string20" />
+		</sequence>
+	</complexType>
+	<complexType name="TR-003-S">
+		<sequence>
+			<element name="head" type="tr-003-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="type-error" type="tr-003-s:long5" />
+						<element name="secondary-distributor" type="tr-003-s:long14" />
+						<element name="secondary-distributor-description" type="tr-003-s:string30" />
+						<element name="closet" type="tr-003-s:string6" />
+						<element name="box" type="tr-003-s:string6" />
+						<element name="box-pair" type="tr-003-s:int6" />
+						<element name="primary-distributor" type="tr-003-s:long14" />
+						<element name="primary-distributor-description" type="tr-003-s:string30" />
+						<element name="strip" type="tr-003-s:string6" />
+						<element name="strip-pair" type="tr-003-s:int6" />
+						<element name="cable" type="tr-003-s:string6" />
+						<element name="cable-pair" type="tr-003-s:int6" />
+						<element name="central-code" type="tr-003-s:long14" />
+						<element name="central-description" type="tr-003-s:string30" />
+						<element name="phone-number" type="tr-003-s:int8" />
+						<element name="len" type="tr-003-s:string20" />
+						<element name="atis-request-number" type="tr-003-s:long9" />
+						<element name="atis-group-number" type="tr-003-s:int4" />
+						<element name="atis-subrequest-number" type="tr-003-s:int4" />
+						<element name="ods-number" type="tr-003-s:int8" />
+						<element name="previous-secondary-distributor" type="tr-003-s:long14" />
+						<element name="previous-secondary-distributor-description" type="tr-003-s:string30" />
+						<element name="previous-closet" type="tr-003-s:string6" />
+						<element name="previous-box" type="tr-003-s:string6" />
+						<element name="previous-box-pair" type="tr-003-s:int6" />
+						<element name="previous-primary-distributor" type="tr-003-s:long14" />
+						<element name="previous-primary-distributor-description" type="tr-003-s:string30" />
+						<element name="previous-strip" type="tr-003-s:string6" />
+						<element name="previous-strip-pair" type="tr-003-s:int6" />
+						<element name="previous-cable" type="tr-003-s:string6" />
+						<element name="previous-cable-pair" type="tr-003-s:int6" />
+						<element name="previous-central-code" type="tr-003-s:long14" />
+						<element name="previous-central-description" type="tr-003-s:string30" />
+						<element name="previous-phone-number" type="tr-003-s:int8" />
+						<element name="previous-len" type="tr-003-s:string20" />
+						<element name="distributor-address" type="tr-003-s:string40" />
+						<element name="closet-address" type="tr-003-s:string40" />
+						<element name="box-address" type="tr-003-s:string40" />
+						<element name="dslams">
+							<complexType>
+								<sequence>
+									<element name="dslam" type="tr-003-s:Dslam" maxOccurs="unbounded" minOccurs="0">
+
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="rack" type="tr-003-s:string10" />
+						<element name="sub-rack" type="tr-003-s:string100" />
+						<element name="cna" type="tr-003-s:string8" />
+						<element name="result" type="tr-003-s:int1" />
+						<element name="horizontal-position" type="tr-003-s:string40" />
+						<element name="previous-horizontal-position" type="tr-003-s:string40" />
+						<element name="previous-box-type" type="tr-003-s:string15" />
+						<element name="box-type" type="tr-003-s:string15" />
+						<element name="state-line" type="tr-003-s:string40"/>
+						<element name="fttciplb" type="tr-003-s:string150" />
+						<element name="fttcusu" type="tr-003-s:string150" />
+						<element name="fttcpwd" type="tr-003-s:string150" />
+						<element name="fttcslot" type="tr-003-s:string150" />
+						<element name="fttcfab" type="tr-003-s:string150" />
+						<element name="fttcmode" type="tr-003-s:string150" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-003-s" type="tr-003-s:TR-003-S" />
+</schema>

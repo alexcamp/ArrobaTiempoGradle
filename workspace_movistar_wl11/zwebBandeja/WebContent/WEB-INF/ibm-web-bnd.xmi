@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webappbnd:WebAppBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:webappbnd="webappbnd.xmi" xmi:id="WebAppBinding_1" virtualHostName="default_host">
+  <webapp href="WEB-INF/web.xml#WebApp"/>
+  <resRefBindings xmi:id="ResourceRefBinding_1212072203020" jndiName="jdbc/vpistbba">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1212072203020"/>
+  </resRefBindings>
+  <resRefBindings xmi:id="ResourceRefBinding_1372194696250" jndiName="tm/TimersVPI">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1372194696250"/>
+  </resRefBindings>
+  <resRefBindings xmi:id="ResourceRefBinding_1396477680928" jndiName="tm/TimerVAT">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1393537908186"/>
+  </resRefBindings>
+  <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1212070142990" jndiName="jdbc/vpistbba">
+    <bindingResourceEnvRef href="WEB-INF/web.xml#ResourceEnvRef_1212071601269"/>
+  </resourceEnvRefBindings>
+</webappbnd:WebAppBinding>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-513-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+
+	<complexType name="TR-513-E">
+		<sequence>
+			<element name="head" type="tr-513-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="ods-number" type="tr-513-e:int8" />
+						<element name="atiempo-request-number" type="tr-513-e:long9" />
+						<element name="atis-request-number" type="tr-513-e:long9" />
+						<element name="department" type="tr-513-e:int2" />
+						<element name="city" type="tr-513-e:int8" />
+						<element name="cni" type="tr-513-e:int3" />
+						<element name="request-date" type="tr-513-e:string10" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-513-e" type="tr-513-e:TR-513-E" />
+</schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-043-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-043-S">
+		<sequence>
+			<element name="head" type="tr-043-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-043-s:long16" />
+						<element name="code" type="tr-043-s:string5" />
+						<element name="description" type="tr-043-s:string255" />
+						<element name="father-email" type="tr-043-s:string255" />
+						<element name="action" type="tr-043-s:string255" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-043-s" type="tr-043-s:TR-043-S" />
+</schema>

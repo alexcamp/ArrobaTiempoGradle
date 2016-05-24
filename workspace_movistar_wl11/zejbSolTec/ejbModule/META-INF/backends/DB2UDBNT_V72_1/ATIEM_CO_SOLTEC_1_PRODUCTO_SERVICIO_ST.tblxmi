@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="PRODUCTO_SERVICIO_ST" name="PRODUCTO_SERVICIO_ST" comments="" primaryKey="PRSE_PK">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PS_ID" name="PS_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176335549109">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PS_NOMBRE" name="PS_NOMBRE">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176335549109" length="150">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PS_OBSERVACION" name="PS_OBSERVACION" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176335549110" length="1000">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PS_VIGENTE" name="PS_VIGENTE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176335549110">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_4"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_ID" name="FAPS_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176754584468">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FA_PS" name="FA_PS" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1442329307049" length="5">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PRSE_PK" name="PRSE_PK" members="PS_ID" constraint="SQLConstraint_1176335549109">
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FLUJO_PROD_SERV_OPER_COM.tblxmi#FK_02_PROD_SERV"/>
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_FLUJO.tblxmi#FK_04_PS_ST"/>
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRODUCTO_SERVICIO_PETICION.tblxmi#FK_PS"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_FAMILIA_PROD" name="FK_FAMILIA_PROD" members="FAPS_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176754584484">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FAMILIA_PRODUCTO_SERVICIO_ST.tblxmi#FAPS_PK"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1176335549109" name="PRSE_PK" type="PRIMARYKEY" primaryKey="PRSE_PK"/>
+  <constraints xmi:id="SQLConstraint_1176754584484" name="FK_FAMILIA_PROD" type="FOREIGNKEY" referenceByKey="FK_FAMILIA_PROD"/>
+</RDBSchema:RDBTable>

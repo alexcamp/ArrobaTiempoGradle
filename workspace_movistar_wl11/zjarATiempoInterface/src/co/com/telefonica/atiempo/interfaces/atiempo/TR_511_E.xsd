@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-511-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-511-E">
+		<sequence>
+			<element name="head" type="tr-511-e:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="phone-number" type="tr-511-e:int8" />
+						<element name="previous-number" type="tr-511-e:int8" />
+						<element name="operation-type" type="tr-511-e:int2" />
+						<element name="atiempo-request-number" type="tr-511-e:long9" />
+						<element name="atis-request-number" type="tr-511-e:long9" />
+						<element name="ods-number" type="tr-511-e:int8" />
+						<element name="new-category" type="tr-511-e:long9" />
+						<element name="new-sub-category" type="tr-511-e:long9" />
+						<element name="request-pbx" type="tr-511-e:int4" />
+						<element name="request-date" type="tr-511-e:string10" />
+						<element name="special-service-types">
+							<complexType>
+								<sequence>
+									<element name="special-service-type" type="tr-511-e:SpecialServicesRequest" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-511-e" type="tr-511-e:TR-511-E" />
+</schema>

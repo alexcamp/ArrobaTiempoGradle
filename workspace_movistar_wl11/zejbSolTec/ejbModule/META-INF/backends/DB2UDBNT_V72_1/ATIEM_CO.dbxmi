@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBDatabase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="ATIEM_CO" name="ATIEM_CO" comments="">
+  <schemata href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FLUJO.tblxmi#FLUJO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_ST.tblxmi#PETICION_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_MENSAJE_ESTADO_ST.tblxmi#MENSAJE_ESTADO_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_RESPUESTA_CONEC6_APSC_LINEA.tblxmi#RESPUESTA_CONEC6_APSC_LINEA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_SERVICIO_BASICO_SUPL_CONEC6_APSC_LINEA.tblxmi#SERVICIO_BASICO_SUPL_CONEC6_APSC_LINEA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_ACTIVIDAD_FLUJO.tblxmi#ACTIVIDAD_FLUJO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FLUJO_DEFINICION.tblxmi#FLUJO_DEFINICION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_MODEM_DECO.tblxmi#MODEM_DECO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRODUCTO_SERVICIO_ST.tblxmi#PRODUCTO_SERVICIO_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FLUJO_PROD_SERV_OPER_COM.tblxmi#FLUJO_PROD_SERV_OPER_COM"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICION_FLUJO.tblxmi#PETICION_FLUJO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_OPERACION_COMERCIAL_ST.tblxmi#OPERACION_COMERCIAL_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_BITACORA_PETICION.tblxmi#BITACORA_PETICION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_DECO_TARJETA_PAQUETE.tblxmi#DECO_TARJETA_PAQUETE"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_DSLAM_CONEC6_APSC_LINEA.tblxmi#DSLAM_CONEC6_APSC_LINEA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRODUCTO_SERVICIO_PETICION.tblxmi#PRODUCTO_SERVICIO_PETICION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_RECURSOS_BA.tblxmi#RECURSOS_BA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_TIPO_PETICION_ST.tblxmi#TIPO_PETICION_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CODIGO_CIERRE.tblxmi#CODIGO_CIERRE"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CODIGO_DIAGNOSTICO.tblxmi#CODIGO_DIAGNOSTICO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CODIGO_ST.tblxmi#CODIGO_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FAMILIA_PRODUCTO_SERVICIO_ST.tblxmi#FAMILIA_PRODUCTO_SERVICIO_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_TIPO_CODIGO.tblxmi#TIPO_CODIGO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_TEMATICO.tblxmi#TEMATICO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_DECO_TARJETA.tblxmi#DECO_TARJETA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_MODEM.tblxmi#MODEM"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_TMP_DECO_TARJETA.tblxmi#TMP_DECO_TARJETA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRUEBA_LINEA.tblxmi#PRUEBA_LINEA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_LOCALIZACION.tblxmi#LOCALIZACION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CODIGO_CIERRE_PETICION.tblxmi#CODIGO_CIERRE_PETICION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CATALOGO_PRUEBA_LINEA.tblxmi#CATALOGO_PRUEBA_LINEA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_AREA_GESTION.tblxmi#AREA_GESTION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_REGLA.tblxmi#REGLA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_REGLA_AREA_GES_COD_ESTADO.tblxmi#REGLA_AREA_GES_COD_ESTADO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_TMP_MODEM.tblxmi#TMP_MODEM"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CONTROLVISITA.tblxmi#CONTROLVISITA"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_ZONAS_ATENDIMIENTO.tblxmi#ZONAS_ATENDIMIENTO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_SLA_ST.tblxmi#SLA_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_ELEMENTO_PETICION.tblxmi#ELEMENTO_PETICION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_TMP_EQUIPO.tblxmi#TMP_EQUIPO"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_ACTIVIDAD_LOCALIZACION.tblxmi#ACTIVIDAD_LOCALIZACION"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_AGENDA_SC_ST.tblxmi#AGENDA_SC_ST"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_DECO_TARJETA_INFO_SAP.tblxmi#DECO_TARJETA_INFO_SAP"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_ELEMENTO_NO_SERIALIZADO.tblxmi#ELEMENTO_NO_SERIALIZADO"/>
+   <tableGroup xmi:type="RDBSchema:RDBTable" href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PETICIONES_VIP.tblxmi#PETICIONES_VIP"/>
+  <domain href="DB2UDBNT_V72_Domain.xmi#SQLVendor_1"/>
+</RDBSchema:RDBDatabase>

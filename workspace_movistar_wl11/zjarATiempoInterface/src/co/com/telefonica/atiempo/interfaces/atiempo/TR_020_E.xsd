@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-020-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	
+	<complexType name="TR020EPositionHeader">
+		<sequence>
+			<element name="sap-material-code" type="tr-020-e:string4"/>
+			<element name="material" type="tr-020-e:string18"/>
+			<element name="plant" type="tr-020-e:string4"/>
+			<element name="storage" type="tr-020-e:string4"/>
+			<element name="batch-code" type="tr-020-e:string10"/>			
+			<element name="mat-quantity" type="tr-020-e:string13"/>
+			<element name="measurement-unit" type="tr-020-e:string3"/>
+			<element name="cost-center" type="tr-020-e:string10"/>
+			<element name="func-area-long" type="tr-020-e:string4"/>						
+			<element name="pep-element" type="tr-020-e:string10"/>
+			<element name="serials">
+				<complexType>
+					<sequence>
+						<element name="serial" type="tr-020-e:string18" minOccurs="0" maxOccurs="unbounded"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR020ERequestHeader">
+		<sequence>
+			<element name="atiempo-request-number" type="tr-020-e:string13"/>
+			<element name="accounting-date" type="tr-020-e:string8"/>
+			<element name="move-type" type="tr-020-e:string3"/>
+			<element name="positions-header">
+				<complexType>
+					<sequence>
+						<element maxOccurs="unbounded" name="position-header" type="tr-020-e:TR020EPositionHeader"/>
+					</sequence>
+				</complexType>
+			</element>	
+		</sequence>
+	</complexType>
+
+	<complexType name="TR-020-E">
+		<sequence>
+			<element name="head" type="tr-020-e:RequestHeaderAgendaSC"/>
+				<element name="body">
+					<complexType>
+						<sequence>
+							<element name="execution-date" type="tr-020-e:string8"/>
+							<element name="execution-time" type="tr-020-e:string6"/>												
+							<element name="atis-request-number" type="tr-020-e:string20"/>												
+							<element name="flag-mat-gesrec" type="tr-020-e:string3"/>												
+							<element name="requests-header">
+								<complexType>
+									<sequence>
+										<element maxOccurs="unbounded" name="request-header" type="tr-020-e:TR020ERequestHeader"/>
+									</sequence>
+								</complexType>
+							</element>							
+						</sequence>
+					</complexType>
+				</element>
+		</sequence>
+	</complexType>
+	<element name="tr-020-e" type="tr-020-e:TR-020-E" />
+</schema>

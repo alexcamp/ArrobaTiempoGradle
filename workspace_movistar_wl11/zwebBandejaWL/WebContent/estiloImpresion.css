@@ -1,0 +1,133 @@
+.tabla-borde-delgado { border-collapse:collapse; border: 1px #666666 solid; }
+.botones {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000066; background-color: #CCCCCC; font-weight: bold}
+.titulo-tabla {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FFFFFF; background-color: #000066; padding:4px; padding-left: 6px; /* background-image: url(img/storbg.gif); */}
+.encabezados-tabla {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #003; background-color: #aaa; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-decoration: none; z-index: 1; clip:  rect(   ); text-align: center; border: #666666; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.encabezados-tabla-blanco {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #FFFFFF; background-color: #999999; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; text-decoration: none; z-index: 1; clip:  rect(   ); text-align: center; border: #666666; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.elementos-filtro { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #000066; background-color: #CCCCCC; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; border: none}
+.botones-chicos { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #006; font-weight: bold; }
+a.link-simple-filtro { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #FFFFFF; font-weight: bold; text-decoration: none}
+.link-simple-oscuro { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; text-decoration: none; color: #000000}
+.link-simple-oscuro:hover { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; text-decoration: underline; color: #000000}
+.link-simple { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; text-decoration: none; color: #FFFFFF }
+.tab-activo { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000000; text-decoration: none; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; font-weight: bold}
+.tab-pasivo { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #FFFFFF; text-decoration: none; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; font-weight: bold}
+.titulo-subtabla { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FFFFFF; background-color: #999999; padding-left: 6px ; top: auto; clip:  rect(   ); height: 10px; vertical-align: top}
+.texto-encabezado { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #FFFFFF ; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; font-style: normal; text-align: center}
+.input-form, select { font-family: Arial, Helvetica, sans-serif; font-size: 9px; font-weight: normal; text-decoration: none; clip:   rect(   )}
+.texto-logeado-como {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FFFFFF; font-style: normal; text-align: center; padding-bottom: 3px}
+.menu-desplegable {  font-family: verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 9px; color: #000066; height: 15px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 4px; text-decoration: none}
+.titulo-tabs {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #000066; padding-top: 4px; padding-right: 2px; padding-bottom: 4px; padding-left: 2px}
+.despliegue-consulta {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: normal; color: #000066; background-color: #CCCCCC}
+.fila-detalle-destacada { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #000000; background-color: #FFFF99; height: 16px; padding-left: 4px ; border: #666666; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+
+.encabezado-subtabla {  font-family: verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #515151; background-color: #B2B2B2; font-weight: bold}
+.alerta { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FF0000;}
+
+.tab-pasivo-izq{ background-image: url("img/tab_pasivo_izq.gif"); }
+.tab-pasivo-der{ background-image: url("img/tab_pasivo_der.gif"); }
+.tab-activo-izq{ background-image: url("img/tab_activo_izq.gif"); }
+.tab-activo-der{ background-image: url("img/tab_activo_der.gif"); }
+
+.tab-activo { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; text-decoration: none; color: #000000; padding: 1px; background-image: url("img/tab_activo_centro.gif"); text-align: center; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; }
+.tab-pasivo { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; text-decoration: none; color: #000000; padding: 1px; background-image: url("img/tab_pasivo_centro.gif"); padding-left: 8px; padding-right: 8px;  padding-top: 4px; padding-bottom: 4px; }
+
+.link-activo,.link-activo:hover,.link-activo:visited{ font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; text-decoration: none; color: #000000}
+.link-pasivo,.link-pasivo:hover,.link-pasivo:visited{ font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; text-decoration: none; color: #FFFFFF}
+
+.hidden { display: none;  }
+body{ margin: 0px; padding: 0px; }
+
+/***/
+
+#cabecera{
+  width: 780px;
+  height: 53px;
+  padding: 0px;
+  border-collapse: collapse;
+  border: 0px;
+}
+
+
+#filtro_grande, #filtro_chico{
+  width: 780;
+  border: 1px solid #666;
+  padding:0;
+  border-collapse: collapse;
+}
+
+.menu-cabecera{
+  background-color: #eef;
+  color: #003;
+  font-weight: bold;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10px;
+}
+
+#listado{
+	width: 640px;
+	border: 1px solid #666;
+	border-collapse: collapse;
+}
+
+/* Los titulos de las columnas del listado de peticiones */
+#listado .encabezados-tabla td{
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #333;
+}
+
+#listado .encabezados-tabla td a{
+	color: #000;
+	text-decoration: none;
+}
+
+/* listado de peticiones */
+.old-fila-detalle-impar { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: normal; color: #000066; background-color: #FFFFFF; height: 16px; padding-left: 4px; text-align: center; vertical-align: top ; border: 1px solid #666}
+.old-fila-detalle-par { font-family: verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: normal; color: #000066; background-color: #CCCCCC; height: 16px; padding-left: 4px; text-align: center; vertical-align: top ; border: 1px #666666 solid}
+
+#listado .fila-detalle-impar td{
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 9px;
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #999;
+	font-weight: bold;
+	padding: 2px;
+}
+
+#listado .fila-detalle-impar td a{
+	color: #333;
+	text-decoration: none;
+}
+#listado .fila-detalle-impar td a:hover{
+	color: #00f;
+	text-decoration: underline;
+}
+
+
+#listado .fila-detalle-par td{
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 9px;
+	background-color: #ddd;
+	color: #000;
+	text-decoration: none;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #999;
+	font-weight: bold;
+	padding: 2px;
+}
+
+#listado .fila-detalle-par td a{
+	color: #333;
+	text-decoration: none;
+}
+#listado .fila-detalle-par td a:hover{
+	color: #00f;
+	text-decoration: underline;
+}
+
+

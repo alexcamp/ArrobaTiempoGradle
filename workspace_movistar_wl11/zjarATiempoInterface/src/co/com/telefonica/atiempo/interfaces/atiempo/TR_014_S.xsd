@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_014_S.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-014-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-014-S">
+		<sequence>
+			<element name="head" type="tr-014-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-014-s:long9" />
+						<element name="error-code" type="tr-014-s:string10" />
+						<element name="error-code-message" type="tr-014-s:string250" />
+						<element name="phone-number" type="tr-014-s:int8" />
+						<element name="port" type="tr-014-s:string20" />
+						<element name="pots" type="tr-014-s:string20" />
+						<element name="adsl" type="tr-014-s:string20" />
+						<element name="lan-ip" type="tr-014-s:string100" />
+						<element name="wan-ip" type="tr-014-s:string100" />
+						<element name="mask" type="tr-014-s:string100" />
+						<element name="frame" type="tr-014-s:string20" />
+						<element name="dslam-ip" type="tr-014-s:string20" />
+						<element name="vpivci-client" type="tr-014-s:string20" />
+						<element name="vpivci-network" type="tr-014-s:string20" />
+						<element name="slot" type="tr-014-s:string20" />
+						<element name="father-email" type="tr-014-s:string50" />
+						<element name="coverage-zone" type="tr-014-s:string50" />
+						<element name="modem-serial" type="tr-014-s:string50" />						
+						<element name="modem-brand" type="tr-014-s:string40" />
+						<element name="modem-model" type="tr-014-s:string40" />						
+						<element name="modem-type" type="tr-014-s:long9" />	
+						<element name="modem-posting-date" type="tr-014-s:string8"/>
+						<element name="modem-move-type" type="tr-014-s:string30" />
+						<element name="modem-sap-material-code" type="tr-014-s:string4"/>
+						<element name="modem-material" type="tr-014-s:string18"/>
+						<element name="modem-plant" type="tr-014-s:string4"/>
+						<element name="modem-storage" type="tr-014-s:string4"/>
+						<element name="modem-batch-code" type="tr-014-s:string10"/>			
+						<element name="modem-measurement-unit" type="tr-014-s:string3"/>
+						<element name="modem-cost-center" type="tr-014-s:string10"/>
+						<element name="modem-func-area-long" type="tr-014-s:string4"/>						
+						<element name="modem-pep-element" type="tr-014-s:string10"/>				
+						<element name="modem-flag-mat-sap" type="tr-014-s:string2"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-014-s" type="tr-014-s:TR-014-S" />
+</schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_023_E.xsd,v 1.1 2011/03/30 18:21:43 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-023-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-023-E">
+		<sequence>
+			<element name="head" type="tr-023-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-023-e:long9" />
+						<element name="phone-number" type="tr-023-e:int8" />
+						<element name="product-service-code" type="tr-023-e:long9" />
+						<element name="product-service-code-ant" type="tr-023-e:long9" />					
+						<element name="commercial-operation" type="tr-023-e:long9" />
+						<element name="service-reference-id" type="tr-023-e:string15" />
+						<element name="old-service-reference-id" type="tr-023-e:string15" />
+						<element name="client-document" type="tr-023-e:string16" />
+						<element name="password" type="tr-023-e:string50" />
+						<element name="client-name" type="tr-023-e:string64" />
+						<element name="client-first-lastname" type="tr-023-e:string40" />
+						<element name="client-second-lastname" type="tr-023-e:string40" />
+						<element name="contact-name" type="tr-023-e:string64" />
+						<element name="contact-phone" type="tr-023-e:string20" />
+						<element name="contact-first-lastname" type="tr-023-e:string40" />
+						<element name="contact-second-lastname" type="tr-023-e:string40" />
+						<element name="father-email" type="tr-023-e:string100" />
+						<element name="second-email" type="tr-023-e:string100" />
+						<element name="tipoSVA" type="tr-023-e:string8" />
+						<element name="dominio1" type="tr-023-e:string200" />
+						<element name="dominio2" type="tr-023-e:string200" />
+						<element name="dominio3" type="tr-023-e:string200" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-023-e" type="tr-023-e:TR-023-E" />
+</schema>

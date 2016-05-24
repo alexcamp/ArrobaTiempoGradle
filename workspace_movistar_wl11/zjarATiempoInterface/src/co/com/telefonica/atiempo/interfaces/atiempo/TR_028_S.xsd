@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_028_S.xsd,v 1.1 2011/03/30 18:21:42 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-028-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="equipment">
+		<sequence>
+			<element name="element-serial" type="tr-028-s:string250" />
+			<element name="element-type" type="tr-028-s:string30" />
+			<element name="equipment-type" type="tr-028-s:string2" />
+			<element name="inventory-type" type="tr-028-s:string250" />
+			<element name="error-code" type="tr-028-s:long10" />
+			<element name="error-code-message" type="tr-028-s:string250" />
+		</sequence>
+	</complexType>
+	<complexType name="TR-028-S">
+		<sequence>
+			<element name="head" type="tr-028-s:ResponseHeader2" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-028-s:long9" />
+						<element name="atis-request-number" type="tr-028-s:long9" />
+						<element name="equipments">							
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-028-s:equipment" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-028-s" type="tr-028-s:TR-028-S" />
+</schema>

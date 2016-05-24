@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-717-s="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/>
+   <complexType name="TR_717_S">
+   <sequence>
+      <element name="head" type="tr-717-s:RequestHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+			<sequence>
+            <element name="id-source-system" type="tr-717-s:string16"/>
+            <element name="id-schedule" type="tr-717-s:string24"/>
+            <element name="material-code" type="tr-717-s:string24"/>
+            <element name="modem-brand" type="tr-717-s:string24"/>
+            <element name="model-modem" type="tr-717-s:string24"/>            
+            <element name="modem-type" type="tr-717-s:string24"/>
+            <element name="modem-serial" type="tr-717-s:string24"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-717-s" type="tr-717-s:TR_717_S"/>
+</schema>

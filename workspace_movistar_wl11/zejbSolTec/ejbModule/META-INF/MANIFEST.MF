@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Class-Path: zejbSolTecClient.jar 
+ zejbBandejaClient.jar 
+ zjarinvocacionservicios.jar 
+ zjarutiles.jar 
+ zjarUtiliesATiempo.jar 
+ zejbComun.jar 
+ zejbComunClient.jar 
+ zejbComunWF.jar 
+ zejbComunWFClient.jar 
+ zjarmsgbroker.jar 
+ lib/classes12.jar 
+ lib/commons-httpclient.jar 
+ lib/commons-logging.jar 
+ lib/directory.jar 
+ lib/fmcojapi.jar 
+ lib/log4j-1.2.8.jar 
+ lib/xercesImpl.jar 
+ lib/xmlParserAPIs.jar 
+ lib/xsdbeans.jar 
+ lib/zjarUtilities-1.00.003.jar 
+ zjarATiempoInterface.jar
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-002-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-002-E">
+		<sequence>
+			<element name="head" type="tr-002-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="ods-number" type="tr-002-e:int8" />
+						<element name="atis-request-number" type="tr-002-e:long9" />
+						<element name="department" type="tr-002-e:int4" />
+						<element name="city" type="tr-002-e:int8" />
+						<element name="cni" type="tr-002-e:string8" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-002-e" type="tr-002-e:TR-002-E" />
+</schema>

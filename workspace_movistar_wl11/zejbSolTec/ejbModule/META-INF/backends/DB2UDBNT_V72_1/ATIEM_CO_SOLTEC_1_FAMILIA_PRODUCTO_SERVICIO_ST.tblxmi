@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="FAMILIA_PRODUCTO_SERVICIO_ST" name="FAMILIA_PRODUCTO_SERVICIO_ST" comments="" primaryKey="FAPS_PK">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_ID" name="FAPS_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176754023171">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_NOMBRE" name="FAPS_NOMBRE">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176754023171" length="150">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_CODIGO" name="FAPS_CODIGO" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1176754023172" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_PRIORIDAD" name="FAPS_PRIORIDAD" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176754023172">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_ID_PADRE" name="FAPS_ID_PADRE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176754023173">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TIEMPO" name="TIEMPO" allowNull="true">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176845674156">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="FAPS_PK" name="FAPS_PK" members="FAPS_ID" constraint="SQLConstraint_1176754023171">
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRODUCTO_SERVICIO_ST.tblxmi#FK_FAMILIA_PROD"/>
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_LOCALIZACION.tblxmi#FK_FAMILIA"/>
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_CATALOGO_PRUEBA_LINEA.tblxmi#FK_FAMILIA"/>
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_AREA_GESTION.tblxmi#FK_FAPS_ID"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1176754023171" name="FAPS_PK" type="PRIMARYKEY" primaryKey="FAPS_PK"/>
+</RDBSchema:RDBTable>

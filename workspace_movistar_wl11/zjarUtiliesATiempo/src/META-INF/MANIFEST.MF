@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: lib/castor-1.0.5.jar 
+ lib/xercesImpl.jar 
+ lib/log4j-1.2.8.jar
+

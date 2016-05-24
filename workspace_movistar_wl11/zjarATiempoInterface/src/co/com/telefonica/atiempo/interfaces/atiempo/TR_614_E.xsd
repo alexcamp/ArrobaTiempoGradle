@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-614-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-614-E">
+		<sequence>
+			<element name="head" type="tr-614-e:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-614-e:long9" />
+						<element name="atis-request-number" type="tr-614-e:long9" />
+						<element name="operacion" type="string" />
+						<element name="fijo-phone-number" type="string" />
+						<element name="movil-phone-number" type="tr-614-e:string14"/>
+						<element name="valor-recarga" type="string" />
+						<element name="codigo-plan" type="string" />
+						<element name="dia-recarga" type="string" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-614-e" type="tr-614-e:TR-614-E" />
+</schema>

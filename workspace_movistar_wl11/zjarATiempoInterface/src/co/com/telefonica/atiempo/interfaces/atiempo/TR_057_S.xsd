@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-057-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+
+	<complexType name="TR-057-S">
+		<sequence>
+			<element name="head" type="tr-057-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence maxOccurs="1" minOccurs="1">
+						<element name="atiempo-request-number" type="string" />
+						<element name="atis-request-number" type="string" />
+						<element name="cameras">
+							<complexType>
+								<sequence maxOccurs="1" minOccurs="1">
+									<element name="camera" type="tr-057-s:CameraResponse" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<element name="tr-057-s" type="tr-057-s:TR-057-S" />
+</schema>

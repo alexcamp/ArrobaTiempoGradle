@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_022_E.xsd,v 1.1 2011/03/30 18:21:43 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-022-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-022-E">
+		<sequence>
+			<element name="head" type="tr-022-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-022-e:long10" />
+						<element name="modem-final-digits" type="tr-022-e:string4" />
+						<element name="city-code" type="tr-022-e:string8" />
+						<element name="id-plan" type="tr-022-e:long10" />
+						<element name="modem-type" type="tr-022-e:int8" />
+						<element name="contractor-id" type="tr-022-e:long10" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-022-e" type="tr-022-e:TR-022-E" />
+</schema>

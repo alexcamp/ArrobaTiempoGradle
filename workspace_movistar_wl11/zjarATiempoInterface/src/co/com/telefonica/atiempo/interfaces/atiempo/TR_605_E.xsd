@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-605-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+
+	<complexType name="TR-605-E">
+		<sequence>
+			<element name="head" type="tr-605-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="pc-id" type="tr-605-e:string250" />
+						<element name="ps" type="tr-605-e:int5" />
+						<element name="oc" type="tr-605-e:int3" />
+						<element name="ps-ant" type="tr-605-e:int5" />
+						<element name="identification-card" type="tr-605-e:string250" />
+						<element name="email" type="tr-605-e:string250" />												
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<element name="tr-601-e" type="tr-605-e:TR-605-E" />
+</schema>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbext:EJBJarExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejb="ejb.xmi" xmlns:ejbext="ejbext.xmi" xmi:id="EJBJarExtension_1115412132843">
+  <ejbExtensions xmi:type="ejbext:SessionExtension" xmi:id="SessionExtension_1115416322858">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115416302765"/>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:SessionExtension" xmi:id="SessionExtension_1115416322890">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115416318328"/>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:SessionExtension" xmi:id="SessionExtension_1115416322904">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115416320406"/>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:SessionExtension" xmi:id="SessionExtension_1115416322906">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1115416321343"/>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:SessionExtension" xmi:id="SessionExtension_1116455923918">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1116455923777"/>
+  </ejbExtensions>
+  <ejbExtensions xmi:type="ejbext:ContainerManagedEntityExtension" xmi:id="ContainerManagedEntityExtension_1176325438267" name="Flujo">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1176325146375"/>
+  </ejbExtensions>
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <appliedAccessIntents xmi:id="AppliedAccessIntent_1239115162107" name="wsOptimisticUpdate" description="" accessIntentName="wsOptimisticUpdate">
+    <methodElements xmi:id="MethodElement_1239115162107" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Actividad_flujo"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162108" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Area_gestion"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162109" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Bitacora_peticion"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162110" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Catalago_prueba_linea"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162111" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_cierre"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162112" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_cierre_peticion"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162113" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_diagnostico"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162114" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_st"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162115" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Controlvisita"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162116" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Deco_tarjeta"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162117" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Dslam_apsc_linea"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162118" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Elemento_Peticion"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162119" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Familia_producto_servicio_st"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162120" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1176325146375"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162121" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Flujo_definicion"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162122" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Flujo_prod_serv_oper_com"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162123" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Localizacion"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1341597889097" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Mensaje_descarga_SAP_ST"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1341597889098" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Mensaje_estado_st"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162125" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Modem"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162126" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Operacion_comercial_st"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162127" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Peticion_flujo"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162128" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Peticion_st"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162129" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Producto_servicio_peticion"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162130" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Producto_servicio_st"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162131" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Prueba_linea"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162132" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Recursos_ba"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162133" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Recursos_linea_basica"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162134" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Regla"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162135" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Regla_area_ges_cod_estado"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162136" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Servicio_basico_supl_apsc_linea"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162137" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tematico"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162138" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tipo_codigo"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162139" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tipo_peticion_st"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162140" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tmp_deco_tarjeta"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162141" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tmp_equipo"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1239115162142" name="*" type="Unspecified">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tmp_modem"/>
+    </methodElements>
+  </appliedAccessIntents>
+</ejbext:EJBJarExtension>

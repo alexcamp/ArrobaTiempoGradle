@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-040-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-040-S">
+		<sequence>
+			<element name="head" type="tr-040-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="status-code" type="tr-040-s:string5" />
+						<element name="atiempo-request-number" type="tr-040-s:long16" />
+						<element name="ticket-number" type="tr-040-s:string255" />
+
+						<element name="network-information">
+							<complexType>
+								<sequence>
+									<element name="equipment">
+										<complexType>
+											<sequence>
+												<element name="ip" type="tr-040-s:string30" />
+												<element name="subrack" type="tr-040-s:string20" />
+												<element name="slot" type="tr-040-s:string20" />
+												<element name="port-id" type="tr-040-s:string50" />
+											</sequence>
+										</complexType>
+									</element>
+
+									<element name="vpi-vci" type="tr-040-s:string24" />
+									<element name="vpi-vci-network" type="tr-040-s:string24" />
+									<element name="pots" type="tr-040-s:string24" />
+									<element name="adsl" type="tr-040-s:string24" />
+									
+									<element name="ip-lan-mask" type="tr-040-s:string255" />
+									<element name="ip-lan" type="tr-040-s:string255" />
+									<element name="ip-wan" type="tr-040-s:string255" />
+								</sequence>
+							</complexType>
+						</element>
+
+
+
+						<element name="other">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-040-s:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="port-modification-flag" type="tr-040-s:string2" />
+
+						<element name="old-network-information">
+							<complexType>
+								<sequence>
+
+									<element name="equipment">
+										<complexType>
+											<sequence>
+												<element name="ip" type="tr-040-s:string30" />
+												<element name="subrack" type="tr-040-s:string20" />
+												<element name="slot" type="tr-040-s:string20" />
+												<element name="port-id" type="tr-040-s:string50" />
+											</sequence>
+										</complexType>
+									</element>
+
+									<element name="vpi-vci" type="tr-040-s:string24" />
+									<element name="vpi-vci-network" type="tr-040-s:string24" />
+									<element name="pots" type="tr-040-s:string24" />
+									<element name="adsl" type="tr-040-s:string24" />
+
+									<element name="ip-lan-mask" type="tr-040-s:string255" />
+									<element name="ip-lan" type="tr-040-s:string255" />
+									<element name="ip-wan" type="tr-040-s:string255" />
+
+								</sequence>
+							</complexType>
+						</element>
+						<element name="action" type="tr-040-s:string255" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-040-s" type="tr-040-s:TR-040-S" />
+</schema>

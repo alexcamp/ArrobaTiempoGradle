@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="zejbBandejaClient">
+        <wb-resource deploy-path="/" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/src-ejbservicios"/>
+        <wb-resource deploy-path="/" source-path="/src-ejbsessions"/>
+        <wb-resource deploy-path="/" source-path="/src-datosbandeja"/>
+        <wb-resource deploy-path="/" source-path="/src-accionesmasivas"/>
+        <wb-resource deploy-path="/" source-path="/ejbModule"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-002-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-002-S">
+		<sequence>
+			<element name="head" type="tr-002-s:ResponseHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="type-error" type="tr-002-s:long5" />
+						<element name="response" type="boolean" />
+						<element name="atis-request-number" type="tr-002-s:long9" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-002-s" type="tr-002-s:TR-002-S" />
+</schema>

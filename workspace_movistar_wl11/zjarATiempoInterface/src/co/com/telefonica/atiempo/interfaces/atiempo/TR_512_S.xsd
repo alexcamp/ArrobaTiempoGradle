@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-512-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-512-S">
+		<sequence>
+			<element name="head" type="tr-512-s:ResponseHeader2" />
+			<element name="body">
+				<complexType>
+                    <all maxOccurs="1" minOccurs="1">
+                    					
+						<element name="atiempo-request-number" type="tr-512-s:long9" />
+						<element name="phone-number" type="tr-512-s:int8" />
+						
+					</all>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-512-s" type="tr-512-s:TR-512-S" />
+</schema>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quartz>
+	<job>
+		<job-detail>
+			<name>EjecucionPeticionesAFuturoBatchJob</name>
+			<group>DEFAULT</group>
+			<description>Ejecucion Peticiones a Futuro</description>
+			<job-class>co.com.telefonica.atiempo.vpistbba.ejecucionfutura.batch.EjecucionPeticionesAFuturoBatchJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+		</job-detail>
+		<trigger>
+			<simple>
+				<name>Trigger</name>
+				<group>DEFAULT</group>
+				<job-name>EjecucionPeticionesAFuturoBatchJob</job-name>
+				<start-time>2007-03-06 6:00:00 AM</start-time>
+				<job-group>DEFAULT</job-group>
+				<repeat-count>-1</repeat-count>
+				<repeat-interval>180000</repeat-interval>
+			</simple>
+		</trigger>				
+	</job>
+	<job>
+		<job-detail>
+			<name>CorreccionEstructuraWFjob</name>
+			<group>DEFAULT</group>
+			<description>Ejecucion Peticiones a Futuro</description>
+			<job-class>co.com.telefonica.atiempo.vpistbba.utilidades.CorreccionEstructuraWFJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+		</job-detail>
+		<trigger>
+			<simple>
+				<name>TriggerWF</name>
+				<group>DEFAULT</group>
+				<job-name>CorreccionEstructuraWFjob</job-name>
+				<start-time>2007-03-06 6:00:00 AM</start-time>
+				<job-group>DEFAULT</job-group>
+				<repeat-count>-1</repeat-count>
+				<repeat-interval>60000</repeat-interval>
+			</simple>
+		</trigger>				
+	</job>
+</quartz>

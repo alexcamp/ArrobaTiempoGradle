@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="CATALOGO_PRUEBA_LINEA" name="CATALOGO_PRUEBA_LINEA" comments="" primaryKey="PK_CAT_PRUEBA">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_ID" name="FAPS_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1184358962729">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_PRUEBA" name="COD_PRUEBA">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1184358962730">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="DESCRIPCION" name="DESCRIPCION">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1184358962729" length="100">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="GRUPO_TRABAJO" name="GRUPO_TRABAJO">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1184358962730" length="50">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TIPO_DANO" name="TIPO_INCIDENCIA" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1214329202156" length="5">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_CAT_PRUEBA" name="PK_CAT_PRUEBA" members="FAPS_ID COD_PRUEBA" constraint="SQLConstraint_1184708959125">
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRUEBA_LINEA.tblxmi#FK_CATALOGO"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_FAMILIA" name="FK_FAMILIA" members="FAPS_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1184708959126">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FAMILIA_PRODUCTO_SERVICIO_ST.tblxmi#FAPS_PK"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1184708959125" name="PK_CAT_PRUEBA" type="PRIMARYKEY" primaryKey="PK_CAT_PRUEBA"/>
+  <constraints xmi:id="SQLConstraint_1184708959126" name="FK_FAMILIA" type="FOREIGNKEY" referenceByKey="FK_FAMILIA"/>
+</RDBSchema:RDBTable>

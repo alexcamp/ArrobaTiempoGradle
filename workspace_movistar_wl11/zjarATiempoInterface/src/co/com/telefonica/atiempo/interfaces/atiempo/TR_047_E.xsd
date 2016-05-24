@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-047-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR-047-E">
+		<sequence>
+  		   <element name="head" type="tr-047-e:RequestHeaderAgendaSC"/>
+ 		   <element name="body">
+              <complexType>
+				 <sequence>
+                    <element name="action" type="tr-047-e:string250"/>
+                    <element name="user" type="tr-047-e:string250"/>
+                    <element name="password" type="tr-047-e:string250"/>
+                    <element name="product-type" type="tr-047-e:string250"/>
+                    <element name="phone" type="tr-047-e:string250"/>
+                    <element name="name" type="tr-047-e:string250"/>
+                    <element name="mail" type="tr-047-e:string250"/>
+                    <element name="activation-date" type="tr-047-e:string250"/>
+                    <element name="address" type="tr-047-e:string250"/>
+                    <element name="state" type="tr-047-e:string250"/>
+                    <element name="city" type="tr-047-e:string250"/>
+                    <element name="user-id" type="tr-047-e:string250"/>
+                    <element name="message-id" type="tr-047-e:string250"/>
+                    <element name="segment" type="tr-047-e:string250"/>
+                    <element name="activation-user" type="tr-047-e:string250"/>
+                    <element name="unregister-date" type="tr-047-e:string250"/>
+                    <element name="new-phone" type="tr-047-e:string250"/>
+				 </sequence>
+			  </complexType>
+	       </element>
+	    </sequence>
+      </complexType>
+	<element name="tr-047-e" type="tr-047-e:TR-047-E"/>
+</schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-010-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-010-E">
+		<sequence>
+			<element name="head" type="tr-010-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="path-type" type="tr-010-e:string4" />
+						<element name="path-number" type="tr-010-e:int3" />
+						<element name="first-path-characters" type="tr-010-e:string3" />
+						<element name="second-path-characters" type="tr-010-e:string4" />
+						<element name="path-zone" type="tr-010-e:char" />
+						<element name="path-type-2" type="tr-010-e:string4" />
+						<element name="path-number-2" type="tr-010-e:int3" />
+						<element name="first-path-characters-2" type="tr-010-e:string3" />
+						<element name="second-path-characters-2" type="tr-010-e:string4" />
+						<element name="path-zone-2" type="tr-010-e:char" />
+						<element name="atis-request-number" type="tr-010-e:long9" />
+						<element name="phone-number" type="tr-010-e:int8" />
+						<element name="client-name" type="tr-010-e:string40" />
+						<element name="client-document" type="tr-010-e:string20" />
+						<element name="product-service-code" type="tr-010-e:long9" />
+						<element name="commercial-operation" type="tr-010-e:long9" />
+						<element name="installation-address" type="tr-010-e:string64" />
+						<element name="address-number" type="tr-010-e:string3" />
+						<element name="address-characters" type="tr-010-e:char" />
+						<element name="department" type="tr-010-e:int4" />
+						<element name="city" type="tr-010-e:int8" />
+						<element name="use-type" type="tr-010-e:long9" />
+						<element name="comercial-product-type" type="tr-010-e:long9" />
+						<element name="comercial-product-subtype" type="tr-010-e:long9" />
+						<element name="place-type-1" type="tr-010-e:string2" />
+						<element name="place-number-1" type="tr-010-e:string6" />
+						<element name="place-type-2" type="tr-010-e:string2" />
+						<element name="place-number-2" type="tr-010-e:string6" />
+						<element name="place-type-3" type="tr-010-e:string2" />
+						<element name="place-number-3" type="tr-010-e:string6" />
+						<element name="atis-number" type="tr-010-e:long9" />
+						<element name="project-code" type="tr-010-e:string20" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-010-e" type="tr-010-e:TR-010-E" />
+</schema>

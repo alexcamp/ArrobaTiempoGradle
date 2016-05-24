@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-054-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+
+	<complexType name="TR-054-E">
+		<sequence>
+			<element name="head" type="tr-054-e:RequestHeaderAgendaSC"/>
+				<element name="body">
+					<complexType>
+						<sequence>
+							<element name="atis-request-number" type="tr-054-e:long9"/>
+							<element name="atiempo-request-number" type="tr-054-e:long9"/>
+							<element name="operacionComercial" type="tr-054-e:int4"/>
+							<element name="idPc" type="string"/>
+							<element name="codigoPlan" type="string"/>
+							<element name="nit" type="string"/>
+							<element name="url" type="string"/>
+							<element name="mensaje1" type="string"/>
+							<element name="mensaje2" type="string"/>
+							<element name="mensaje3" type="string"/>
+							<element name="region" type="string"/>
+							<element name="promocion1" type="string"/>
+							<element name="promocion2" type="string"/>
+							<element name="promocion3" type="string"/>
+							<element name="palabrasClave1" type="string"/>
+							<element name="palabrasClave2" type="string"/>
+							<element name="palabrasClave3" type="string"/>
+							<element name="ciudad" type="string"/>
+							<element name="nombreCliente" type="string"/>
+							<element name="emailCliente" type="string"/>
+							<element name="fechaVenta" type="string"/>
+							<element name="direccion" type="string"/>
+							<element name="telefono" type="string"/>
+							<element name="celular" type="string"/>
+							<element name="nombreContacto" type="string"/>
+							<element name="telefonoContacto" type="string"/>
+							<element name="emailContacto" type="string"/>
+							<element name="indicativo" type="string"/>
+							<element name="codigoApertura" type="string"/>
+							<element name="codigoDiagnostico" type="string"/>
+							<element name="numeroIncidencia" type="string"/>
+							<element name="observaciones1" type="string"/>
+							<element name="observaciones2" type="string"/>
+							<element name="observaciones3" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+		</sequence>
+	</complexType>
+	<element name="tr-054-e" type="tr-054-e:TR-054-E" />
+</schema>

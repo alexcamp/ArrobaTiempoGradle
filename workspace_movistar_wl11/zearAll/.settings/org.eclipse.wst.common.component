@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="zearAll">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="zejbBandeja.jar" deploy-path="/" handle="module:/resource/zejbBandeja/zejbBandeja">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbBandejaClient.jar" deploy-path="/" handle="module:/resource/zejbBandejaClient/zejbBandejaClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbComun.jar" deploy-path="/" handle="module:/resource/zejbComun/zejbComun">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbComunClient.jar" deploy-path="/" handle="module:/resource/zejbComunClient/zejbComunClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbEmuladorSigres.jar" deploy-path="/" handle="module:/resource/zejbEmuladorSigres/zejbEmuladorSigres">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbEmuladorSigresClient.jar" deploy-path="/" handle="module:/resource/zejbEmuladorSigresClient/zejbEmuladorSigresClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbClienteEmuladorSigres.jar" deploy-path="/" handle="module:/resource/zejbClienteEmuladorSigres/zejbClienteEmuladorSigres">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbClienteEmuladorSigresClient.jar" deploy-path="/" handle="module:/resource/zejbClienteEmuladorSigresClient/zejbClienteEmuladorSigresClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbComunWF.jar" deploy-path="/" handle="module:/resource/zejbComunWF/zejbComunWF">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbComunWFClient.jar" deploy-path="/" handle="module:/resource/zejbComunWFClient/zejbComunWFClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbVpiStbBa.jar" deploy-path="/" handle="module:/resource/zejbVpiStbBa/zejbVpiStbBa">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbVpiStbBaClient.jar" deploy-path="/" handle="module:/resource/zejbVpiStbBaClient/zejbVpiStbBaClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbSolTec.jar" deploy-path="/" handle="module:/resource/zejbSolTec/zejbSolTec">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbSolTecClient.jar" deploy-path="/" handle="module:/resource/zejbSolTecClient/zejbSolTecClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbCommunucatorWS.jar" deploy-path="/" handle="module:/resource/zejbCommunucatorWS/zejbCommunucatorWS">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zejbCommunucatorWSClient.jar" deploy-path="/" handle="module:/resource/zejbCommunucatorWSClient/zejbCommunucatorWSClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zjarUtiliesATiempo.jar" deploy-path="/lib" handle="module:/resource/zjarUtiliesATiempo/zjarUtiliesATiempo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zjarATiempoInterface.jar" deploy-path="/lib" handle="module:/resource/zjarATiempoInterface/zjarATiempoInterface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zjarutiles.jar" deploy-path="/lib" handle="module:/resource/zjarutiles/zjarutiles">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zjarinvocacionservicios.jar" deploy-path="/lib" handle="module:/resource/zjarinvocacionservicios/zjarinvocacionservicios">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zjarmsgbroker.jar" deploy-path="/lib" handle="module:/resource/zjarmsgbroker/zjarmsgbroker">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zTest.war" deploy-path="/" handle="module:/resource/zTest/zTest">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zwebBandejaWL.war" deploy-path="/" handle="module:/resource/zwebBandejaWL/zwebBandejaWL">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

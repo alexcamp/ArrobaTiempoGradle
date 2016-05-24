@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_024_E.xsd,v 1.1 2011/03/30 18:21:43 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-024-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-024-E">
+		<sequence>
+			<element name="head" type="tr-024-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-024-e:long9" />
+						<element name="license-type" type="tr-024-e:string9" />
+						<element name="commercial-operation" type="tr-024-e:long9" />
+						<element name="service-reference-id" type="tr-024-e:string15" />
+						<element name="client-document" type="tr-024-e:string16" />
+						<element name="client-name" type="tr-024-e:string64" />
+						<element name="client-first-lastname" type="tr-024-e:string40" />
+						<element name="client-second-lastname" type="tr-024-e:string40" />
+						<element name="contact-name" type="tr-024-e:string64" />
+						<element name="contact-first-lastname" type="tr-024-e:string40" />
+						<element name="contact-second-lastname" type="tr-024-e:string40" />
+						<element name="father-email" type="tr-024-e:string100" />
+						<element name="second-email" type="tr-024-e:string100" />
+						<element name="phone-number" type="tr-024-e:int8" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-024-e" type="tr-024-e:TR-024-E" />
+</schema>

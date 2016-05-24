@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-601-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-601-S">
+		<sequence>
+			<element name="head" type="tr-601-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+	                    <element name="atiempo-request-number" type="tr-601-s:string9" />
+	                    <element name="action-secuence" type="tr-601-s:string23" />
+	                    <element name="altamira-service-name" type="tr-601-s:string23" />
+	                    <element name="request-stage" type="tr-601-s:string14" />
+	                    <element name="secret-code" type="tr-601-s:string16"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-601-s" type="tr-601-s:TR-601-S" />
+</schema>

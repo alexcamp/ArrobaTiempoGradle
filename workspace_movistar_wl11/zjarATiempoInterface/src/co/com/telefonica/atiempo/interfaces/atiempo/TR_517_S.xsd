@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-517-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-517-S">
+		<sequence>
+			<element name="head" type="tr-517-s:ResponseHeader2" />
+			<element name="body">
+				<complexType>
+                    <all maxOccurs="1" minOccurs="1">
+						<element name="atiempo-request-number" type="tr-517-s:long9" />
+						<element name="atis-request-number" type="tr-517-s:long9" />
+						<element name="ods-number" type="tr-517-s:int8" />
+						<element name="phone-number" type="tr-517-s:long9" />
+						<element name="operation-type" type="tr-517-s:int2" />
+					</all>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-517-s" type="tr-517-s:TR-517-S" />
+</schema>

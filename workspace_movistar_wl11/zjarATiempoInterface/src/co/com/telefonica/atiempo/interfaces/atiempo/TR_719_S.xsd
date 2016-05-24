@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-719-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-719-S">
+		<sequence>
+			<element name="head" type="tr-719-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="id_sistema_origen" type="tr-719-s:string50" />
+						<element name="id_actuacion" type="tr-719-s:string10" />
+						<element name="id_pedido_atis" type="tr-719-s:string10" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-719-s" type="tr-719-s:TR-719-S" />
+</schema>

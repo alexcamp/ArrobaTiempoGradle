@@ -1,0 +1,148 @@
+body {
+	margin-left: 0px;
+	width: 780px;
+	scrollbar-3dlight-color : #FFFFFF;
+	scrollbar-arrow-color : #b7bad7;
+	scrollbar-base-color : #e9edf6;
+	scrollbar-darkshadow-color :  #e9edf6;
+	scrollbar-face-color : #e9edf6;
+	scrollbar-track-color : #b7bad7;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td{
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+}
+
+/* ESTILOS USADOS POR LA CABECERA NUEVA */
+.txt-usuario-rol { padding-right: 10px; font-size: 10px; color: #00005A; font-family: Arial, Helvetica, sans-serif; text-decoration: none }
+.nombre-app { font-size: 10pt; color: #5A5A5A; font-family: Verdana, Arial; font-weight: bold; padding-left:10px; }
+
+
+/* ESTILOS USADOS POR LA CABECERA NUEVA */
+
+/* FILTRO */
+
+#listado-completo {
+	border: 1px solid #3e5e8d;
+	border-collapse: collapse;
+
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+	width: 780px;
+}
+
+#filtro-chico, #filtro-grande, #listado, .tabla-borde-delgado{
+	border: 1px solid #3e5e8d;
+	border-collapse: collapse;
+
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+}
+#filtro-chico, #filtro-grande, #listado, .tabla-borde-delgadoFchica{
+	border: 1px solid #3e5e8d;
+	border-collapse: collapse;
+
+	font-family: Verdana, Arial;
+	font-size: 5pt;
+	color: #5a5a5a;
+	font-weight: bold;
+}
+
+.titulo-tabla{
+	font-size: 7pt;
+	color: #fff;
+	background-color: #3e5e8d;
+	font-family: Verdana, Arial;
+	font-weight: bold;
+	padding: 4px;
+	padding-left: 10px;
+}
+
+.elementos-filtro{
+	background-color: #dbddeb;
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+}
+.elementos-filtroNB{
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+}
+.botones-chicos{
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+	border: 1px solid #00086e;
+	background-image: url("img/fondo-boton.gif");
+}
+
+.fila-invisible td, .encabezado-subtabla { color: #FFFFFF; background-color: #FFFFFF; border: 1px solid #FFFFFF; padding: 2px; text-align: center; }
+.encabezados-tabla td, .encabezado-subtabla { background-color: #b7bad7; border: 1px solid #9c9dcb; padding: 2px; text-align: center; }
+.fila-detalle-par { background-color: #e9edf6; border: 1px solid #9c9dcb; padding: 2px; text-align: center; vertical-align: middle; }
+.fila-detalle-impar { background-color: #ffffff; border: 1px solid #9c9dcb; padding: 2px; text-align: center; vertical-align: middle; }
+.fila-detalle-par td, .fila-detalle-impar td { border: 1px solid #9c9dcb }
+
+/* Efecto para los links */
+.fila-detalle-par td a, .fila-detalle-impar td a { color: #5a5a5a; text-decoration: none }
+.fila-detalle-par td a:hover, .fila-detalle-impar td a:hover { color: #00f; text-decoration: underline }
+
+input { font-size: 8pt; color: #003366; font-family: Arial, Helvetica, sans-serif }
+
+select, .input-form { font-size: 7pt; color: #5a5a5a; font-family: Arial, Helvetica, sans-serif; background-color-old: #E6EFF4; background-color: #fff; font-weight: normal; border: 1px solid #5a5a5a; padding-left: 2px; }
+
+textarea { font-size: 8pt; color: #003366; font-family: Arial, Helvetica, sans-serif; background-color: #D3DEE5}
+
+
+.mensaje-error {
+	background-color: #FFFFFF;
+	font-family: verdana;
+	font-size: 10px;
+	color: #F00;
+}
+
+.mensaje-ok {
+	background-color: #000000;
+	font-family: verdana;
+	font-size: 10px;
+	// color: #55FF55;
+	color: #00CC00;
+}
+
+
+
+/* DEJAR ESTILOS NO USADOS BAJO ESTA LINEA */
+
+/*
+.texterror { font-size: 8pt; color: #FF0000; font-family: "Verdana", "Arial"; }
+
+.titulo { font-size: 9pt; color: #333333; font-family: "Verdana", "Arial"; font-weight: bold; clip: rect(   ); text-indent: 2pt; }
+.titulo2 { font-size: 8pt; color: #333333; font-family: "Verdana", "Arial"; font-weight: bold; font-variant: normal}
+.textotop { font-size: 10pt; color: "#003366";  font-style: italic; font-family: "Verdana", "Arial"; }
+.comercial { font-size: 8pt; color: "#003366"; font-family: "Verdana","Arial"; }
+.normal1b { font-weight: bold; font-size: 8pt; color: "#003366"; font-family: "Verdana","Arial"; }
+.textchico { font-size: 7pt; color: #FF0000; font-family: "Verdana", "Arial"; }
+.normal { font-size: 8pt; color: #003366; font-family: "Verdana", "Arial"; }
+.detalle { font-size: 8pt; color: #003366; font-family: "Verdana", "Arial"; }
+
+.ayuda { font-size: 9pt; color: #003366; font-family: "Verdana", "Arial"; }
+.textchicoNegro { font-size: 7pt; color: #003366; font-family: "Verdana", "Arial"; }
+.txt { font-size: 10px; color: #00005A; font-family: Verdana, Arial, Helvetica, sans-serif; text-decoration: none }
+.txtmenub { font-weight: bold; font-size: 10px; color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; text-decoration: none }
+
+.enlcabportada { font-weight: normal; font-size: 10px; color: #5A5A5A; font-family: Arial, Helvetica, sans-serif; text-decoration: none }
+.pie { PADDING-RIGHT: 10px; FONT-SIZE: 10px; COLOR: #00005a; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none }
+.pieLink { FONT-SIZE: 10px; COLOR: #00005a; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none }
+*/

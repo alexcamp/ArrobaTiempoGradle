@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-801-s="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/>
+   <complexType name="TR801SEquipment">
+	 	<sequence>
+			<element name="deco-code" type="tr-801-s:string64"/>
+		    <element name="deco-brand" type="string"/>
+		    <element name="deco-type" type="string"/>
+			<element name="deco-serial-number" type="tr-801-s:string30"/>
+		    <element name="deco-cass-id" type="tr-801-s:string150"/>
+		    <element name="card-code" type="tr-801-s:string64"/>
+		    <element name="card-serial-number" type="tr-801-s:string30"/>
+		</sequence>
+   </complexType>
+
+   <complexType name="TR_801_S">
+   <sequence>
+      <element name="head" type="tr-801-s:RequestHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+			<sequence>
+            <element name="id-source-system" type="tr-801-s:string16"/>
+            <element name="id-schedule" type="tr-801-s:string24"/>
+			<element name="appt_number" type="string"/>
+            <element name="task-type-code" type="string"/>
+            <element name="client-code" type="string"/>
+            <element name="client-number" type="tr-801-s:string30"/>
+            <element name="city" type="string"/>
+            <element name="location-county" type="tr-801-s:string30"/>
+            <element name="action" type="tr-801-s:string10"/>
+			<element name="atis-request-number" type="tr-801-s:string150"/>
+            <element name="equipments">
+              <complexType>
+  				 <sequence>
+                    <element maxOccurs="unbounded" name="equipment" type="tr-801-s:TR801SEquipment"/>
+				 </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-801-s" type="tr-801-s:TR_801_S"/>
+</schema>

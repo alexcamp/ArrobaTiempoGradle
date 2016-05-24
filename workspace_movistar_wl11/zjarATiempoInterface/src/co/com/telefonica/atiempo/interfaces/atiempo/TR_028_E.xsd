@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_028_E.xsd,v 1.1 2011/03/30 18:21:43 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-028-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="equipment">
+		<sequence>
+			<element name="element-serial" type="tr-028-e:string250" />
+			<element name="element-type" type="tr-028-e:string30" />
+			<element name="equipment-type" type="tr-028-e:string2" />
+			<element name="inventory-type" type="tr-028-e:string250" />
+			<element name="equipment-state" type="tr-028-e:string30" />
+			<element name="product-service-code" type="tr-028-e:long9" />
+			<element name="inv-posting-date" type="tr-028-e:string8"/>
+			<element name="inv-move-type" type="tr-028-e:string30" />
+			<element name="inv-sap-material-code" type="tr-028-e:string4"/>
+			<element name="inv-material" type="tr-028-e:string18"/>
+			<element name="inv-plant" type="tr-028-e:string4"/>
+			<element name="inv-storage" type="tr-028-e:string4"/>
+			<element name="inv-batch-code" type="tr-028-e:string10"/>			
+			<element name="inv-measurement-unit" type="tr-028-e:string3"/>
+			<element name="inv-cost-center" type="tr-028-e:string10"/>
+			<element name="inv-func-area-long" type="tr-028-e:string4"/>						
+			<element name="inv-pep-element" type="tr-028-e:string10"/>
+			<element name="inv-flag-mat-sap" type="tr-028-e:string2"/>
+			<element name="caracteristica" type="tr-028-e:string250"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR-028-E">
+		<sequence>
+			<element name="head" type="tr-028-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-028-e:long9" />
+						<element name="atis-request-number" type="tr-028-e:long9" />
+						<element name="phone-number" type="tr-028-e:string30" />
+						
+						<element name="equipments">							
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-028-e:equipment" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-028-e" type="tr-028-e:TR-028-E" />
+</schema>

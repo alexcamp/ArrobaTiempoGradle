@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_001_S.xsd,v 1.1 2011/03/30 18:21:05 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-001-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	
+	<complexType name="ClientData">
+		<sequence>
+			<element name="client-code" type="tr-001-s:long9" />
+			<element name="account-code" type="tr-001-s:long9" />
+			<element name="client-document-type" type="tr-001-s:string3" />
+			<element name="client-document-number" type="tr-001-s:string20" />
+			<element name="client-document-verification" type="tr-001-s:string2" />
+			<element name="client-name" type="tr-001-s:string64" />
+			<element name="client-lastname" type="tr-001-s:string40" />
+			<element name="client-lastname2" type="tr-001-s:string40" />
+			<element name="client-segment-code" type="tr-001-s:long9" />
+			<element name="client-subsegment-code" type="tr-001-s:long9" />
+			<element name="account-segment-code" type="tr-001-s:long9" />
+			<element name="account-subsegment-code" type="tr-001-s:long9" />
+			<element name="client-type" type="tr-001-s:char" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="ContactData">
+		<sequence>
+			<element name="submitter-name" type="tr-001-s:string64" />
+			<element name="submitter-last-name" type="tr-001-s:string40" />
+			<element name="submitter-second-last-name" type="tr-001-s:string40" />
+			<element name="contact-phone" type="tr-001-s:string20" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="Address">
+		<sequence>
+			<element name="street-number" type="tr-001-s:string6" />
+			<element name="department-code" type="tr-001-s:string2" />
+			<element name="city-code" type="tr-001-s:string8" />
+			<!--element name="granite-code" type="tr-001-s:int1" /-->
+			<element name="street-name" type="tr-001-s:string40" />
+			<element name="path-type" type="tr-001-s:string4" />
+			<element name="path-number" type="tr-001-s:int3" />
+			<element name="first-path-characters" type="tr-001-s:string3" />
+			<element name="second-path-characters" type="tr-001-s:string4" />
+			<element name="path-zone" type="tr-001-s:char" />
+			<element name="path-type-2" type="tr-001-s:string4" />
+			<element name="path-number-2" type="tr-001-s:int3" />
+			<element name="first-path-characters-2" type="tr-001-s:string3" />
+			<element name="second-path-characters-2" type="tr-001-s:string4" />
+			<element name="path-zone-2" type="tr-001-s:char" />
+			<element name="street-type" type="tr-001-s:string3" />
+			<element name="place-type-1" type="tr-001-s:string2" />
+			<element name="place-number-1" type="tr-001-s:string6" />
+			<element name="place-type-2" type="tr-001-s:string2" />
+			<element name="place-number-2" type="tr-001-s:string6" />
+			<element name="place-type-3" type="tr-001-s:string2" />
+			<element name="place-number-3" type="tr-001-s:string6" />
+			<element name="complements-description-1" type="tr-001-s:string40" />
+			<element name="complements-description-2" type="tr-001-s:string40" />
+			<element name="sub-city-name" type="tr-001-s:string20" />
+			<element name="external-city-code" type="tr-001-s:string9" />
+			<element name="territory" type="tr-001-s:string4" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="Characteristic">
+		<sequence>
+			<element name="code" type="tr-001-s:long9" />
+			<element name="name" type="tr-001-s:string20" />
+			<element name="data-type" type="tr-001-s:string2" />
+			<element name="code-value" type="tr-001-s:long9" />
+			<element name="initial-value" type="tr-001-s:string100" />
+			<element name="final-value" type="tr-001-s:string100" />
+			<element name="real-value" type="tr-001-s:string100" />
+			<element name="length" type="tr-001-s:long9" />
+			<element name="format" type="tr-001-s:string20" />
+			<element name="moment" type="tr-001-s:char" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="SubRequest">
+		<sequence>
+			<element name="product-service-code" type="tr-001-s:long9" />
+			<element name="product-service-name" type="tr-001-s:string20" />
+			<element name="comercial-operation" type="tr-001-s:long9" />
+			<element name="product-service-type" type="tr-001-s:long9" />
+			<element name="quantity-of-product-services" type="tr-001-s:string9" />
+			<element name="service-reference-id" type="tr-001-s:string15" />
+			<element name="service-initial-date" type="dateTime" />
+			<element name="service-end-date" type="dateTime" />
+			<element name="observations" type="tr-001-s:string100" />
+			<element name="code" type="tr-001-s:int4" />
+			<element name="contract-number" type="tr-001-s:long9" />
+			<element name="characteristic">
+				<complexType>
+					<sequence>
+						<element name="characteristic-ps" type="tr-001-s:Characteristic" maxOccurs="unbounded" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR001SGroup">
+		<sequence>
+			<element name="estimated-execution-date" type="dateTime" />
+			<element name="commitment-date" type="dateTime" />
+			<element name="observations" type="tr-001-s:string100" />
+			<element name="code" type="tr-001-s:int4" />
+			<element name="father-group-code" type="tr-001-s:int4" />
+			<element name="children-group-count" type="tr-001-s:int4" />
+			<element name="comercial-product-identification-number" type="tr-001-s:string40" />
+			<element name="comercial-product-identification" type="tr-001-s:string2" />
+			<element name="comercial-operation-type" type="tr-001-s:long9" />
+			<element name="comercial-product-code" type="tr-001-s:long9" />
+			<element name="father-comercial-product-code" type="tr-001-s:long9" />
+			<element name="comercial-product-type" type="tr-001-s:long9" />
+			<element name="comercial-product-subtype" type="tr-001-s:long9" />
+			<element name="use-type-code" type="tr-001-s:long9" />
+			<element name="use-type-name" type="tr-001-s:string20" />
+			<element name="father-identification-line" type="tr-001-s:string40" />
+			<element name="address" type="tr-001-s:Address" />
+			<element name="subRequests">
+				<complexType>
+					<sequence>
+						<element name="subRequest" type="tr-001-s:SubRequest" maxOccurs="unbounded" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR-001-S">
+		<sequence>
+			<element name="head" type="tr-001-s:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="request-number" type="tr-001-s:long9">
+						</element>
+						<element name="emitting-user" type="tr-001-s:string16" />
+						<element name="emitting-date" type="dateTime" />
+						<element name="observations" type="tr-001-s:string100" />
+						<element name="client-data" type="tr-001-s:ClientData" />
+						<element name="contact-data" type="tr-001-s:ContactData" />
+						<element name="sale-channel" type="tr-001-s:string9" />
+						<element name="jorney" type="tr-001-s:string20" />
+						<element name="coordinate-x" type="tr-001-s:string240" />
+						<element name="coordinate-y" type="tr-001-s:string240" />
+						<element name="groupings">
+							<complexType>
+								<sequence>
+									<element name="group" type="tr-001-s:TR001SGroup" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<element name="tr-001-s" type="tr-001-s:TR-001-S" />
+</schema>

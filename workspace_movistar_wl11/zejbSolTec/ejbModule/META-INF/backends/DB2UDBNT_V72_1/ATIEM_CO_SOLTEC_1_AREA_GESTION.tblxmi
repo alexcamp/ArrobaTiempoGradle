@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="AREA_GESTION" name="AREA_GESTION" comments="" primaryKey="PK_ID_AREA_GES">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_AREA_GES" name="ID_AREA_GES">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1187298388375">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="COD_AREA_GES" name="COD_AREA_GES">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1187298388376">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="DESCRIPCION" name="DESCRIPCION">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1187298388375" length="150">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FAPS_ID" name="FAPS_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1187298388377">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_FAPS_ID" name="FK_FAPS_ID" members="FAPS_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1187298388375">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FAMILIA_PRODUCTO_SERVICIO_ST.tblxmi#FAPS_PK"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_ID_AREA_GES" name="PK_ID_AREA_GES" members="ID_AREA_GES" constraint="SQLConstraint_1187298388376">
+    <referenceByKey href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_REGLA_AREA_GES_COD_ESTADO.tblxmi#FK_ID_AREA_GES"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1187298388375" name="FK_FAPS_ID" type="FOREIGNKEY" referenceByKey="FK_FAPS_ID"/>
+  <constraints xmi:id="SQLConstraint_1187298388376" name="PK_ID_AREA_GES" type="PRIMARYKEY" primaryKey="PK_ID_AREA_GES"/>
+</RDBSchema:RDBTable>

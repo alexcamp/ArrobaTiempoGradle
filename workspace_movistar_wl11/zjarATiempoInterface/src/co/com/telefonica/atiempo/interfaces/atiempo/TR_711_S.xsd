@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-711-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR711STechnician">
+		<sequence>
+			<element name="technician-id" type="string"/>
+			<element name="technician-name" type="tr-711-s:string150"/>
+			<element name="technician-lastname" type="string"/>
+			<element name="contract-code" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR711SNote">
+		<sequence>
+			<element name="note-type" type="string"/>
+			<element name="value" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR711SMaterials">
+		<sequence>
+			<element name="code-material" type="int"/>
+			<element name="material-amount" type="int"/>
+			<element name="material-unit-measure" type="tr-711-s:string3"/>
+			<element name="type-equipment" type="tr-711-s:string30"/>
+			<element name="brand-equipment" type="tr-711-s:string50"/>
+			<element name="model-equipment" type="tr-711-s:string50"/>
+			<element name="equipment-serial-number" type="tr-711-s:string30"/>
+			<element name="cass-id" type="tr-711-s:string64"/>
+			<element name="external-code-equipment" type="string"/>
+			<element name="action-type" type="string"/>
+			<element name="posting-date" type="tr-711-s:string8"/>
+			<element name="move-type" type="tr-711-s:string30"/>
+			<element name="material-code" type="tr-711-s:string4"/>
+			<element name="material" type="tr-711-s:string18"/>
+			<element name="plant" type="tr-711-s:string4"/>
+			<element name="storage" type="tr-711-s:string4"/>
+			<element name="batch-code" type="tr-711-s:string10"/>
+			<element name="measurement-unit" type="tr-711-s:string3"/>
+			<element name="cost-center" type="tr-711-s:string10"/>
+			<element name="func-area-long" type="tr-711-s:string4"/>
+			<element name="pep-element" type="tr-711-s:string10"/>
+			<element name="flag-mat-sap" type="tr-711-s:string2"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR711SBreakPairs">
+		<sequence>
+			<element name="family" type="tr-711-s:string30"/>
+			<element name="break-code" type="tr-711-s:string30"/>
+			<element name="observations" type="tr-711-s:string100"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR_711_S">
+		<sequence>
+			<element name="head" type="tr-711-s:RequestHeaderAgendaSC"/>
+			<element name="body">
+				<complexType>
+					<sequence maxOccurs="1" minOccurs="1">
+						<element name="id-source-system" type="tr-711-s:string16"/>
+						<element name="id-schedule" type="tr-711-s:string64"/>
+						<element name="code-state-schedule" type="int"/>
+						<element name="state-description" type="tr-711-s:string30"/>
+						<element name="initial-automatic-date" type="tr-711-s:string64"/>
+						<element name="final-automatic-date" type="tr-711-s:string64"/>
+						<element name="postage-code" type="string"/>
+						<element name="initial-manual-date" type="tr-711-s:string64"/>
+						<element name="end-achievement-schedule-date" type="tr-711-s:string64"/>
+						<element name="it-answer" type="tr-711-s:string64"/>
+						<element name="it-complement" type="tr-711-s:string64"/>
+						<element name="it-closing" type="tr-711-s:string64"/>
+						<element name="technician" type="tr-711-s:TR711STechnician"/>
+						<element name="notes">
+							<complexType>
+								<sequence>
+									<element maxOccurs="unbounded" name="note" type="tr-711-s:TR711SNote"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="materials">
+							<complexType>
+								<sequence>
+									<element maxOccurs="unbounded" name="material" type="tr-711-s:TR711SMaterials"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="breaks">
+							<complexType>
+								<sequence>
+									<element name="families">
+										<complexType>
+											<sequence>
+												<element maxOccurs="unbounded" name="breakpair" type="tr-711-s:TR711SBreakPairs"/>
+											</sequence>
+										</complexType>
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="cambplan" type="tr-711-s:string250"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-711-s" type="tr-711-s:TR_711_S"/>
+</schema>

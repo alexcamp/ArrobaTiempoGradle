@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://atiempo.telefonica.com.co" 
+xmlns:tr-811-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR811STechnician">
+		<sequence>
+			<element name="technician-name" type="tr-811-s:string150"/>
+			<element name="document-number" type="string"/>
+			<element name="duration" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SCancelReason">
+		<sequence>
+			<element name="reason" type="tr-811-s:string150"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SInventory">
+		<sequence>
+			<element name="material" type="tr-811-s:TR811SMaterials"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SMaterials">
+		<sequence>
+			<element name="code-material" type="tr-811-s:string50"/>
+			<element name="material-amount" type="int"/>
+			<element name="material-unit-measure" type="tr-811-s:string3"/>
+			<element name="type-equipment" type="tr-811-s:string30"/>
+			<element name="brand-equipment" type="tr-811-s:string50"/>
+			<element name="model-equipment" type="tr-811-s:string50"/>
+			<element name="equipment-serial-number" type="tr-811-s:string30"/>
+			<element name="cass-id" type="tr-811-s:string30"/>
+			<element name="action-type" type="string"/>
+			<element name="material" type="tr-811-s:string18"/>
+			<element name="cost-center" type="tr-811-s:string10"/>
+			<element name="code-description" type="tr-811-s:string30"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SFamilies">
+		<sequence>
+			<element name="breakpair" type="tr-811-s:TR811SBreakPair"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SNotes">
+		<sequence>
+			<element name="note" type="tr-811-s:string250"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SBreakPair">
+		<sequence>
+			<element name="family" type="tr-811-s:string250"/>
+			<element name="break-code" type="tr-811-s:string250"/>
+			<element name="observations" type="tr-811-s:string250"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SNoCompletInst">
+		<sequence>
+			<element name="code" type="tr-811-s:string250"/>
+			<element name="reason" type="tr-811-s:string250"/>
+			<element name="observation" type="tr-811-s:string250"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SCodCompletRep">
+		<sequence>
+			<element name="Repair-Clos-Code" type="tr-811-s:string250"/>
+			<element name="Location-Damage" type="tr-811-s:string250"/>
+			<element name="cause-damage" type="tr-811-s:string250"/>
+			<element name="Corrective-Action" type="tr-811-s:string250"/>
+			<element name="suspended-code" type="tr-811-s:string250"/>
+			<element name="Unrealized-code" type="tr-811-s:string250"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811SOtherData">
+		<sequence>
+			<element name="Closing-remarks" type="tr-811-s:string250"/>
+			<element name="Name-person-receiving" type="tr-811-s:string250"/>
+			<element name="Certificate-person-receiving" type="tr-811-s:string250"/>
+		</sequence>
+	</complexType>
+	<complexType name="TR811S">
+		<sequence>
+			<element name="head" type="tr-811-s:RequestHeaderAgendaSC"/>
+			<element name="body">
+				<complexType>
+					<sequence maxOccurs="1" minOccurs="1">
+						<element name="id-source-system" type="tr-811-s:string16"/>
+						<element name="id-schedule" type="tr-811-s:string64"/>
+						<element name="appt_number" type="tr-811-s:string64"/>
+						<element name="code-state-schedule" type="int"/>
+						<element name="state-description" type="tr-811-s:string30"/>
+						<element name="final-automatic-date" type="tr-811-s:string64"/>
+						<element name="postage-code" type="string"/>
+						<element name="initial-manual-date" type="tr-811-s:string64"/>
+						<element name="end-achievement-schedule-date" type="tr-811-s:string64"/>
+						<element name="technician" type="tr-811-s:TR811STechnician"/>
+						<element name="notes" type="tr-811-s:TR811SNotes"/>
+						<element name="cancel-reason" type="tr-811-s:TR811SCancelReason"/>
+						<element name="installed_inventory" type="tr-811-s:TR811SInventory"/>
+						<element name="deinstalled_inventory" type="tr-811-s:TR811SInventory"/>
+						<element name="customer_inventory" type="tr-811-s:TR811SInventory"/>
+						<element name="material_flag" type="tr-811-s:string250"/>
+						<element name="breaks">
+							<complexType>
+								<sequence>
+									<element name="families" type="tr-811-s:TR811SFamilies"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="no-complet-inst" type="tr-811-s:TR811SNoCompletInst"/>
+						<element name="cod_complet_rep" type="tr-811-s:TR811SCodCompletRep"/>
+						<element name="other-data" type="tr-811-s:TR811SOtherData"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-811-s" type="tr-811-s:TR811S"/>
+</schema>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_013_E.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-013-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-013-E">
+		<sequence>
+			<element name="head" type="tr-013-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-013-e:long9" />
+						<element name="client-document" type="tr-013-e:string16" />
+						<element name="client-document-type" type="tr-013-e:string3" />
+						<element name="address" type="tr-013-e:string50" />
+						<element name="client-type" type="tr-013-e:char" />
+						<element name="client-name" type="tr-013-e:string64" />
+						<element name="client-first-lastname" type="tr-013-e:string40" />
+						<element name="client-second-lastname" type="tr-013-e:string40" />
+						<element name="contact-phone" type="tr-013-e:string20" />
+						<element name="contact-name" type="tr-013-e:string64" />
+						<element name="contact-first-lastname" type="tr-013-e:string40" />
+						<element name="contact-second-lastname" type="tr-013-e:string40" />
+						<element name="service-phone" type="tr-013-e:int8" />
+						<element name="previous-service-phone" type="tr-013-e:int8" />
+						<element name="product-service-code" type="tr-013-e:long9" />
+						<element name="commercial-operation-type" type="tr-013-e:long9" />
+						<element name="second-commercial-operation" type="tr-013-e:long9" />
+						<element name="dslams">
+							<complexType>
+								<sequence>
+									<element name="dslam" maxOccurs="unbounded" minOccurs="0">
+										<complexType>
+											<sequence>
+												<element name="ip" type="tr-013-e:string15" />
+											</sequence>
+										</complexType>
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="city-code" type="tr-013-e:string40" />
+						<element name="father-email" type="tr-013-e:string100" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-013-e" type="tr-013-e:TR-013-E" />
+</schema>

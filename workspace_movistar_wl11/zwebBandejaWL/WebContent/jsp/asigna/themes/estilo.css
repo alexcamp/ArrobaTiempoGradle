@@ -1,0 +1,99 @@
+.tabla-borde-delgado {
+	BORDER-COLLAPSE: collapse
+}
+.botones {
+	BACKGROUND-COLOR: #cccccc; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.titulo-tabla {
+	BACKGROUND-COLOR: #000066; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; PADDING-LEFT: 6px; PADDING-TOP: 3px
+}
+.encabezados-tabla {
+	BACKGROUND-COLOR: #999999; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000033; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; PADDING-BOTTOM: 1px; PADDING-LEFT: 2px; PADDING-RIGHT: 1px; PADDING-TOP: 1px; TEXT-ALIGN: center; TEXT-DECORATION: none; Z-INDEX: 1
+}
+.elementos-filtro {
+	BACKGROUND-COLOR: #cccccc; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.botones-chicos {
+	COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; OVERFLOW: hidden
+}
+A.link-simple-filtro {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.link-simple-oscuro {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.link-simple-oscuro:hover {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.link-simple {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.tab-activo {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px; TEXT-DECORATION: none
+}
+.tab-pasivo {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px; TEXT-DECORATION: none
+}
+.titulo-subtabla {
+	BACKGROUND-COLOR: #999999; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold; HEIGHT: 10px; PADDING-LEFT: 6px; TOP: auto; VERTICAL-ALIGN: top
+}
+.texto-encabezado {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-STYLE: normal; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px
+}
+.input-form {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.texto-logeado-como {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; FONT-WEIGHT: bold
+}
+.menu-desplegable {
+	COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; HEIGHT: 15px; PADDING-BOTTOM: 1px; PADDING-LEFT: 4px; PADDING-RIGHT: 1px; PADDING-TOP: 1px; TEXT-DECORATION: none
+}
+.titulo-tabs {
+	COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 4px
+}
+.despliegue-consulta {
+	BACKGROUND-COLOR: #cccccc; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal
+}
+.fila-detalle-impar {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.fila-detalle-par {
+	BACKGROUND-COLOR: #cccccc; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.fila-detalle-destacada {
+	BACKGROUND-COLOR: #ffff99; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; HEIGHT: 16px; PADDING-LEFT: 4px
+}
+.fila-detalle-verde {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; COLOR: #009933; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: left; VERTICAL-ALIGN: top
+}
+.fila-detalle-amarillo {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; COLOR: #cc9900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: left; VERTICAL-ALIGN: top
+}
+.fila-detalle-rojo {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: bold; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: left; VERTICAL-ALIGN: top
+}
+.tabla-borde-delgado-lista {
+	BORDER-BOTTOM: 1px; BORDER-COLLAPSE: collapse; BORDER-LEFT: 1px; BORDER-RIGHT: 1px; BORDER-TOP: 1px
+}
+.fila-detalle-par-sin-borde {
+	BACKGROUND-COLOR: #cccccc; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: middle
+}
+.fila-detalle-impar-sin-borde {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: middle
+}
+.fila-detalle-tecnico {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000066; font-weight: normal; text-align: center; vertical-align: middle}
+.fila-tec-amarilla {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-style: normal; color: #003366; background-color: #FFFFCC}
+.fila-tec-verde {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-style: normal; font-weight: normal; font-variant: normal; color: #000066; background-color: #FFFF66}
+.fila-detalle-imparA { BACKGROUND-COLOR: #FFFFCC; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-imparSA { BACKGROUND-COLOR: #CCCCCC; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #003399; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-sin_jor { BACKGROUND-COLOR: #999999; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #003366; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-Dispo { BACKGROUND-COLOR: #CCCCCC; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #006699; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-terminada { BACKGROUND-COLOR: #006699; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-en-curso { BACKGROUND-COLOR: #33CC00; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-en-cursoA { BACKGROUND-COLOR: #FFFF00; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-asignada { BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-asignadaA { BACKGROUND-COLOR: #FF0000; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-bloqueo { BACKGROUND-COLOR: #999900; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #003399; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-noocupado { BACKGROUND-COLOR: #669999; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }
+.fila-detalle-Folio { BACKGROUND-COLOR: #330066; BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; COLOR: #CCCCCC; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; FONT-WEIGHT: normal; HEIGHT: 16px; PADDING-LEFT: 4px; TEXT-ALIGN: center; VERTICAL-ALIGN: top }

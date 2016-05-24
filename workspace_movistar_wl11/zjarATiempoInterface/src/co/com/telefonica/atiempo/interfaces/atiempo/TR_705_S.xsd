@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-705-s="http://atiempo.telefonica.com.co">
+   <include schemaLocation="commons-atiempo.xsd"/> 
+   <complexType name="TR_705_S">
+    <sequence>
+      <element name="head" type="tr-705-s:ResponseHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+          <sequence maxOccurs="1" minOccurs="1">
+            <element name="id-system-origin" type="tr-705-s:string16"/>
+            <element name="id-schedule" type="tr-705-s:string64"/>
+            <element name="response-reschedule" type="string"/>
+            <element name="reschedule-date" type="tr-705-s:string64"/>
+            <element name="code-error-reschedule" type="tr-705-s:string16"/>
+            <element name="description-error-reschedule" type="tr-705-s:string150"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-705-s" type="tr-705-s:TR_705_S"/>
+</schema>

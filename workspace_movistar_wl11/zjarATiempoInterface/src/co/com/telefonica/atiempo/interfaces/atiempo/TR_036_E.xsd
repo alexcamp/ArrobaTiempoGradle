@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_036_E.xsd,v 1.1 2011/03/30 18:22:10 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-036-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR_036_E">
+		<sequence>
+			<element name="head" type="tr-036-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-036-e:long16" />
+						<element name="service-number" type="tr-036-e:string40" />
+						<element name="pssba-data-list">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-036-e:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="other">
+							<complexType>
+								<sequence>
+									<element name="value" type="tr-036-e:valueType" minOccurs="0" maxOccurs="unbounded" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-036-e" type="tr-036-e:TR_036_E" />
+</schema>

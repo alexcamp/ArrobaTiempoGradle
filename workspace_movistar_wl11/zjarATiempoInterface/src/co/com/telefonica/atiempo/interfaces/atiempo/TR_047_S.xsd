@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-047-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="TR-047-S">
+		<sequence>
+		<element name="head" type="tr-047-s:ResponseHeaderAgendaSC"/>
+			<element name="body">
+				<complexType>
+					<sequence>
+						 <element name="status" type="tr-047-s:string250"/>
+			             <element name="license-code" type="tr-047-s:string250"/>
+            			 <element name="cancellation-date" type="tr-047-s:string250"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-047-s" type="tr-047-s:TR-047-S"/>
+</schema>

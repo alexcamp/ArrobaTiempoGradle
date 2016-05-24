@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_009_S.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-009-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-009-S">
+		<sequence>
+			<element name="head" type="tr-009-s:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="response" type="boolean" />
+						<element name="cod-inc-atis" type="tr-009-s:long9" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-009-s" type="tr-009-s:TR-009-S" />
+</schema>

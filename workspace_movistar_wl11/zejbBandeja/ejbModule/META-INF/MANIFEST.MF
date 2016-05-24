@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: zejbBandejaClient.jar 
+ zejbComunClient.jar 
+ zjarutiles.jar 
+ zjarinvocacionservicios.jar 
+ zjarATiempoInterface.jar
+

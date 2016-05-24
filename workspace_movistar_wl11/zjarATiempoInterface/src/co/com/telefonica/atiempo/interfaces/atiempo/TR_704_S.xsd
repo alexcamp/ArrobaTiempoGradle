@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_704_S.xsd,v 1.1 2011/03/30 18:23:11 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-704-s="http://atiempo.telefonica.com.co">
+    <include schemaLocation="commons-atiempo.xsd"/>
+    <complexType name="TR_704_S">
+	<sequence>
+	<element name="head" type="tr-704-s:RequestHeaderAgendaSC"/>
+      <element name="body">
+        <complexType>
+          <sequence maxOccurs="1" minOccurs="1">
+            <element name="id-system-origin" type="tr-704-s:string16"/>
+            <element name="id-request-number" type="tr-704-s:string64"/>
+            <element name="id-state-schedule" type="tr-704-s:long16"/>
+            <element name="description-state-schedule" type="tr-704-s:string150"/>
+            <element name="response-cancellation-schedule" type="tr-704-s:string150"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-704-s" type="tr-704-s:TR_704_S"/>
+</schema>

@@ -1,0 +1,201 @@
+/* ESTILOS USADOS POR LA CABECERA NUEVA */
+.txt-usuario-rol { padding-right: 10px; font-size: 10px; color: #00005A; font-family: Arial, Helvetica, sans-serif; text-decoration: none }
+.nombre-app { font-size: 10pt; color: #5A5A5A; font-family: Verdana, Arial; font-weight: bold; padding-left:10px; }
+
+a{
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+}
+
+/* ESTILOS USADOS POR LA CABECERA NUEVA */
+
+/* FILTRO */
+#filtro-chico, #filtro-grande, .listado, .tabla-borde-delgado{
+	border: 1px solid #3e5e8d;
+	border-collapse: collapse;
+	width: 100%;
+
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+}
+
+#filtro-chico, #filtro-grande, .listado1, .tabla-borde-delgado1{
+	border: 1px solid #3e5e8d;
+	border-collapse: collapse;
+	width:"50%";
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+}
+
+.titulo-tabla{
+	font-size: 8pt;
+	color: #fff;
+	background-color: #3e5e8d;
+	font-family: Verdana, Arial;
+	font-weight: bold;
+	padding: 4px;
+	padding-left: 10px;
+}
+
+.elementos-filtro{
+	background-color: #dbddeb;
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+}
+
+.telefmundo {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #5A5A5A;
+	height: 15px;
+	width: 173px;
+	border: 1px solid #A4C401;
+}
+
+.botones-chicos{
+	font-family: Verdana, Arial;
+	font-size: 7pt;
+	color: #5a5a5a;
+	font-weight: bold;
+	border: 1px solid #00086e;
+	background-image: url("img/fondo-boton.gif");
+}
+
+.txtbold {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #5A5A5A;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+.fecha {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #00005A;
+	text-decoration: none;
+	padding-right: 10px;
+}
+.encabezados-tabla td, .encabezados-tabla { background-color: #b7bad7; border: 1px solid #9c9dcb; padding: 2px; 
+	text-align: center;  padding-left: 6px;  font-size: 10px; 
+	font-weight: bold;  color: #494949;
+}
+.fila-detalle-par td { background-color: #e9edf6; border: 1px solid #9c9dcb; padding: 2px; 
+	text-align: center; vertical-align: middle; }
+.fila-detalle-impar td { background-color: #ffffff; border: 1px solid #9c9dcb; padding: 2px; 
+	text-align: center; vertical-align: middle; }
+
+/*** INICIO NUEVOS TABS ***/
+  .tabs {
+  float:left;
+  width:100%;
+  /*background:#fff url("/images/tabs_bg.gif") repeat-x bottom;*/
+  font-size: 1.0em;
+  line-height:normal;
+  margin-bottom:10px;
+  }
+  .tabs ul {
+  margin:0;
+  padding:3px 5px 0;
+  list-style:none;
+  }
+  .tabs li {
+  float:left;
+  background:url("img/tab_left.gif") no-repeat left top;
+  margin:0;
+  padding:0 0 0 6px;
+  border-bottom: 1px solid #9c9dcb;
+  }
+  .tabs a {
+  float:left;
+  display:block;
+  width:.1em;
+  background:url("img/tab_right.gif") no-repeat right top;
+  padding:5px 6px 4px 2px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#666;
+  }
+
+  .tabs > ul a {width:auto;}
+  /* Commented Backslash Hack hides rule from IE5-Mac \*/
+  .tabs a {float:none;}
+  /* End IE5-Mac hack */
+  .tabs a:hover {
+  color:#333;
+  }
+  .tabs .activo {
+  background-position:0 -150px;
+  border-width:0;
+  }
+  .tabs .activo a {
+  background-position:100% -150px;
+  padding-bottom:5px;
+  color:#333;
+  }
+  .tabs li:hover, .header li:hover a {
+  background-position:0% -150px;
+  color:#333;
+  }
+  .tabs li:hover a {
+  background-position:100% -150px;
+  }
+
+/*** FIN NUEVOS TABS ***/
+
+/* TABS */
+.tab-pasivo-izq{ background-image: url("img/tab_pasivo_izq.gif"); }
+.tab-pasivo-der{ background-image: url("img/tab_pasivo_der.gif"); }
+.tab-activo-izq{ background-image: url("img/tab_activo_izq.gif"); }
+.tab-activo-der{ background-image: url("img/tab_activo_der.gif"); }
+
+.tab-activo { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; 
+	font-weight: bold; text-decoration: none; color: #656464; padding: 1px; 
+	background-color: #dbddeb /*#b7bad7*/; text-align: center; padding-left: 8px; 
+	padding-right: 8px; padding-top: 4px; padding-bottom: 4px;  
+	border-color : #3E5E8D black black;
+border-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px
+	}
+.tab-pasivo { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; 
+	font-weight: bold; text-decoration: none; color: #717171; padding: 1px; 
+	background-color: #e9edf6 /*#dbddeb*/; padding-left: 8px; padding-right: 8px;  
+	padding-top: 4px; padding-bottom: 4px; border-color : #9c9dcb black black;
+border-style: solid; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px
+	}
+.tab-pasivo td a { color: #5a5a5a; text-decoration: none }
+.tab-pasivo td a:hover { color: #000000; text-decoration: underline }
+
+/* Efecto para los links */
+.fila-detalle-par td a, .fila-detalle-impar td a { color: #5a5a5a; text-decoration: none }
+.fila-detalle-par td a:hover, .fila-detalle-impar td a:hover { color: #000000; text-decoration: underline }
+
+input { font-size: 8pt; color: #003366; font-family: Arial, Helvetica, sans-serif; background-color: #D3DEE5}
+
+select, .input-form { font-size: 7pt; color: #5a5a5a; font-family: Arial, Helvetica, sans-serif; background-color-old: #E6EFF4; background-color: #fff; font-weight: normal; border: 1px solid #5a5a5a; padding-left: 2px; }
+
+textarea { font-size: 8pt; color: #003366; font-family: Arial, Helvetica, sans-serif; background-color: #D3DEE5}
+
+/* DEJAR ESTILOS NO USADOS BAJO ESTA LINEA */
+
+/*
+.texterror { font-size: 8pt; color: #FF0000; font-family: "Verdana", "Arial"; }
+
+.titulo { font-size: 9pt; color: #333333; font-family: "Verdana", "Arial"; font-weight: bold; clip: rect(   ); text-indent: 2pt; }
+.titulo2 { font-size: 8pt; color: #333333; font-family: "Verdana", "Arial"; font-weight: bold; font-variant: normal}
+.textotop { font-size: 10pt; color: "#003366";  font-style: italic; font-family: "Verdana", "Arial"; }
+.comercial { font-size: 8pt; color: "#003366"; font-family: "Verdana","Arial"; }
+.normal1b { font-weight: bold; font-size: 8pt; color: "#003366"; font-family: "Verdana","Arial"; }
+.textchico { font-size: 7pt; color: #FF0000; font-family: "Verdana", "Arial"; }
+.normal { font-size: 8pt; color: #003366; font-family: "Verdana", "Arial"; }
+.detalle { font-size: 8pt; color: #003366; font-family: "Verdana", "Arial"; }
+
+.ayuda { font-size: 9pt; color: #003366; font-family: "Verdana", "Arial"; }
+.textchicoNegro { font-size: 7p

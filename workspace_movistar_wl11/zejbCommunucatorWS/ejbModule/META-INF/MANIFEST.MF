@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Class-Path: zejbBandejaClient.jar 
+ zejbClienteEmuladorSigresClient.jar 
+ zejbComunClient.jar 
+ zejbComunWFClient.jar 
+ zejbEmuladorSigresClient.jar 
+ zejbVpiStbBaClient.jar 
+ zjarATiempoInterface.jar 
+ zejbCommunucatorWSClient.jar
+

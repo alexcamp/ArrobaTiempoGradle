@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-518-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-518-S">
+		<sequence>
+		<element name="head" type="tr-518-s:ResponseHeader2" />
+			<element name="body">
+			<complexType>
+					<sequence>
+						<element name="atiempo-request-number" type="tr-518-s:long9"/>
+						<element name="ods-number" type="tr-518-s:long9" />
+						<element name="special-service-types">
+							<complexType>
+								<sequence>
+									<element name="special-service-type" minOccurs="0" maxOccurs="unbounded">
+										<complexType>
+											<sequence>
+											<element name="special-service" type="tr-518-s:string15" minOccurs="0"/>
+											<element name="action-result-number" type="tr-518-s:long9" minOccurs="0"/>
+											<element name="action-result-description" type="tr-518-s:string150" minOccurs="0"/>
+											</sequence>
+										</complexType>		
+									</element>							
+								</sequence>
+							</complexType>
+						</element>
+	                </sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-518-s" type="tr-518-s:TR-518-S" />
+</schema>

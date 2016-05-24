@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_025_S.xsd,v 1.2 2011/06/19 13:42:00 mfmendez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-025-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+
+	<complexType name="deco_card">
+		<sequence>
+			<element name="deco-id" type="tr-025-s:long9" />
+			<element name="deco-serial" type="tr-025-s:string30" />
+			<element name="deco-cas-id" type="tr-025-s:string30" />
+			<element name="deco-reference" type="tr-025-s:string3" />
+			<element name="deco-brand" type="tr-025-s:string80" />
+			<element name="deco-posting-date" type="tr-025-s:string8"/>
+			<element name="deco-move-type" type="tr-025-s:string30" />
+			<element name="deco-sap-material-code" type="tr-025-s:string4"/>
+			<element name="deco-material" type="tr-025-s:string18"/>
+			<element name="deco-plant" type="tr-025-s:string4"/>
+			<element name="deco-storage" type="tr-025-s:string4"/>
+			<element name="deco-batch-code" type="tr-025-s:string10"/>			
+			<element name="deco-measurement-unit" type="tr-025-s:string3"/>
+			<element name="deco-cost-center" type="tr-025-s:string10"/>
+			<element name="deco-func-area-long" type="tr-025-s:string4"/>						
+			<element name="deco-pep-element" type="tr-025-s:string10"/>			
+			<element name="card-id" type="tr-025-s:long9" />
+			<element name="card-serial" type="tr-025-s:string30" />			
+			<element name="card-posting-date" type="tr-025-s:string8"/>
+			<element name="card-move-type" type="tr-025-s:string30" />
+			<element name="card-sap-material-code" type="tr-025-s:string4"/>
+			<element name="card-material" type="tr-025-s:string18"/>
+			<element name="card-plant" type="tr-025-s:string4"/>
+			<element name="card-storage" type="tr-025-s:string4"/>
+			<element name="card-batch-code" type="tr-025-s:string10"/>			
+			<element name="card-measurement-unit" type="tr-025-s:string3"/>
+			<element name="card-cost-center" type="tr-025-s:string10"/>
+			<element name="card-func-area-long" type="tr-025-s:string4"/>						
+			<element name="card-pep-element" type="tr-025-s:string10"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="equipment">
+		<sequence>
+			<element name="element-id" type="tr-025-s:long9" />
+			<element name="element-serial" type="tr-025-s:string30" />
+			<element name="element-type" type="tr-025-s:string250" />		
+			<element name="equipment-type" type="tr-025-s:string2" />
+			<element name="inventory-type" type="tr-025-s:string250" />
+			<element name="inventory-brand" type="tr-025-s:string50" />
+			<element name="inventory-model" type="tr-025-s:string50" />
+			<element name="inventory-work" type="tr-025-s:string30" />
+			<element name="product-service-code" type="tr-025-s:long9" />
+			<element name="inventory-contractor" type="tr-025-s:string50" />
+			<element name="product-code" type="tr-025-s:long9" />			
+			<element name="inv-posting-date" type="tr-025-s:string8"/>
+			<element name="inv-move-type" type="tr-025-s:string30" />
+			<element name="inv-sap-material-code" type="tr-025-s:string4"/>
+			<element name="inv-material" type="tr-025-s:string18"/>
+			<element name="inv-plant" type="tr-025-s:string4"/>
+			<element name="inv-storage" type="tr-025-s:string4"/>
+			<element name="inv-batch-code" type="tr-025-s:string10"/>			
+			<element name="inv-measurement-unit" type="tr-025-s:string3"/>
+			<element name="inv-cost-center" type="tr-025-s:string10"/>
+			<element name="inv-func-area-long" type="tr-025-s:string4"/>						
+			<element name="inv-pep-element" type="tr-025-s:string10"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR-025-S">
+		<sequence>
+			<element name="head" type="tr-025-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-025-s:long9" />
+						<element name="atiempo-request-number" type="tr-025-s:long9" />						
+						<element name="modem-serial" type="tr-025-s:string30" />
+						<element name="modem-code" type="tr-025-s:long10" />
+						<element name="modem-work" type="tr-025-s:long10" />
+						<element name="modem-brand" type="tr-025-s:string30" />
+						<element name="modem-model" type="tr-025-s:string30" />
+						<element name="modem-type" type="tr-025-s:long9" />
+						<element name="modem-posting-date" type="tr-025-s:string8"/>
+						<element name="modem-move-type" type="tr-025-s:string30" />
+						<element name="modem-sap-material-code" type="tr-025-s:string4"/>
+						<element name="modem-material" type="tr-025-s:string18"/>
+						<element name="modem-plant" type="tr-025-s:string4"/>
+						<element name="modem-storage" type="tr-025-s:string4"/>
+						<element name="modem-batch-code" type="tr-025-s:string10"/>			
+						<element name="modem-measurement-unit" type="tr-025-s:string3"/>
+						<element name="modem-cost-center" type="tr-025-s:string10"/>
+						<element name="modem-func-area-long" type="tr-025-s:string4"/>						
+						<element name="modem-pep-element" type="tr-025-s:string10"/>
+						<element name="decos-cards">							
+							<complexType>
+								<sequence>
+									<element name="deco-card" type="tr-025-s:deco_card" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="equipments">							
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-025-s:equipment" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-025-s" type="tr-025-s:TR-025-S" />
+</schema>

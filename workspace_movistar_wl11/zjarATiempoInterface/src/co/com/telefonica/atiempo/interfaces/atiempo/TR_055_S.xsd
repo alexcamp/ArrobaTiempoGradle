@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-055-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-055-S">
+		<sequence>
+			<element name="head" type="tr-055-s:ResponseHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="nit" type="tr-055-s:long9"/>
+						<element name="telefonoPadre" type="tr-055-s:long9"/>
+						<element name="telefonoAdicional" type="tr-055-s:long9"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-055-s" type="tr-055-s:TR-055-S" />
+</schema>

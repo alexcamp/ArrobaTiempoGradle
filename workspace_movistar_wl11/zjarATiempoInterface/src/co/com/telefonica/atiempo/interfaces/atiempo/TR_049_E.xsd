@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-049-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	
+	<complexType name="TR049EBasicLine">
+		<sequence>
+			<element name="ods-number" type="tr-049-e:int8"/>
+			<element name="reserve-result" type="boolean"/>
+			<element name="secondary-distributor" type="tr-049-e:long14"/>
+			<element name="distributor-description" type="tr-049-e:string30"/>
+			<element name="closet" type="tr-049-e:string6"/>
+			<element name="box" type="tr-049-e:string6"/>
+			<element name="box-pair" type="tr-049-e:int6"/>
+			<element name="primary-distributor" type="tr-049-e:int6"/>
+			<element name="strip" type="tr-049-e:string6"/>
+			<element name="strip-pair" type="tr-049-e:int6"/>
+			<element name="central-code" type="tr-049-e:long14"/>
+			<element name="central-description" type="tr-049-e:string30"/>
+			<element name="cable" type="tr-049-e:string6"/>
+			<element name="cable-pair" type="tr-049-e:int6"/>
+			<element name="phone-number" type="tr-049-e:int8"/>
+			<element name="len" type="tr-049-e:string20"/>
+			<element name="zonas-atendimiento">
+				<complexType>
+					<sequence>
+						<element name="zona" type="tr-049-e:string15" minOccurs="0" maxOccurs="unbounded"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="distributor-address" type="tr-049-e:string40"/>
+			<element name="closet-address" type="tr-049-e:string40"/>
+			<element name="box-address" type="tr-049-e:string40"/>
+			<element name="horizontal-position" type="tr-049-e:string30"/>
+			<element name="state-line" type="tr-049-e:string40"/>
+			<element name="box-type" type="tr-049-e:string15" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR049EWideBand">
+		<sequence>
+			<element name="ticket-number" type="tr-049-e:string255" />
+
+			<element name="network-information">
+				<complexType>
+					<sequence>
+						<element name="equipment">
+							<complexType>
+								<sequence>
+									<element name="ip" type="tr-049-e:string30" />
+									<element name="subrack" type="tr-049-e:string20" />
+									<element name="slot" type="tr-049-e:string20" />
+									<element name="port-id" type="tr-049-e:string50" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="vpi-vci" type="tr-049-e:string24" />
+						<element name="vpi-vci-network" type="tr-049-e:string24" />
+						<element name="pots" type="tr-049-e:string24" />
+						<element name="adsl" type="tr-049-e:string24" />
+						<element name="ip-lan-mask" type="tr-049-e:string255" />
+						<element name="ip-lan" type="tr-049-e:string255" />
+						<element name="ip-wan" type="tr-049-e:string255" />
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="port-modification-flag" type="tr-049-e:string2" />
+
+			<element name="old-network-information">
+				<complexType>
+					<sequence>
+						<element name="equipment">
+							<complexType>
+								<sequence>
+									<element name="ip" type="tr-049-e:string30" />
+									<element name="subrack" type="tr-049-e:string20" />
+									<element name="slot" type="tr-049-e:string20" />
+									<element name="port-id" type="tr-049-e:string50" />
+								</sequence>
+							</complexType>
+						</element>
+
+						<element name="vpi-vci" type="tr-049-e:string24" />
+						<element name="vpi-vci-network" type="tr-049-e:string24" />
+						<element name="pots" type="tr-049-e:string24" />
+						<element name="adsl" type="tr-049-e:string24" />
+						<element name="ip-lan-mask" type="tr-049-e:string255" />
+						<element name="ip-lan" type="tr-049-e:string255" />
+						<element name="ip-wan" type="tr-049-e:string255" />
+					</sequence>
+				</complexType>
+			</element>			
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR049EAssignedNumber">
+		<sequence>
+			<element name="atiempo-request-number" type="tr-049-e:string16"/>
+			<element name="status-request" type="tr-049-e:string16"/>
+			<element name="old-phone-number" type="tr-049-e:string16"/>
+			<element name="new-phone-number" type="tr-049-e:string16"/>
+			<element name="basic-line"  type="tr-049-e:TR049EBasicLine" maxOccurs="unbounded"/>
+			<element name="wide-band"  type="tr-049-e:TR049EWideBand" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+				
+	<complexType name="TR-049-E">
+		<sequence>
+			<element name="head" type="tr-049-e:ResponseHeaderAgendaSC"/>
+				<element name="body">
+					<complexType>
+						<sequence>
+							<element name="assigned-numbers">
+								<complexType>
+									<sequence>
+										<element maxOccurs="unbounded" name="assigned-number" type="tr-049-e:TR049EAssignedNumber"/>
+									</sequence>
+								</complexType>
+							</element>							
+						</sequence>
+					</complexType>
+				</element>
+		</sequence>
+	</complexType>
+	<element name="tr-049-e" type="tr-049-e:TR-049-E" />
+</schema>

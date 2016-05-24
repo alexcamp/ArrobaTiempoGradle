@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="FLUJO_PROD_SERV_OPER_COM" name="FLUJO_PROD_SERV_OPER_COM" comments="" primaryKey="P_FLPS_PRIMARY">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FLPS_ID" name="FLPS_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176336960359">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PRSE_ID" name="PRSE_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176336960360">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="OPCO_ID" name="OPCO_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176336960361">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="FLUJ_ID" name="FLUJ_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1176336960362">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_02_PROD_SERV" name="FK_02_PROD_SERV" members="PRSE_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176336960359">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_PRODUCTO_SERVICIO_ST.tblxmi#PRSE_PK"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_03_FLUJO" name="FK_03_FLUJO" members="FLUJ_ID" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1176336960360">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_FLUJO.tblxmi#P_FLUJ_PRIMARY"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="P_FLPS_PRIMARY" name="P_FLPS_PRIMARY" members="FLPS_ID" constraint="SQLConstraint_1176336960361"/>
+  <constraints xmi:id="SQLConstraint_1176336960359" name="FK_02_PROD_SERV" type="FOREIGNKEY" referenceByKey="FK_02_PROD_SERV"/>
+  <constraints xmi:id="SQLConstraint_1176336960360" name="FK_03_FLUJO" type="FOREIGNKEY" referenceByKey="FK_03_FLUJO"/>
+  <constraints xmi:id="SQLConstraint_1176336960361" name="P_FLPS_PRIMARY" type="PRIMARYKEY" primaryKey="P_FLPS_PRIMARY"/>
+</RDBSchema:RDBTable>

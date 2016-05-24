@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_016_E.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-016-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR_016_E">
+		<sequence>
+			<element name="head" type="tr-016-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-016-e:long9">
+							
+						</element>
+						<element name="contractor-id" type="tr-016-e:long10">
+							
+						</element>
+						<element name="deco-final-digits" type="tr-016-e:string4">
+							
+						</element>
+						<element name="deco-reference" type="tr-016-e:string3"></element>
+						<element name="card-final-digits" type="tr-016-e:string4">
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-016-e" type="tr-016-e:TR_016_E" />
+</schema>

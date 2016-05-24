@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-510-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-510-E">
+		<sequence>
+			<element name="head" type="tr-510-e:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="product-service-code" type="tr-510-e:long9" />
+						<element name="family" type="tr-510-e:string23" />
+						<element name="comercial-operation" type="tr-510-e:long9" />
+						<element name="name" type="tr-510-e:string40" />
+						<element name="installation-address" type="tr-510-e:string65" />
+						<element name="place-type-1" type="tr-510-e:string2" />
+						<element name="place-number-1" type="tr-510-e:string6" />
+						<element name="place-type-2" type="tr-510-e:string2" />
+						<element name="place-number-2" type="tr-510-e:string6" />
+						<element name="place-type-3" type="tr-510-e:string2" />
+						<element name="place-number-3" type="tr-510-e:string6" />
+						<element name="enhancement-number" type="tr-510-e:int4" />
+						<element name="nit" type="tr-510-e:string14" />
+						<element name="use-type" type="tr-510-e:long9" />
+						<element name="atiempo-request-number" type="tr-510-e:long9" />
+						<element name="category" type="tr-510-e:long9" />
+						<element name="sub-category" type="tr-510-e:long9" />
+						<element name="phone-number" type="tr-510-e:int8" />
+						<element name="path-type" type="tr-510-e:string4" />
+						<element name="path-number" type="tr-510-e:int3" />
+						<element name="first-path-characters" type="tr-510-e:string3" />
+						<element name="second-path-characters" type="tr-510-e:string3" />
+						<element name="path-zone" type="tr-510-e:char" />
+						<element name="path-type-2" type="tr-510-e:string4" />
+						<element name="path-number-2" type="tr-510-e:int3" />
+						<element name="first-path-characters-2" type="tr-510-e:string3" />
+						<element name="second-path-characters-2" type="tr-510-e:string3" />
+						<element name="path-zone-2" type="tr-510-e:char" />
+						<element name="address-number" type="tr-510-e:string3" />
+						<element name="address-characters" type="tr-510-e:char" />
+						<element name="department" type="tr-510-e:int4" />
+						<element name="city" type="tr-510-e:int8" />
+						<element name="zone" type="tr-510-e:int2" />
+						<element name="sector" type="tr-510-e:int2" />
+						<element name="block" type="tr-510-e:int4" />
+						<element name="block-side" type="tr-510-e:string2" />
+						<element name="space-number" type="tr-510-e:int4" />
+						<element name="sub-city" type="tr-510-e:string20" />
+						<element name="request-pbx" type="tr-510-e:int4" />
+						<element name="atis-request-number" type="tr-510-e:long9" />
+						<element name="previous-phone-number" type="tr-510-e:int8" />
+						<element name="request-date" type="tr-510-e:string10" />
+						<element name="number-client" type="tr-510-e:long9" />
+						<element name="ods-number" type="tr-510-e:int8" />
+						<element name="project-code" type="tr-510-e:string23" />
+						<element name="special-service-types">
+							<complexType>
+								<sequence>
+									<element name="special-service-type" type="tr-510-e:SpecialServicesRequest" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-510-e" type="tr-510-e:TR-510-E" />
+</schema>

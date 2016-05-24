@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:TR_SMS_E="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	
+	<complexType name="TRSMSEDATOS">
+		<sequence>
+			<element name="ENVIAR_SMS">
+				<complexType>
+					<sequence>
+						<element name="NUMERO" type="TR_SMS_E:string30" />
+						<element name="TEXTO" type="TR_SMS_E:string200" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="TR_SMS_E">
+		<sequence>
+			<element name="AGENDASERVICE" type="TR_SMS_E:AgendaServiceHeader" />
+				<element name="DATOS">
+					<complexType>
+						<sequence>
+							<element name="DATOS" type="TR_SMS_E:TRSMSEDATOS"/>
+						</sequence>
+					</complexType>
+				</element>
+		</sequence>
+	</complexType>
+	<element name="TR_SMS_E" type="TR_SMS_E:TR_SMS_E" />
+</schema>

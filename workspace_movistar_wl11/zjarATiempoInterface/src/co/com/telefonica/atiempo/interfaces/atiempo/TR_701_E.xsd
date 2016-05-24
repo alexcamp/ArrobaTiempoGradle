@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_701_E.xsd,v 1.1 2011/03/30 18:23:11 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-701-e="http://atiempo.telefonica.com.co">
+    <include schemaLocation="commons-atiempo.xsd"/>
+	<complexType name="Customer">
+      <sequence>
+        <element name="code" type="tr-701-e:long15"/>
+        <element name="id-type" type="tr-701-e:string3"/>
+        <element name="id" type="tr-701-e:string30"/>
+        <element name="name" type="tr-701-e:string360"/>
+        <element name="type" type="tr-701-e:string30"/>
+        <element name="subseg" type="tr-701-e:string240"/>
+        <element minOccurs="0" name="phone-number" type="long"/>
+        <element minOccurs="0" name="email" type="tr-701-e:string2000"/>
+      </sequence>
+    </complexType>
+
+	<complexType name="Product">
+      <sequence>
+        <element name="product-code" type="tr-701-e:long9"/>
+        <element minOccurs="0" name="atis-request-number" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="nombre-PS-Producto"  type="tr-701-e:string150"/>
+		<element minOccurs="0" name="caracteristica-Producto"  type="tr-701-e:string150"/>
+		<element minOccurs="0" name="plazo-Financiacion"  type="tr-701-e:int4"/>
+      </sequence>
+    </complexType>
+
+	<complexType name="TechnicalData">
+      <sequence>
+        <element name="central-code" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="phone-humber" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="len" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="horizontal-position" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="distributor-code" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="distributor-description" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="distributor-address" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="strip" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="strip-pair" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="cable" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="cable-pair" type="tr-701-e:string150"/>
+        <element name="closet" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="closet-address" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="box" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="box-pair" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="box-address" type="tr-701-e:string150"/>
+        <element name="box-type" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="box-distance" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="latitude" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="longitude" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="zone" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="speed" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="ip-type" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="port-id" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="pots" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="adsl" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="ip-dslam" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="ip-wan" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="ip-lan" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="ip-lan-mask" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="frame" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="card" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="rack" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="subrack" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="vpi-vci" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="vpi-vci-network" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="user-access" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="packages" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="decos-type" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="decos-number" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="par-dedicated" type="tr-701-e:string2"/>
+        <element minOccurs="0" name="nom-interlocutor" type="tr-701-e:string200"/>
+        <element minOccurs="0" name="tel-interlocutor" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="tel1-contacto" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="tel2-contacto" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="tel3-contacto" type="tr-701-e:string20"/>
+      </sequence>
+    </complexType>
+
+ 	<complexType name="DateData">
+      <sequence>
+        <element minOccurs="0" name="breakdown-date" type="date"/>
+        <element minOccurs="0" name="breakdown-commitment-date" type="date"/>
+      </sequence>
+  	</complexType>
+
+  	<complexType name="AddressData">
+      <sequence>
+        <element name="address" type="tr-701-e:string960"/>
+        <element name="city" type="tr-701-e:string60"/>
+        <element name="state" type="tr-701-e:string60"/>
+        <element minOccurs="0" name="sub-city" type="tr-701-e:string60"/>
+        <element name="location" type="tr-701-e:string60"/> 
+        <element minOccurs="0" name="agency-name" type="tr-701-e:string60"/>
+        <element name="neighborhood" type="tr-701-e:string60"/>
+        <element minOccurs="0" name="coordinate-x" type="tr-701-e:string240"/>
+        <element minOccurs="0" name="coordinate-y" type="tr-701-e:string240"/>
+      </sequence>
+    </complexType>
+ 
+    <complexType name="CoordinatedActions">
+      <sequence>
+        <element minOccurs="0" name="dependence-type" type="tr-701-e:string30"/>
+        <element minOccurs="0" name="dependece-id" type="tr-701-e:long8"/>
+      </sequence>
+    </complexType>
+ 
+    <complexType name="Notes">
+      <sequence>
+        <element name="note-description" type="tr-701-e:string2000"/>
+        <element minOccurs="0" name="note-detail" type="tr-701-e:string32767"/>
+        <element minOccurs="0" name="note-type" type="tr-701-e:string240"/>
+      </sequence>
+    </complexType>
+
+    <complexType name="ContactData">
+      <sequence>
+        <element minOccurs="0" name="contact-name" type="tr-701-e:string150"/>
+        <element name="contact-media" type="tr-701-e:string150"/>
+        <element minOccurs="0" name="contact-phone" type="tr-701-e:string40"/>
+        <element minOccurs="0" name="contact-email" type="tr-701-e:string2000"/>
+        <element minOccurs="0" name="contact-cell-phone" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="datos-agendamiento" type="tr-701-e:string200"/>
+      </sequence>
+    </complexType>
+
+    <complexType name="AccessTimes">
+      <sequence>
+        <element minOccurs="0" name="jorney" type="tr-701-e:string20"/>
+      </sequence>
+    </complexType>
+
+    <complexType name="MassiveBreakdowns">
+      <sequence>
+        <element minOccurs="0" name="breakdown-masive-type" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="initial-range" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="final-range" type="tr-701-e:string20"/>
+      </sequence>
+    </complexType>
+
+    <complexType name="ProductService">
+      <sequence>
+        <element minOccurs="0" name="ps-id" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="operation-comercial" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="idpc-tv" type="tr-701-e:string20"/>
+        <element minOccurs="0" name="accion" type="tr-701-e:string250"/>
+      </sequence>
+    </complexType> 
+    
+    <complexType name="TR701EEquipment">
+    	 	<sequence>
+				<element name="serial-number" type="tr-701-e:string64"/>
+				<element name="brand" type="tr-701-e:string30"/>
+				<element name="model" type="tr-701-e:string30"/>
+				<element name="type" type="tr-701-e:string30"/>
+				<element name="cass-id" type="tr-701-e:string64"/>
+				<element name="card-serial-number" type="tr-701-e:string64"/>
+				<element name="inventory-type" type="tr-701-e:string30"/>
+				<element name="part-type" type="tr-701-e:string30"/>
+				<element name="id" type="tr-701-e:string30"/>
+				<element name="posting-date" type="tr-701-e:string8"/>
+				<element name="move-type" type="tr-701-e:string30" />
+				<element name="material-code" type="tr-701-e:string4"/>
+				<element name="material" type="tr-701-e:string18"/>
+				<element name="plant" type="tr-701-e:string4"/>
+				<element name="storage" type="tr-701-e:string4"/>
+				<element name="batch-code" type="tr-701-e:string10"/>			
+				<element name="measurement-unit" type="tr-701-e:string3"/>
+				<element name="cost-center" type="tr-701-e:string10"/>
+				<element name="func-area-long" type="tr-701-e:string4"/>						
+				<element name="pep-element" type="tr-701-e:string10"/>
+				<element name="flag-mat-sap" type="tr-701-e:string2"/>
+				<element name="card-posting-date" type="tr-701-e:string8"/>
+				<element name="card-move-type" type="tr-701-e:string30" />
+				<element name="card-sap-material-code" type="tr-701-e:string4"/>
+				<element name="card-material" type="tr-701-e:string18"/>
+				<element name="card-plant" type="tr-701-e:string4"/>
+				<element name="card-storage" type="tr-701-e:string4"/>
+				<element name="card-batch-code" type="tr-701-e:string10"/>			
+				<element name="card-measurement-unit" type="tr-701-e:string3"/>
+				<element name="card-cost-center" type="tr-701-e:string10"/>
+				<element name="card-func-area-long" type="tr-701-e:string4"/>						
+				<element name="card-pep-element" type="tr-701-e:string10"/>
+				<element name="card-flag-mat-sap" type="tr-701-e:string2"/>
+    		</sequence>
+   </complexType>
+    
+    <complexType name="TR_701_E">
+      <sequence>
+        <element name="head" type="tr-701-e:RequestHeaderAgendaSC"/>
+        <element name="body">
+        <complexType>
+          <sequence maxOccurs="1" minOccurs="1">
+            <element name="id-system-origin" type="tr-701-e:string16"/>
+            <element name="id-schedule" type="tr-701-e:string64"/>
+            <element name="schedule-date" type="date"/>
+            <element name="code-schedule-type" type="tr-701-e:string30"/>
+            <element name="action-name" type="tr-701-e:string80"/>
+            <element name="code-action" type="tr-701-e:string30"/>
+            <element name="severity" type="tr-701-e:string30"/>
+            <element name="urgency" type="tr-701-e:string30"/>
+            <element name="summary" type="tr-701-e:string240"/>
+            <element minOccurs="0" name="description-action" type="tr-701-e:string4000"/>
+            <element minOccurs="1" name="affected-area" type="tr-701-e:string30"/>
+			<element name="project-code" type="tr-701-e:string20" />
+            <element name="customer" type="tr-701-e:Customer"/>
+            <element name="product" type="tr-701-e:Product"/>
+            <element name="technicaldata" type="tr-701-e:TechnicalData"/>
+            <element name="datedata" type="tr-701-e:DateData"/>
+            <element name="addressdata" type="tr-701-e:AddressData"/>
+            <element name="coordinatedactions" type="tr-701-e:CoordinatedActions"/>
+            <element name="notes" type="tr-701-e:Notes"/>
+            <element name="contactdata" type="tr-701-e:ContactData"/>
+            <element name="accesstimes" type="tr-701-e:AccessTimes"/>
+            <element name="massivebreakdowns" type="tr-701-e:MassiveBreakdowns"/>
+	    <element name="products-service">
+              <complexType>
+  		<sequence>
+                    <element maxOccurs="unbounded" name="product-service" type="tr-701-e:ProductService"/>
+		</sequence>
+              </complexType>           
+            </element>
+            <element name="equipments">
+	      <complexType>
+	    	<sequence>
+	    	     <element maxOccurs="unbounded" name="equipment" type="tr-701-e:TR701EEquipment"/>
+	    	</sequence>
+	      </complexType>
+            </element>
+            
+            <element name="transactiontype" type="tr-701-e:string10"/>
+            <element name="breakdown-type" type="tr-701-e:string10"/>
+            
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="tr-701-e" type="tr-701-e:TR_701_E"/>
+</schema>

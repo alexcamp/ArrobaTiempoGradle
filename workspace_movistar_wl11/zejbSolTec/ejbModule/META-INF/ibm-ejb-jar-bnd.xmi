@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbbnd:EJBJarBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:common="common.xmi" xmlns:ejb="ejb.xmi" xmlns:ejbbnd="ejbbnd.xmi" xmi:id="EJBJarBinding_1115412125250" currentBackendId="DB2UDBNT_V72_1">
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1172686732218" jndiName="ejb/co/com/telefonica/atiempo/soltec/mensajeria/salida/QMATiempoManagerLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#QMATiempoManager"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1178651883734" jndiName="jms/QMAT_QCF">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1178651883734"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690746933" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690746933"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690747058" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690747058"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690747167" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690747167"/>
+    </resRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1178652366984" jndiName="jms/QMAT/IT_BUS_SOLIS_REC_RED_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1178652366984"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1178652419859" jndiName="jms/QMBUS/RT_AT_SOLIS_REC_RED2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1178652419859"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1181689342312" jndiName="jms/QMAT/IT_BUS_SOLIC_REC_BA_CONS_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1181689342312"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1183649994765" jndiName="jms/QMAT/IT_BUS_ACT_EST_TEC_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1183649994765"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1184594798593" jndiName="jms/QMAT/IT_BUS_CIERRE_INCI_RESP_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1184594798593"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196293777640" jndiName="jms/QMAT/IT_BUS_ACT_INV_BA_MOD_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196293777640"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196293827640" jndiName="jms/QMBUS/RT_AT_ACT_INV_BA_MOD2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196293827640"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196293868937" jndiName="jms/QMAT/IT_BUS_GESTIONAR_ACT_INV_DTH_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196293868937"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196293909437" jndiName="jms/QMBUS/RT_AT_GESTIONAR_ACT_INV_DTH2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196293909437"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294052734" jndiName="jms/QMBUS/RT_AT_ACT_EST_TEC_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294052734"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294141718" jndiName="jms/QMBUS/RT_AT_SOLIC_REC_BA_CONS2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294141718"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294203968" jndiName="jms/QMAT/IT_BUS_GESTIONAR_DTH_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294203968"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294231765" jndiName="jms/QMBUS/RT_AT_GESTIONAR_DTH2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294231765"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294259796" jndiName="jms/QMAT/IT_BUS_GEST_CONF_ACTUAL_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294259796"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294284984" jndiName="jms/QMBUS/RT_AT_GEST_CONF_ACTUAL2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294284984"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294314296" jndiName="jms/QMAT/IT_BUS_ALISTAR_DTH_DECOS_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294314296"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196294343500" jndiName="jms/QMBUS/RT_AT_ALISTAR_DTH_DECOS2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196294343500"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196358036656" jndiName="jms/QMAT/IT_BUS_ALISTAR_MODEM_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196358036656"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1196359242109" jndiName="jms/QMBUS/RT_AT_LISTAR_BA_MODEMS2_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1196359242109"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1215181667427" jndiName="jms/QMAT/IT_BUS_SOLIC_REC_BA_SIGR_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1215181667427"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1215185691100" jndiName="jms/QMBUS/RT_AT_SOLIC_REC_BA_SIGR_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1215185691100"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1215185730923" jndiName="jms/QMBUS/RT_AT_SOL_CUEN_CORR_BA_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1215185730923"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1215204011911" jndiName="jms/QMAT/IT_BUS_SOL_CUEN_CORR_BA_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1215204011911"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1239728797391" jndiName="jms/QMAT/IT_BUS_ACT_INV_EQUIPOS_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1239728797391"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1239728839423" jndiName="jms/QMAT/IT_BUS_ALISTAR_EQUIPOS_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1239728839423"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1239728878377" jndiName="jms/QMAT/IT_BUS_CONSULTA_EQUIPOS_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1239728878377"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1259445214515" jndiName="jms/QMAT/IT_BUS_SOLIS_REC_RED_GR_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1259445214515"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1259445214640" jndiName="jms/QMBUS/RT_AT_SOLIS_REC_RED2_GR_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1259445214640"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1259445214671" jndiName="jms/QMAT/IT_BUS_ACT_EST_TEC_GR_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1259445214671"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1259445214703" jndiName="jms/QMBUS/RT_AT_ACT_EST_TEC_GR_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1259445214703"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1285952993531" jndiName="jms/QMAT/IT_BUS_CREA_ACT_SC_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1285952993531"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1285953289546" jndiName="jms/QMAT/RT_BUS_ACT_RECURSOS_SC_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1285953289546"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1285953344796" jndiName="jms/QMAT/RT_BUS_CIERRE_ACT_SC_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1285953344796"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1306772251921" jndiName="jms/QMAT/RT_BUS_ACT_MODEM_SC_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1304625836046"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1308274536984" jndiName="jms/QMAT/IT_BUS_VISTA_GLOBAL_ST">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1308274536984"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1308274589046" jndiName="jms/QMAT/IT_BUS_NOTIFICACION_SAP_ST">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1308274589046"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1308274589047" jndiName="jms/QMAT/IT_BUS_PRESENCIA_DIGITAL_ST">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1308274589047"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1361470839357" jndiName="jms/QMAT/RT_BUS_REF_DATOS_STB_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1361470839357"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1364934707671" jndiName="jms/QMAT/IT_BUS_CONF_CAMARA_ZTE_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1364934707671"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1364934707765" jndiName="jms/QMAT/IT_BUS_ACT_CAMARA_AGENDASC_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1364934707765"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1443107511371" jndiName="jms/QMAT/IT_BUS_REFRESH_TV_TOA_ST_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1443107511371"/>
+    </resourceEnvRefBindings>
+    <resourceEnvRefBindings xmi:id="ResourceEnvRefBinding_1443809796782" jndiName="jms/QMAT/IT_BUS_AUTOCONFIG_ACS_Q">
+      <bindingResourceEnvRef href="META-INF/ejb-jar.xml#ResourceEnvRef_1443809632886"/>
+    </resourceEnvRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1175665368831" jndiName="ejb/co/com/telefonica/atiempo/soltec/servicios/IncidentesServicesLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#IncidentesServices"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690747260" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690747260"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690748522" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690748522"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690748615" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690748615"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1175730846374" listenerInputPortName="QMAT_IF_BUS_GEST_INCI_ALTA_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#RecepcionIncidenteATISMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1175744521839" listenerInputPortName="WF_TO_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#WFMessageST"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176310042031" jndiName="ejb/co/com/telefonica/atiempo/soltec/mensajeria/entrada/RecursosServiciosLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#RecursosServicios"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690748709" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690748709"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690748802" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690748802"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210694879604" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210694879604"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1176311486116" listenerInputPortName="QMAT_RF_BUS_ASIG_REC_LB_ALTA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#AsignacionRecursoSTBMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176317102156" jndiName="ejb/co/com/telefonica/atiempo/soltec/asignacion/ejb/sb/AsignacionSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#AsignacionST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690748896" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690748896"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690748989" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690748989"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749067" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749067"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176329322562" jndiName="ejb/co/com/telefonica/atiempo/soltec/datos_publicacion/ejb/sb/DatosPublicacionSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#DatosPublicacionST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749160" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749160"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749269" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749269"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749363" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749363"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176325146375" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/FlujoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1176325146375"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749456" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749456"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176334946765" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Flujo_definicionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176334946765"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176337171890" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Flujo_prod_serv_oper_comLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176337171890"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176328026828" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176329474468" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Peticion_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749534" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749534"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374546" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_flujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374546"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176385501406" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Bitacora_peticionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176385501406"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176387098687" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_peticionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176387098687"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1177022337968" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/TematicoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1177022337968"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1177022879234" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Deco_tarjetaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1177022879234"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1177447455531" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/ModemLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1177447455531"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1178635734828" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Tmp_deco_tarjetaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1178635734828"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1182523651437" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Prueba_lineaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1182523651437"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1182868402156" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Mensaje_estado_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1182868402156"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184369288406" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_diagnosticoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184369288406"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1188681408078" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Recursos_linea_basicaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1188681408078"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1188681880000" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Recursos_baLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1188681880000"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1196284655281" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Tmp_modemLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1196284655281"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1196779681734" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/ControlvisitaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1196779681734"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1238702774531" jndiName="ejb/co/com/telefonica/atiempo/ejb/eb/Elemento_PeticionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1238702774531"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176329527546" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176332985640" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Mensaje_estado_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Mensaje_estado_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749612" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749612"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1182868402281" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1182868402281"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176333119187" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176334561859" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Actividad_flujoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Actividad_flujo"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690749706" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690749706"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176334946781" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Flujo_definicionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176334946781"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374578" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_flujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374578"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176334649250" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176334840593" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Flujo_definicionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Flujo_definicion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690750578" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690750578"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176334946796" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/FlujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176334946796"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176334946797" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Actividad_flujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176334946797"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176334872296" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176335608484" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Producto_servicio_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690750656" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690750656"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176337171921" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Flujo_prod_serv_oper_comLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176337171921"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374593" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_flujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374593"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176387098718" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_peticionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176387098734"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176754607781" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Familia_producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176754607781"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176335608484" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176337056359" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Flujo_prod_serv_oper_comLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Flujo_prod_serv_oper_com"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690750718" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690750718"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176337171922" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176337171922"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176337171937" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/FlujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176337171937"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176337091203" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176338016984" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Operacion_comercial_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Operacion_comercial_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690750796" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690750796"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374625" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_flujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374625"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176387098750" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_peticionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176387098750"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176338069421" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176338244906" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_flujoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Peticion_flujo"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690750874" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690750874"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374640" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374640"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374656" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Actividad_flujoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374656"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374671" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Operacion_comercial_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374671"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176338374672" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176338374672"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176338244906" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176385277468" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Bitacora_peticionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Bitacora_peticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690750936" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690750936"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176385501437" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176385501437"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176385477046" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176386699671" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_peticionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Producto_servicio_peticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751014" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751014"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176387098781" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Operacion_comercial_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176387098781"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176387098796" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176387098796"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176387098812" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176387098812"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176387028750" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176388597234" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Recursos_baLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Recursos_ba"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751076" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751076"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1188681880140" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1188681880140"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176388632437" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176389256703" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Tipo_peticion_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tipo_peticion_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751138" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751138"/>
+    </resRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176389256703" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176395735562" jndiName="ejb/co/com/telefonica/atiempo/soltec/mensajeria/tv/ejb/sb/RecursosTVLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#RecursosTV"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751201" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751201"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751263" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751263"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751310" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751310"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176395771140" jndiName="ejb/co/com/telefonica/atiempo/soltec/mensajeria/ba/ejb/sb/RecursosBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#RecursosBA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751372" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751372"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751434" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751434"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751497" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751497"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1176401115939" listenerInputPortName="QMAT_RF_BUS_SOLIS_REC_RED2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudPuntosRedSTBMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176407135171" jndiName="ejb/co/com/telefonica/atiempo/soltec/bitacora/ejb/sb/BitacoraSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#BitacoraST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751559" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751559"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751652" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751652"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751746" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751746"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176473378203" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Recursos_linea_basicaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Recursos_linea_basica"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751824" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751824"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176474085593" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Dslam_apsc_lineaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176474085593"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176474283156" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Servicio_basico_supl_apsc_lineaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176474283156"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1188681408234" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1188681408234"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1216906107745" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Zonas_atendimientoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1214402626947"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176474085625" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176473841812" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Dslam_apsc_lineaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Dslam_apsc_linea"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751886" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751886"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176474085625" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Recursos_linea_basicaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176474085625"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176474085640" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176474173234" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Servicio_basico_supl_apsc_lineaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Servicio_basico_supl_apsc_linea"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751948" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751948"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176474283157" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Recursos_linea_basicaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176474283157"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176474203109" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176751827343" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_cierreLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_cierre"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690751995" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690751995"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184360112437" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/LocalizacionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184360112437"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184425726921" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_cierre_peticionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184425726921"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176752093968" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176752400171" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_diagnosticoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_diagnostico"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690752057" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690752057"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184369288515" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184369288515"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176752481531" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176753572453" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690752120" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690752120"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299886968" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Regla_area_ges_cod_estadoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299886968"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176753660234" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176754046578" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Familia_producto_servicio_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Familia_producto_servicio_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690752166" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690752166"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1176754607890" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1176754607890"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184688691625" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/LocalizacionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184688691625"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184708790812" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/Catalago_prueba_lineaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184708790812"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299424343" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Area_gestionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299424343"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176754165640" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176754348015" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Tipo_codigoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tipo_codigo"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690752213" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690752213"/>
+    </resRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1176754459328" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1176964649262" listenerInputPortName="QMAT_RF_BUS_SOLIC_REC_BA_CONS2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudInformacionTecnicaBAMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1176964649263" listenerInputPortName="QMAT_RF_BUS_GEST_CONF_ACTUAL2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudInformacionTecnicaTVMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176919686937" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/ejb/sb/ASTDefaultActividadLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTDefaultActividad"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690752275" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690752275"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690752369" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690752369"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690752478" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690752478"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176921893312" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/recepcion/ejb/sb/ASTVerificacionPeticionLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTVerificacionPeticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690753599" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690753599"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690753692" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690753692"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690753786" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690753786"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1176929786109" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/recepcion/ejb/sb/ASTGeneraFlujoPeticionLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTGeneraFlujoPeticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690753879" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690753879"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690753973" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690753973"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754066" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754066"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177022234625" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/TematicoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tematico"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754160" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754160"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1177022338062" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1177022338062"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1177022338078" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177022579968" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Deco_tarjetaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Deco_tarjeta"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754206" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754206"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1177022879359" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1177022879359"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1177022753515" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177008464125" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/ejb/sb/ASTCalculasSgteTareaLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTCalculasSgteTarea"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754269" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754269"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754362" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754362"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754456" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754456"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177078192968" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/ejb/sb/ASTEnvioCierrePeticionLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTEnvioCierrePeticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754533" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754533"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754596" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754596"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754642" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754642"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177080158859" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/ASTRecuperarInfSTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTRecuperarInfSTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754689" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754689"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754736" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754736"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754783" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754783"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177080623343" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/ASTRecuperarInfBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTRecuperarInfBA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754845" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754845"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754892" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754892"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754938" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754938"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177080879171" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/ASTRecuperarInfTVLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTRecuperarInfTV"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690754985" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690754985"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755032" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755032"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755079" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755079"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177080996593" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/inventario/ejb/sb/ASTActualizarInventarioSTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTActualizarInventarioSTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755141" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755141"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755188" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755188"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210694879729" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210694879729"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177081057218" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/inventario/ejb/sb/ASTActualizarInventarioBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTActualizarInventarioBA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755219" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755219"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755265" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755265"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755312" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755312"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177081103296" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/inventario/ejb/sb/ASTActualizarInventarioTVLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTActualizarInventarioTV"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755359" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755359"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755406" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755406"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755452" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755452"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177085401859" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/ASTAnulacionATISLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTAnulacionATIS"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755499" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755499"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690755546" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690755546"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756356" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756356"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1177447356453" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/ModemLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Modem"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756402" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756402"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1177447455687" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1177447455687"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1177447455703" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1177612317660" listenerInputPortName="QMAT_RF_BUS_ACT_INV_BA_MOD2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudActualizacionInventarioBAMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1177612333120" listenerInputPortName="QMAT_RF_BUS_GESTIONAR_ACT_INV_DTH2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudActualizacionInventarioTVMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1177612345793" listenerInputPortName="QMAT_RF_BUS_ACT_EST_TEC_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudActualizacionInventarioSTBMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1178635659640" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Tmp_deco_tarjetaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tmp_deco_tarjeta"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756449" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756449"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1178635734953" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1178635734953"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1178635734984" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1178813505359" jndiName="ejb/com/telefonica_chile/soltec/grabacion/GrabadorSolTecLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#GrabadorSolTec"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756496" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756496"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756527" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756527"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756574" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756574"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1182522225867" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/TipoCodigoStLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#TipoCodigoSt"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756605" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756605"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756636" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756636"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210694879775" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210694879775"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1182524147811" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/CodigoStLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#CodigoSt"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756683" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756683"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756714" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756714"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756761" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756761"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1182617838687" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Prueba_lineaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Prueba_linea"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756792" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756792"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1182617838687" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1182523651578"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184707653765" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/Catalago_prueba_lineaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184707653765"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1182631988421" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1182816925563" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/InstalacionServiceSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#InstalacionServiceST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756838" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756838"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756870" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756870"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756916" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756916"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1182873640569" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/PeticionesServiceSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#PeticionesServiceST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756947" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756947"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690756994" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690756994"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757025" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757025"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1182879104969" jndiName="ejb/co/com/telefonica/atiempo/soltec/comun/ejb/InfoComunColombiaSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#InfoComunColombiaST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757072" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757072"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757103" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757103"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757134" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757134"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1184360112531" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/LocalizacionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Localizacion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757181" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757181"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184360112531" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_cierreLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184360112531"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184688691750" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Familia_producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184688691750"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1190654348218" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1184425592765" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_cierre_peticionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Codigo_cierre_peticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757212" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757212"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184425727000" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_cierreLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184425727000"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1190654348219" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1184359790138" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/cancelacion/ejb/sb/Catalago_prueba_lineaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Catalago_prueba_linea"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757243" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757243"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184707653828" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Prueba_lineaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184707653828"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1184708790890" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Familia_producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1184708790890"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1184702981062" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1185311689796" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/ejb/eb/ASTActividadAutomaticaVaciaLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTActividadAutomaticaVacia"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757275" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757275"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757321" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757321"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757352" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757352"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1185995352906" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_stb/ejb/eb/ASTMarcarAveriaSTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTMarcarAveriaSTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757384" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757384"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757415" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757415"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757446" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757446"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1186001671593" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_stb/ejb/eb/ASTDiagnosticarSTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTDiagnosticarSTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757477" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757477"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757508" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757508"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757539" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757539"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1187298898375" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Area_gestionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Area_gestion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757570" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757570"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299426984" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Familia_producto_servicio_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299426984"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299887093" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Regla_area_ges_cod_estadoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299887093"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1190654301531" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1187299042359" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/ReglaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Regla"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757602" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757602"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299887125" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Regla_area_ges_cod_estadoLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299887125"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1190654348220" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1187299186890" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Regla_area_ges_cod_estadoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Regla_area_ges_cod_estado"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757633" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757633"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299887156" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Area_gestionLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299887156"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299887187" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Codigo_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299887187"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1187299887218" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/ReglaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1187299887218"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1190654348221" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1187305202625" jndiName="ejb/co/com/telefonica/atiempo/soltec/reglas/ejb/sb/ReglasSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ReglasST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757664" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757664"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757695" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757695"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757711" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757711"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1187306934828" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_ba/ejb/sb/ASTDiagnosticoBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTDiagnosticoBA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757742" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757742"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757773" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757773"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757804" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757804"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1187307135078" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_tv/ejb/sb/ASTDiagnosticoTVLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTDiagnosticoTV"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757835" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757835"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757851" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757851"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757882" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757882"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1187371127828" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/recepcion/ejb/sb/ASTBloqueoPeticionLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTBloqueoPeticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757913" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757913"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757944" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757944"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757960" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757960"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1187717816218" listenerInputPortName="QMAT_RF_BUS_ALISTAR_DTH_DECOS2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ConsultaDecoTarjetaporInstalarSTMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1187795758843" listenerInputPortName="QMAT_RF_BUS_GESTIONAR_DTH2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ConfiguracionServiciosTVSTMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1191257862468" listenerInputPortName="WF_SOLTEC_ACCION_MASIVA_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#AccionMasivaSTReceptorMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1191273573250" jndiName="ejb/co/com/telefonica/atiempo/soltec/accion_masiva/ejb/sb/AccionMasivaSTServicesLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#AccionMasivaSTServices"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690757991" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690757991"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758006" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758006"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758038" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758038"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1196284587640" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Tmp_modemLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tmp_modem"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758069" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758069"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1253388547870" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1253388547870"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1196284655437" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1196284655437"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1196284621359" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1196287516953" listenerInputPortName="QMAT_RF_BUS_ALISTAR_BA_MODEMS2_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ConsultaModem"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1196779608531" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/ControlvisitaLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Controlvisita"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758084" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758084"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1196779682468" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1196779682468"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1196779650531" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1201648327953" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_stb/ejb/sb/ASTControlReparacionSTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTControlReparacionSTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758100" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758100"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758115" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758115"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758147" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758147"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1201648926921" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_ba/ejb/sb/ASTControlReparacionBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTControlReparacionBA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758162" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758162"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758178" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758178"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758209" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758209"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1201650184406" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_tv/ejb/sb/ASTControlReparacionTVLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTControlReparacionTV"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758225" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758225"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758240" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758240"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1210690758256" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1210690758256"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1214500916140" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Zonas_atendimientoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Zonas_atendimiento"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1216906182188" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Recursos_linea_basicaLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1214402627056"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1214500916140" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1214837713778" listenerInputPortName="QMAT_RF_BUS_SOLIC_REC_BA_SIGR_ST_Q">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudInformacionTecnicaBASigresMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1214841932813" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/ASTRecuperarInfBASigresLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTRecuperarInfBASigres"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1214841932813" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1214841932813"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390279808" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390279808"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390279886" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390279886"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1214920219537" listenerInputPortName="QMAT_RF_BUS_SOL_CUEN_CORR_BA_ST_Q">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudCuentaCorreoBAMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1214921845513" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/RecuperaCuentaCorreoBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1215443977673"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1214921907200" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1214921907200"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1214925526688" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/ASTRecuperaCuentaCorreoBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1215443977783"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1215457553544" jndiName="ejb/co/com/telefonica/atiempo/soltec/mensajeria/ba/ejb/sb/RecuperaCuentaCorreoLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#RecuperaCuentaCorreoBA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390447402" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1214921907200"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390447403" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390447402"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390447433" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390447433"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1216745075202" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/ASTRecuperaCuentaCorreoBALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTRecuperaCuentaCorreoBA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1216918628575" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1216918628575"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1216918654388" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1216918654388"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1216918678497" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1216918678497"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1223917457294" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Sla_stLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Sla_st"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1236700140582" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1236700140582"/>
+    </resRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1223917457294" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1243279801888" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_stb/ejb/sb/ASTAprovisionamientoRISTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTAprovisionamientoRISTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390447480" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390447480"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390447527" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390447527"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390447558" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390447558"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1243281262529" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_stb/ejb/sb/ASTMantenimientoRISTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTMantenimientoRISTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390512605" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390512605"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390512652" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390512652"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1246390512683" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1246390512683"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1238679946152" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/recuperar_inf/ejb/sb/ASTRecuperarInfEquipoLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTRecuperarInfEquipo"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1239728566870" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1239728566870"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1238680758244" jndiName="ejb/co/com/telefonica/atiempo/soltec/mensajeria/equipo/ejb/sb/EquipoSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#EquipoST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1239728566917" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1239728566917"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1253388469144" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1253388469144"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1238684857911" listenerInputPortName="QMAT_RF_BUS_CONSULTA_EQUIPOS_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudInformacionTecnicaEquipoMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1238692139622" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Elemento_PeticionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Elemento_Peticion"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1253388354151" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1253388354151"/>
+    </resRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1238702748265" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Peticion_stLocalHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1238702748265"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1238703932436" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1238772651863" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Tmp_equipoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Tmp_equipo"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1253388328625" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1253388328625"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1253388523490" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1253388523490"/>
+    </resRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1238773242754" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1239020331313" listenerInputPortName="QMAT_RF_BUS_ALISTAR_EQUIPOS_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ConsultaEquipo"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1239035544493" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/inventario/ejb/sb/ASTActualizarInventarioEquipoLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTActualizarInventarioEquipo"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1239728566964" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1239728566964"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1253388504123" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1253388504123"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1239206564197" listenerInputPortName="QMAT_RF_BUS_ACT_INV_EQUIPO_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudActualizacionInventarioEquipoMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1245268025415" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Actividad_localizacionLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Actividad_localizacion"/>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1245268025415" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1259632771312" listenerInputPortName="QMAT_RF_BUS_SOLIS_REC_RED2_GR_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudPuntosRedSTBGRMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1259632771313" listenerInputPortName="QMAT_RF_BUS_ACT_EST_TEC_GR_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#SolicitudActualizacionInventarioSTBGRMD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1259767301031" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/recepcion/ejb/sb/ASTVerificar_Retencion_STLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTVerificar_Retencion_ST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1241448708706" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1241448708706"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1241448876302" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1241448876302"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1241452218498" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1241452218498"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1284733865187" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/AgendaSCSTLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#AgendaSCST"/>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1284734037750" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1284740549984" listenerInputPortName="QMAT_RF_BUS_CREA_ACT_SC_ST">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#CreaActuacionSCSTMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1284740633859" listenerInputPortName="QMAT_IF_BUS_CIERRE_ACT_SC_ST">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#CierreActuacionSCSTMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1284760450484" listenerInputPortName="QMAT_IF_BUS_ACT_RECURSOS_SC_ST">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ActivarRecursosSCSTMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1302190327406" listenerInputPortName="QMAT_IF_BUS_ACT_MODEM_SC_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ActivarModemSCSTMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1308271808500" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/inventario/ejb/sb/ASTVistaGlobalLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTVistaGlobal"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1308272328921" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1308272328921"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1308272353859" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1308272353859"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1308272391390" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1308272391390"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1308272260968" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/inventario/ejb/sb/ASTNotificacionSAPLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTNotificacionSAP"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1308272431375" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1308272431375"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1308272476906" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1308272476906"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1308272499328" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1308272499328"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1308424869484" listenerInputPortName="QMAT_RF_BUS_VISTA_GLOBAL_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#STVistaGlobalMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1308429811593" listenerInputPortName="QMAT_RF_BUS_NOTIFICACION_SAP_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#STNotificacionSAPMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1310924422500" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Deco_Tarjeta_Info_SapLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Deco_Tarjeta_Info_Sap"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1310926079937" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1310926079937"/>
+    </resRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1310924719796" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1322087632031" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/ElementoNoSerializadoLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ElementoNoSerializado"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1330287348875" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/factory/df/inventario/ASTConfPresenciaDigitalSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTConfPresenciaDigitalST"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1330805631484" listenerInputPortName="QMAT_RF_BUS_PRESENCIA_DIGITAL_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#STPresenciaDigitalMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1341604273592" jndiName="ejb/co/com/telefonica/atiempo/soltec/ejb/eb/Mensaje_descarga_SAP_STLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Mensaje_descarga_SAP_ST"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1361384867699" jndiName="ejb/co/com/telefonica/atiempo/soltec/mensajeria/RefrecarRecursosSTBLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#RefrecarRecursosSTB"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1361487637449" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1361487637449"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1361487637668" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1361487637668"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1361487637746" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1361487637746"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1361385356721" listenerInputPortName="QMAT_IF_BUS_REF_DATOS_STB_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#RefrescarRecursosSTBMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1364933853234" listenerInputPortName="QMAT_RF_BUS_CONF_CAMARA_ZTE_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ConfCamaraZTEMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1364934455375" listenerInputPortName="QMAT_RF_BUS_ACT_CAMARA_AGENDASC_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ActivarCamaraAgendaSCMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1428047075091" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/configuracion/ejb/naked/sb/ACSServicioSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ACSServicioST"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1440185607299" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1440185607299"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1440185607340" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1440185607340"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1440185607360" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1440185607360"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1428047075092" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/configuracion/ejb/naked/sb/ASTConfigurarACSLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTConfigurarACS"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1456521143119" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1456521143119"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1456521143149" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1456521143149"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1456521143179" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1456521143179"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1405716586847" jndiName="ejb/co/com/telefonica/atiempo/ejb/eb/Peticiones_VIPLocalHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Peticiones_VIP"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1405716639102" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1405716639102"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1428047075091" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/configuracion/ejb/naked/sb/ACSServicioSTLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ACSServicioST"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1428047075092" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/configuracion/ejb/naked/sb/ASTConfigurarACSLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTConfigurarACS"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1429117586586" listenerInputPortName="QMAT_RF_BUS_AUTOCONFIG_ACS_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ConfigurarModemAutoInstalacionSTMBD"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1432324879939" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion/ASTServicioTOALocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#ASTServicioTOA"/>
+    <resRefBindings xmi:id="ResourceRefBinding_1440185710653" jndiName="jdbc/soltec">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1440185710653"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1440185710673" jndiName="jdbc/bandeja">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1440185710673"/>
+    </resRefBindings>
+    <resRefBindings xmi:id="ResourceRefBinding_1440185710703" jndiName="jdbc/vpistbba">
+      <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_1440185710703"/>
+    </resRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1440123286913" listenerInputPortName="QMAT_IF_BUS_ACTIVAR_DECOS_TOA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#STActivarDecosTOA"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1440123286914" listenerInputPortName="QMAT_IF_BUS_ACTIVAR_MODEM_TOA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ASTActivarModemTOA"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1440600070171" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_averias/ejb/sb/SolucionTecnicaAveriasLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#SolucionTecnicaAverias"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1440715660853" listenerInputPortName="QMAT_IF_BUS_REFRESH_TV_TOA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ASCRefrescarRecursosTVMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1440715660854" listenerInputPortName="QMAT_IF_BUS_REFRESH_BA_TOA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ASCRefrescarRecursosBAMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1440715660855" listenerInputPortName="QMAT_IF_BUS_REFRESH_LB_TOA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#ASCRefrescarRecursosSTBMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1441143148045" listenerInputPortName="QMAT_IF_BUS_CIERRE_ACT_TOA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#CierreActuacionTOASTMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1441229584797" jndiName="ejb/co/com/telefonica/atiempo/soltec/actividades/df/solucion_averias/ejb/sb/BandejaProcesoDeBajaLocalHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#BandejaProcesoDeBaja"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1442523315238" listenerInputPortName="QMAT_RF_BUS_REFRESH_TV_TOA_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#RefrescarRecursosTVSTMDB"/>
+  </ejbBindings>
+  <ejbBindings xmi:type="ejbbnd:MessageDrivenBeanBinding" xmi:id="MessageDrivenBeanBinding_1443811353783" listenerInputPortName="QMAT_RF_BUS_AUTOCONFIG_ACS_ST_LP">
+    <enterpriseBean xmi:type="ejb:MessageDriven" href="META-INF/ejb-jar.xml#AutoconfiguracionModemACSSTMDB"/>
+  </ejbBindings>
+  <defaultCMPConnectionFactory xmi:id="CMPConnectionFactoryBinding_1117063318259" jndiName="jdbc/soltec" resAuth="Per_Connection_Factory"/>
+</ejbbnd:EJBJarBinding>

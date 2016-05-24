@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-611-s="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR-611-S">
+		<sequence>
+			<element name="head" type="tr-611-s:RequestHeaderAgendaSC" />
+			<element name="body">
+				<complexType>
+					<sequence>
+	                    <element name="atiempo-request-number" type="tr-611-s:long9" />
+	                    <element name="atis-request-number" type="tr-611-s:long9" />
+	                    <element name="confirmation-flag" type="string" />
+	                    <element name="description" type="string" />
+	                    <element name="date" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-611-s" type="tr-611-s:TR-611-S" />
+</schema>

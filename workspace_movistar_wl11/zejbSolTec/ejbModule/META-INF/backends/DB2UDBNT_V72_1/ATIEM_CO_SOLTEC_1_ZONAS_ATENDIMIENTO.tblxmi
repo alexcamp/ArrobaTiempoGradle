@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="ZONAS_ATENDIMIENTO" name="ZONAS_ATENDIMIENTO" comments="" primaryKey="PK_ZONA_ATEN">
+  <database href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO.dbxmi#ATIEM_CO"/>
+  <schema href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1.schxmi#SOLTEC"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_ZONA_ATENDIMIENTO" name="ID_ZONA_ATENDIMIENTO">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1214398624883">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="ID_CONECTOR" name="ID_CONECTOR">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1214398624884">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBNT_V72_Primitives.xmi#SQLExactNumeric_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="IP" name="IP">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1214398716043" length="15">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="DB2UDBNT_V72_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="PK_ZONA_ATEN" name="PK_ZONA_ATEN" members="ID_ZONA_ATENDIMIENTO" constraint="SQLConstraint_1214398624883"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="FK_ZONATEN_RECU" name="FK_ZONATEN_RECU" members="ID_CONECTOR" onDelete="RESTRICT" onUpdate="NO ACTION" constraint="SQLConstraint_1214398716043">
+    <target href="META-INF/backends/DB2UDBNT_V72_1/ATIEM_CO_SOLTEC_1_RESPUESTA_CONEC6_APSC_LINEA.tblxmi#P_PKRESPUESTA_CONE"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1214398624883" name="PK_ZONA_ATEN" type="PRIMARYKEY" primaryKey="PK_ZONA_ATEN"/>
+  <constraints xmi:id="SQLConstraint_1214398716043" name="FK_ZONATEN_RECU" type="FOREIGNKEY" referenceByKey="FK_ZONATEN_RECU"/>
+</RDBSchema:RDBTable>

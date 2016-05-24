@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>bandejaweb</display-name>
+
+	<context-param>
+		<param-name>controladorDeAplicacion</param-name>
+		<param-value>com.telefonica_chile.bandeja.web.AtiempoControladorDeAplicacion</param-value>
+	</context-param>
+	<context-param>
+		<param-name>MaxTimeSessionMinutes</param-name>
+		<param-value>30</param-value>
+	</context-param>
+	
+	<filter>
+		<filter-name>SessionManagerFilter</filter-name>
+		<filter-class>co.com.telefonica.atiempo.filters.SessionManagerFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionManagerFilter</filter-name>
+		<url-pattern>*.acc</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>JSecurityCheckFilter</filter-name>
+		<filter-class>co.com.telefonica.atiempo.filters.JSecurityCkeckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>JSecurityCheckFilter</filter-name>
+		<url-pattern>/security</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>co.com.telefonica.atiempo.contextListeners.SessionContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>co.com.telefonica.atiempo.contextListeners.TimersContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>co.com.telefonica.atiempo.contextListeners.TimmerCierreAutVelAdiciona</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Init</servlet-name>
+		<servlet-class>com.telefonica_chile.bandeja.web.Init</servlet-class>
+		<init-param>
+			<param-name>ldap-config-file</param-name>
+			<param-value>/home/atiemweb/etc/etc.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ldap-config-nodo</param-name>
+			<param-value>bandeja</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>controladorDeEntrada</servlet-name>
+		<servlet-class>com.tecnonautica.mvc.ControladorDeEntrada</servlet-class>
+		<init-param>
+			<param-name>log4j-init-file</param-name>
+			<param-value>/WEB-INF/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>GenerarBintegrada</servlet-name>
+		<servlet-class>com.telefonica_chile.bandeja.web.acciones.GenerarBintegrada</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VerArchivo</servlet-name>
+		<servlet-class>com.telefonica_chile.bandeja.web.VerArchivo</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>controladorDeEntrada</servlet-name>
+		<url-pattern>*.acc</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>controladorDeEntrada</servlet-name>
+		<url-pattern>*.free</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GenerarBintegrada</servlet-name>
+		<url-pattern>/GenerarBintegrada</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VerArchivo</servlet-name>
+		<url-pattern>/VerArchivo</url-pattern>
+	</servlet-mapping>
+	
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<resource-ref id="ResourceRef_1212072203020">
+		<res-ref-name>jdbc/vpistbba</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+	<resource-ref id="ResourceRef_1372194696250">
+		<description></description>
+		<res-ref-name>tm/TimersVPI</res-ref-name>
+		<res-type>commonj.timers.TimerManager</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Unshareable</res-sharing-scope>
+	</resource-ref>
+	<resource-ref id="ResourceRef_1393537908186">
+		<description></description>
+		<res-ref-name>tm/TimerVAT</res-ref-name>
+		<res-type>commonj.timers.TimerManager</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Unshareable</res-sharing-scope>
+	</resource-ref>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Acc</web-resource-name>
+			<description></description>
+			<url-pattern>*.acc</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>PUT</http-method>
+			<http-method>POST</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<web-resource-collection>
+			<web-resource-name>Servlets</web-resource-name>
+			<description></description>
+			<url-pattern>VerArchivo</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>PUT</http-method>
+			<http-method>POST</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description></description>
+			<role-name>generico</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.html</form-login-page>
+			<form-error-page>/errorlogin.html</form-error-page>
+		</form-login-config>
+	</login-config>
+	<security-role>
+		<description></description>
+		<role-name>generico</role-name>
+	</security-role>
+</web-app>

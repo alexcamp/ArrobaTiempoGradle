@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="zejbComunClient">
+        <wb-resource deploy-path="/" source-path="/ejbModule"/>
+        <wb-resource deploy-path="/" source-path="/ejbentitiescomun"/>
+        <wb-resource deploy-path="/" source-path="/ejbsessionsvpistbba"/>
+        <wb-resource deploy-path="/" source-path="/utiles"/>
+        <wb-resource deploy-path="/" source-path="/ejbutiles"/>
+        <wb-resource deploy-path="/" source-path="/ejbserviciosvpistbba"/>
+        <wb-resource deploy-path="/" source-path="/ejbsessionscomun"/>
+    </wb-module>
+</project-modules>

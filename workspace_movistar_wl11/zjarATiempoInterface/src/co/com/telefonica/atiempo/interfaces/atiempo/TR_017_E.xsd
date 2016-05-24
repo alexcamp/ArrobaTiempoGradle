@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: TR_017_E.xsd,v 1.1 2011/03/30 18:21:28 lfmartinez Exp $ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://atiempo.telefonica.com.co" xmlns:tr-017-e="http://atiempo.telefonica.com.co">
+	<include schemaLocation="commons-atiempo.xsd" />
+	<complexType name="TR017EEquipment">
+		<sequence>
+			<element name="cas-id" type="tr-017-e:string30" />
+			<element name="card-serial" type="tr-017-e:string30" />
+			<element name="product-service-code" type="tr-017-e:long9" />
+			<element name="commercial-operation" type="tr-017-e:long9" />
+			<element name="deco-serial" type="tr-017-e:string30" />
+			<element name="tipo-deco" type="tr-017-e:string30" />
+			<element name="marca-deco" type="tr-017-e:string30" />
+		</sequence>
+	</complexType>
+	<complexType name="TR017EPackage">
+		<sequence>
+			<element name="product-service-code" type="tr-017-e:long9" />
+			<element name="commercial-operation" type="tr-017-e:long9" />
+		</sequence>
+	</complexType>
+	<complexType name="TR_017_E">
+		<sequence>
+			<element name="head" type="tr-017-e:RequestHeader" />
+			<element name="body">
+				<complexType>
+					<sequence>
+						<element name="atis-request-number" type="tr-017-e:long9" />
+						<element name="pc-id" type="tr-017-e:string30" />
+						<element name="pc-product-service-code" type="tr-017-e:long9" />
+						<element name="pc-commercial-operation" type="tr-017-e:long9" />
+						<element name="client-document-number" type="tr-017-e:long16" />
+						<element name="client-document-type" type="tr-017-e:string3" />
+						<element name="client-lastname" type="tr-017-e:string40" />
+						<element name="client-second-lastname" type="tr-017-e:string40" />
+						<element name="client-name" type="tr-017-e:string64" />
+						<element name="city" type="tr-017-e:string8" />
+						<element name="client-type" type="tr-017-e:char" />
+						<element name="equipments">
+							
+							<complexType>
+								<sequence>
+									<element name="equipment" type="tr-017-e:TR017EEquipment" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+						<element name="packages">
+							<complexType>
+								<sequence>
+									<element name="package" type="tr-017-e:TR017EPackage" maxOccurs="unbounded" minOccurs="0" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="tr-017-e" type="tr-017-e:TR_017_E" />
+</schema>

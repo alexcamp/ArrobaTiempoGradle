@@ -1,0 +1,13 @@
+<LDAPS>
+	<LDAP id="bandeja">
+        <direccion>ldap://192.168.121.11</direccion>
+		<claseImplementa>com.sun.jndi.ldap.LdapCtxFactory</claseImplementa>
+		<nombreNodoBase>ou=intranet,ou=Workflow,o=ctc,c=cl</nombreNodoBase>
+		<adminUser>cn=ldapadm</adminUser>
+		<adminPwd>abc123</adminPwd>
+		<clase>workflowUser</clase>
+		<mainKey>cn</mainKey>
+		<atributos>
+		</atributos>
+	</LDAP>
+</LDAPS>
